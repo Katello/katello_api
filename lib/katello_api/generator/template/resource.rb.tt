@@ -1,0 +1,29 @@
+module KatelloApi
+  module Resources
+    class <%= resource_name.camelize %> < KatelloApi::Base
+      def self.doc
+        @doc ||= KatelloApi.doc['resources']["<%= resource_key %>"]
+      end
+<% resource[:methods].each do |method| -%>
+
+      # @param [Hash] params a hash of params to be passed to the service
+<% all_params(method).sort_by{|p| prioritize_id(p["name"])}.each do |param| -%>
+      # @option params [<%= param["expected_type"].capitalize %><%= param["allow_nil"] ? ', nil' : '' %>] <%= param["name"] %><%= format_param_description(param["description"]) %>
+<% if param["params"] && param["expected_type"] == 'hash' -%>
+      #   allowed keys are:
+<% param["params"].sort_by{|p| prioritize_id(p["name"])}.each do |subparam| -%>
+      #   * <%= subparam["name"] %> [<%= subparam["expected_type"].capitalize %><%= subparam["allow_nil"] ? ', nil' : '' %>]<%= format_param_description(subparam["description"], ' ') %>
+<% end -%>
+<% end -%>
+<% end -%>
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def <%= method[:name] %>(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+<% end -%>
+
+    end
+  end
+end
