@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["katello-devel@redhat.com"]
   gem.description   = %q{Helps you to use Katello's API calls from your app}
   gem.summary       = %q{Ruby bindings for Katello's rest API}
-  gem.homepage      = "http://github.com/katello/Katello"
+  gem.homepage      = "http://github.com/katello/katello_api"
 
   gem.files         = `git ls-files`.split($\)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
