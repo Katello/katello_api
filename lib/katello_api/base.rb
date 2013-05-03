@@ -24,7 +24,7 @@ module KatelloApi
   end
 
   class Base
-    API_VERSION = "1.0"
+    API_VERSION = "1"
 
     attr_reader :client, :config
 
