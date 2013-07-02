@@ -29,14 +29,17 @@ module KatelloApi
     attr_reader :client, :config
 
     def initialize(config, options = { })
+      headers = { :content_type => 'application/json',
+                  :accept => "application/json;version=#{API_VERSION}",
+                  'HTTP_KATELLO_USER' => 'admin' }
+      headers['HTTP_KATELLO_SYSTEM'] = config[:system] if config[:system]
+
       @client = RestClient::Resource.new(
           config[:base_url],
           { :user => config[:username],
             :password => config[:password],
             :oauth => config[:oauth],
-            :headers => { :content_type => 'application/json',
-                          :accept => "application/json;version=#{API_VERSION}",
-                          'HTTP_KATELLO_USER' => 'admin' }
+            :headers => headers
           }.merge(options))
       @config = config
     end
