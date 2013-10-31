@@ -5,7 +5,7 @@ $:.unshift(File.expand_path("../../lib", __FILE__))
 require 'optparse'
 require 'katello_api/generator/base'
 
-options = {:katello_apidoc_url => "http://localhost:3000/katello/apidoc"}
+options = {:katello_apidoc_url => "https://localhost:3000/katello/apidoc"}
 
 optparse = OptionParser.new do |opts|
   opts.banner = <<-BANNER
