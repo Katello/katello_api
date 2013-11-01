@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://github.com/katello/katello_api"
 
   gem.files         = `git ls-files`.split($\)
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  #gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
 
   gem.files.reject! do |fn|
     fn.start_with?("lib/katello_api/generator") ||
