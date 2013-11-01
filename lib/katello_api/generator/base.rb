@@ -31,9 +31,9 @@ module KatelloApi
         File.expand_path("../template", __FILE__)
       end
 
-      def self.start(katello_url)
+      def self.start(katello_url, api_version = nil)
         katello_url = katello_url.sub(/\.json\Z/,"")
-        katello_url << "/#{KatelloApi::Base::API_VERSION}.json"
+        katello_url << "/#{(api_version || KatelloApi::Base::API_VERSION)}.json"
         uri = URI(katello_url)
         http = Net::HTTP.new(uri.host, uri.port)
         if uri.scheme == "https"

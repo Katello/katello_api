@@ -6,12 +6,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] environment_id  id of environment containing the errata. 
-      # @option params [String] product_id  the product which contains the errata. 
-      # @option params [Object] repository_id Part of +/api/repositories/:repository_id/errata+ path
-      # @option params [String] repoid  id of repository containing the errata. 
-      # @option params [String] severity  severity of errata. usually one of: critical, important, moderate, low. case insensitive. 
-      # @option params [String] type  type of errata. usually one of: security, bugfix, enhancement. case insensitive. 
+      # @option params [String] environment_id The environment containing the errata.
+      # @option params [String] product_id The product which contains errata.
+      # @option params [String] repository_id The repository which contains errata.
+      # @option params [String] severity Severity of errata. usually one of: critical, important, moderate, low. case insensitive.
+      # @option params [String] type Type of errata. usually one of: security, bugfix, enhancement. case insensitive.
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

@@ -6,9 +6,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] system_group_id  system_group identifier 
-      # @option params [String] type  filter errata by type 
+      # @option params [String] organization_id Oranization identifier
+      # @option params [String] system_group_id System_group identifier
+      # @option params [String] type Filter errata by type
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -17,9 +17,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] errata_ids  list of errata ids to install 
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] system_group_id  system_group identifier 
+      # @option params [String] errata_ids List of errata ids to install
+      # @option params [String] organization_id Oranization identifier
+      # @option params [String] system_group_id System_group identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
