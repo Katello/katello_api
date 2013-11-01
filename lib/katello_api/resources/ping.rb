@@ -17,7 +17,7 @@ module KatelloApi
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
-      def status(params = {}, headers = {})
+      def server_status(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

@@ -6,9 +6,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] environment_id Part of +/api/organizations/:organization_id/environments/:environment_id/changesets+ path
-      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/environments/:environment_id/changesets+ path
-      # @option params [String] name  an optional changeset name to filter upon 
+      # @option params [Object] environment_id Part of +/api/environments/:environment_id/changesets+ path
+      # @option params [String] name An optional changeset name to filter upon
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -29,8 +28,8 @@ module KatelloApi
       # @option params [Object] id Part of +/api/changesets/:id+ path
       # @option params [Hash] changeset
       #   allowed keys are:
-      #   * description [String, nil]  the description of the changeset 
-      #   * name [String]  the name of the changeset 
+      #   * description [String, nil] The description of the changeset
+      #   * name [String] The name of the changeset
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -39,21 +38,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/changesets/:id/dependencies+ path
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def dependencies(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] environment_id Part of +/api/organizations/:organization_id/environments/:environment_id/changesets+ path
-      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/environments/:environment_id/changesets+ path
+      # @option params [Object] environment_id Part of +/api/environments/:environment_id/changesets+ path
       # @option params [Hash] changeset
       #   allowed keys are:
-      #   * description [String, nil]  the description of the changeset 
-      #   * name [String]  the name of the changeset 
+      #   * description [String, nil] The description of the changeset
+      #   * name [String] The name of the changeset
       #   * type [String]
       #
       # @param [Hash] headers additional http headers
@@ -63,11 +52,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/changesets/:id/promote+ path
+      # @option params [Object] id Part of +/api/changesets/:id/apply+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
-      def promote(params = {}, headers = {})
+      def apply(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

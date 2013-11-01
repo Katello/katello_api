@@ -6,10 +6,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] interval  filter by interval 
-      # @option params [String] name  filter by name 
-      # @option params [String] sync_date  filter by sync date 
+      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/sync_plans+ path
+      # @option params [String] interval Filter by interval
+      # @option params [String] name Filter by name
+      # @option params [String] sync_date Filter by sync date
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -18,8 +18,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  sync plan numeric identifier 
-      # @option params [String] organization_id  oranization identifier 
+      # @option params [String] id Sync plan numeric identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -28,13 +27,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
+      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/sync_plans+ path
       # @option params [Hash] sync_plan
       #   allowed keys are:
-      #   * description [String, nil]  sync plan description 
-      #   * interval [String, nil]  how often synchronization should run 
-      #   * name [String]  sync plan name 
-      #   * sync_date [String, nil]  start datetime of synchronization 
+      #   * description [String, nil] Sync plan description
+      #   * interval [String, nil] How often synchronization should run
+      #   * name [String] Sync plan name
+      #   * sync_date [String, nil] Start datetime of synchronization
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -43,14 +42,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  sync plan numeric identifier 
-      # @option params [String] organization_id  oranization identifier 
+      # @option params [String] id Sync plan numeric identifier
       # @option params [Hash] sync_plan
       #   allowed keys are:
-      #   * description [String, nil]  sync plan description 
-      #   * interval [String, nil]  how often synchronization should run 
-      #   * name [String]  sync plan name 
-      #   * sync_date [String, nil]  start datetime of synchronization 
+      #   * description [String, nil] Sync plan description
+      #   * interval [String, nil] How often synchronization should run
+      #   * name [String] Sync plan name
+      #   * sync_date [String, nil] Start datetime of synchronization
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -59,8 +57,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  sync plan numeric identifier 
-      # @option params [String] organization_id  oranization identifier 
+      # @option params [String] id Sync plan numeric identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

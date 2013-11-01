@@ -6,11 +6,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  content view id 
-      # @option params [String] environment_id  environment identifier 
-      # @option params [String] organization_id  organization identifier 
-      # @option params [String] label  content view label 
-      # @option params [String] name  content view name 
+      # @option params [String] id Content view id
+      # @option params [String] environment_id Environment identifier
+      # @option params [String] organization_id Organization identifier
+      # @option params [String] label Content view label
+      # @option params [String] name Content view name
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -19,8 +19,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  content view id 
-      # @option params [String] environment_id  environment id 
+      # @option params [String] id Content view id
+      # @option params [String] environment_id Environment id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -29,8 +29,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  content view id 
-      # @option params [String] environment_id  environment promoting to 
+      # @option params [String] id Content view id
+      # @option params [String] environment_id Environment promoting to
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -39,11 +39,20 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/content_views/:id/refresh+ path
+      # @option params [String] id Content view id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def refresh(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id Content view id
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def destroy(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
