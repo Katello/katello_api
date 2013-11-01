@@ -18,7 +18,7 @@ USAGE: #{__FILE__} [FLAGS]
     options[:apidoc_url] = val
   end
 
-  opts.on("--api-version VERSION", "version of the API to hit (default: #{options[:api_version]}") do |val|
+  opts.on("--api-version VERSION", "version of the API to hit (default: #{options[:api_version]})") do |val|
     options[:api_version] = val
   end
 

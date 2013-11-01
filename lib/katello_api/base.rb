@@ -24,15 +24,13 @@ module KatelloApi
   end
 
   class Base
-    API_VERSION = "v1"
+    API_VERSION = "v2"
 
     attr_reader :client, :config
 
-    def initialize(config, options = { })
+    def initialize(config, options = {})
       headers = { :content_type => 'application/json',
-                  :accept => "application/json;version=#{API_VERSION}",
-                  'HTTP_KATELLO_USER' => 'admin' }
-      headers['HTTP_KATELLO_SYSTEM'] = config[:system] if config[:system]
+                  :accept => "application/json;version=#{API_VERSION}" }
 
       @client = RestClient::Resource.new(
           config[:base_url],
@@ -149,10 +147,10 @@ module KatelloApi
       params          ||= { }
       # insert param values
       url_param_names = self.class.params_in_path(url)
-      url             = url_param_names.inject(url) do |url, param_name|
+      url             = url_param_names.inject(url) do |urrl, param_name|
         param_value = params[param_name] or
           raise ArgumentError, "missing param '#{param_name}' in parameters"
-        url.sub(":#{param_name}", param_value.to_s)
+        urrl.sub(":#{param_name}", param_value.to_s)
       end
 
       return url, params.reject { |param_name, _| url_param_names.include? param_name }
