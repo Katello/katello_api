@@ -374,14 +374,17 @@
         </li>
       
         <li>
-          <span class="name">name</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">ldap_group</span>
+          <span class="type">(<tt>Hash</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>name of the ldap group</p>
+<p>allowed keys are:</p>
+<ul><li>
+<p>name [String] Name of the ldap group</p>
+</li></ul>
 </div>
           
         </li>
@@ -416,12 +419,12 @@
       <pre class="lines">
 
 
-14
-15
-16</pre>
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/role_ldap_group.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/role_ldap_group.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -504,7 +507,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>ldap group (name)</p>
+<p>Ldap group (name)</p>
 </div>
           
         </li>
@@ -517,7 +520,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>role identifier</p>
+<p>Role identifier</p>
 </div>
           
         </li>
@@ -552,12 +555,12 @@
       <pre class="lines">
 
 
-24
-25
-26</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/role_ldap_group.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/role_ldap_group.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -640,7 +643,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>role identifier</p>
+<p>Role identifier</p>
 </div>
           
         </li>
@@ -675,12 +678,12 @@
       <pre class="lines">
 
 
-33
-34
-35</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/role_ldap_group.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/role_ldap_group.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -695,7 +698,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 31 13:03:43 2013 by
+  Generated on Fri Nov  1 10:42:22 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-1.9.3).
 </div>

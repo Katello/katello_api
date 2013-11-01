@@ -332,6 +332,30 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#systems_registerable-instance_method" title="#systems_registerable (instance method)">- (Array) <strong>systems_registerable</strong>(params = {}, headers = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>First item: parsed data; second item: raw body.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#update-instance_method" title="#update (instance method)">- (Array) <strong>update</strong>(params = {}, headers = {}) </a>
     
 
@@ -488,7 +512,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>organization identifier</p>
+<p>Organization identifier</p>
 </div>
           
         </li>
@@ -505,9 +529,9 @@
 <ul><li>
 <p>description [String, nil]</p>
 </li><li>
-<p>name [String]  name of the environment (identifier)</p>
+<p>name [String] Name of the environment (identifier)</p>
 </li><li>
-<p>prior [String]  identifier of an environment that is prior the new
+<p>prior [String] Identifier of an environment that is prior the new
 environment in the chain, it has to be either library or an environment at
 the end of the chain</p>
 </li></ul>
@@ -633,7 +657,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>environment identifier</p>
+<p>Environment identifier</p>
 </div>
           
         </li>
@@ -646,7 +670,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>organization identifier</p>
+<p>Organization identifier</p>
 </div>
           
         </li>
@@ -769,7 +793,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>organization identifier</p>
+<p>Organization identifier</p>
 </div>
           
         </li>
@@ -782,7 +806,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>set true if you want to see only library environment</p>
+<p>Set true if you want to see only library environment</p>
 </div>
           
         </li>
@@ -795,7 +819,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>filter only environments with this identifier</p>
+<p>Filter only environments with this identifier</p>
 </div>
           
         </li>
@@ -918,7 +942,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>environment identifier</p>
+<p>Environment identifier</p>
 </div>
           
         </li>
@@ -953,12 +977,12 @@ the end of the chain</p>
       <pre class="lines">
 
 
-94
 95
-96</pre>
+96
+97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/environment.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/environment.rb', line 95</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_releases'>releases</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1041,7 +1065,20 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>environment identifier</p>
+<p>Environment identifier</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">content_view_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Content view identifier</p>
 </div>
           
         </li>
@@ -1054,7 +1091,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>organization identifier</p>
+<p>Organization identifier</p>
 </div>
           
         </li>
@@ -1067,7 +1104,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>set to true if you want to see also disabled repositories</p>
+<p>Set to true if you want to see also disabled repositories</p>
 </div>
           
         </li>
@@ -1102,12 +1139,12 @@ the end of the chain</p>
       <pre class="lines">
 
 
-85
 86
-87</pre>
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/environment.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/environment.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_repositories'>repositories</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1190,7 +1227,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>organization identifier</p>
+<p>Organization identifier</p>
 </div>
           
         </li>
@@ -1203,7 +1240,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>set true if you want to see only library environment</p>
+<p>Set true if you want to see only library environment</p>
 </div>
           
         </li>
@@ -1216,7 +1253,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>filter only environments with this identifier</p>
+<p>Filter only environments with this identifier</p>
 </div>
           
         </li>
@@ -1339,7 +1376,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>environment identifier</p>
+<p>Environment identifier</p>
 </div>
           
         </li>
@@ -1352,7 +1389,7 @@ the end of the chain</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>organization identifier</p>
+<p>Organization identifier</p>
 </div>
           
         </li>
@@ -1395,6 +1432,129 @@ the end of the chain</p>
       <pre class="code"><span class="info file"># File 'lib/katello_api/resources/environment.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="systems_registerable-instance_method">
+  
+    - (<tt>Array</tt>) <strong>systems_registerable</strong>(params = {}, headers = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns First item: parsed data; second item: raw body</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a hash of params to be passed to the service</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>headers</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional http headers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>params</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">organization_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Organization identifier</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>First item: parsed data; second item: raw body</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/environment.rb', line 104</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_systems_registerable'>systems_registerable</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1505,7 +1665,7 @@ the end of the chain</p>
 <ul><li>
 <p>description [String, nil]</p>
 </li><li>
-<p>name [String]  name of the environment (identifier)</p>
+<p>name [String] Name of the environment (identifier)</p>
 </li></ul>
 </div>
           
@@ -1561,7 +1721,7 @@ the end of the chain</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 31 13:03:41 2013 by
+  Generated on Fri Nov  1 10:42:20 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-1.9.3).
 </div>

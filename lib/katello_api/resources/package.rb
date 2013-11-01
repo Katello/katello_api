@@ -6,7 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] repository_id  environment numeric identifier 
+      # @option params [String] repository_id Environment numeric identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -15,8 +15,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] repository_id  environment numeric identifier 
-      # @option params [String] search  search expression 
+      # @option params [String] repository_id Environment numeric identifier
+      # @option params [String] search Search expression
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -25,8 +25,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  package id 
-      # @option params [String] repository_id  environment numeric identifier 
+      # @option params [String] id Package id
+      # @option params [String] repository_id Environment numeric identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

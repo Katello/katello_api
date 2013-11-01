@@ -6,8 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  product numeric identifier 
-      # @option params [String] organization_id  organization identifier 
+      # @option params [String] id Product numeric identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -16,13 +15,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  product numeric identifier 
-      # @option params [String] organization_id  organization identifier 
-      # @option params [Hash] product
-      #   allowed keys are:
-      #   * description [String, nil]  product description 
-      #   * gpg_key_name [String, nil]  identifier of the gpg key 
-      #   * recursive [String]  set to true to recursive update gpg key 
+      # @option params [String] id Product numeric identifier
+      # @option params [String] gpg_key_id Identifier of the gpg key
+      # @option params [String] provider_id Provider the product belongs to
+      # @option params [String] description Product description
+      # @option params [String] label
+      # @option params [String] name
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -31,9 +29,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] environment_id  environment identifier 
-      # @option params [String] organization_id  organization identifier 
-      # @option params [String] name  product identifier 
+      # @option params [String] limit Number of results to return
+      # @option params [String] offset Starting location to retrieve data from
+      # @option params [String] search Search string
+      # @option params [Hash] sort
+      #   allowed keys are:
+      #   * by [String] Field to sort the results on
+      #   * order [String] How to order the sorted results (e.g. asc for ascending)
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -42,8 +44,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  product numeric identifier 
-      # @option params [String] organization_id  organization identifier 
+      # @option params [String] id Product numeric identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -52,11 +53,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  product numeric identifier 
-      # @option params [String] environment_id  environment identifier 
-      # @option params [String] organization_id  organization identifier 
-      # @option params [String] include_disabled  set to true if you want to list disabled repositories 
-      # @option params [String] name  repository identifier 
+      # @option params [String] id Product numeric identifier
+      # @option params [String] content_view_id Find repos in content view instead of default content view
+      # @option params [String] environment_id Environment identifier
+      # @option params [String] organization_id Organization identifier
+      # @option params [String] include_disabled Set to true if you want to list disabled repositories
+      # @option params [String] name Repository identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -65,9 +67,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  product numeric identifier 
-      # @option params [String] organization_id  organization identifier 
-      # @option params [String] plan_id  plan numeric identifier 
+      # @option params [String] id Product numeric identifier
+      # @option params [String] organization_id Organization identifier
+      # @option params [String] plan_id Plan numeric identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -76,9 +78,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  product numeric identifier 
-      # @option params [String] organization_id  organization identifier 
-      # @option params [String] plan_id  plan numeric identifier 
+      # @option params [String] id Product numeric identifier
+      # @option params [String] organization_id Organization identifier
+      # @option params [String] plan_id Plan numeric identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -87,21 +89,15 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id  content view definition identifier 
+      # @option params [String] gpg_key_id Identifier of the gpg key
+      # @option params [String] provider_id Provider the product belongs to
+      # @option params [String] description Product description
+      # @option params [String] label
+      # @option params [String] name
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
-      def list_content_view_definition_products(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id  content view definition identifier 
-      # @option params [String] products  updated list of products 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def update_content_view_definition_products(params = {}, headers = {})
+      def create(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

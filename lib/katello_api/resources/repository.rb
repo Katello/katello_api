@@ -6,11 +6,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  id of an organization the repository will be contained in 
-      # @option params [String] product_id  id of a product the repository will be contained in 
-      # @option params [String] gpg_key_name  name of a gpg key that will be assigned to the new repository 
+      # @option params [String] product_id Product the repository belongs to
+      # @option params [String] content_type Type of repo (either &#8216;yum&#8217; or &#8216;puppet&#8217;, defaults to &#8216;yum&#8217;)
+      # @option params [String] enabled Flag that enables/disables the repository
+      # @option params [String] gpg_key_name Name of a gpg key that will be assigned to the new repository
+      # @option params [String] label
       # @option params [String] name
-      # @option params [String] url  repository source url 
+      # @option params [String] url Repository source url
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -19,7 +21,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  repository id 
+      # @option params [String] id Repository id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -28,10 +30,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  repository id 
-      # @option params [Hash] repository
-      #   allowed keys are:
-      #   * gpg_key_name [String]  name of a gpg key that will be assigned to the repository 
+      # @option params [String] id Repository id
+      # @option params [String] gpg_key_id Id of a gpg key that will be assigned to this repository
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -45,16 +45,6 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id
-      # @option params [String] enable  flag that enables/disables the repository 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def enable(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
@@ -95,20 +85,31 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] environment_id Id of an environment to show repositories in
+      # @option params [String] organization_id Id of an organization to show repositories in
+      # @option params [String] product_id Id of a product to show repositories of
+      # @option params [String] enabled Limit to only enabled repositories
+      # @option params [String] library Show repositories in library and the default content view
+      # @option params [String] limit Number of results to return
+      # @option params [String] offset Starting location to retrieve data from
+      # @option params [String] search Search string
+      # @option params [Hash] sort
+      #   allowed keys are:
+      #   * by [String] Field to sort the results on
+      #   * order [String] How to order the sorted results (e.g. asc for ascending)
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
-      def list_content_view_definition_repositories(params = {}, headers = {})
+      def index(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id  content view definition identifier 
-      # @option params [String] repos  updated list of repo ids 
+      # @option params [String] id Repository id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
-      def update_content_view_definition_repositories(params = {}, headers = {})
+      def sync(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

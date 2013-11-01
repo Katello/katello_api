@@ -6,7 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  organization identifier 
+      # @option params [String] organization_id Organization identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -15,7 +15,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  task identifier 
+      # @option params [String] id Task identifier
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

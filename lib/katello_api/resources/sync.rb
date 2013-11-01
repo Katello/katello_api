@@ -6,10 +6,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] product_id  product identifier 
-      # @option params [String] provider_id  provider identifier 
-      # @option params [String] repository_id  repository identifier 
+      # @option params [Object] product_id Part of +/api/products/:product_id/sync+ path
+      # @option params [Object] provider_id Part of +/api/providers/:provider_id/sync+ path
+      # @option params [Object] repository_id Part of +/api/repositories/:repository_id/sync+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -18,10 +17,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] product_id  product identifier 
-      # @option params [String] provider_id  provider identifier 
-      # @option params [String] repository_id  repository identifier 
+      # @option params [Object] product_id Part of +/api/products/:product_id/sync+ path
+      # @option params [Object] provider_id Part of +/api/providers/:provider_id/sync+ path
+      # @option params [Object] repository_id Part of +/api/repositories/:repository_id/sync+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -30,10 +28,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] product_id  product identifier 
-      # @option params [String] provider_id  provider identifier 
-      # @option params [String] repository_id  repository identifier 
+      # @option params [Object] product_id Part of +/api/products/:product_id/sync+ path
+      # @option params [Object] provider_id Part of +/api/providers/:provider_id/sync+ path
+      # @option params [Object] repository_id Part of +/api/repositories/:repository_id/sync+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

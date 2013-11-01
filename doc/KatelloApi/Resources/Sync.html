@@ -361,53 +361,40 @@
     <ul class="option">
       
         <li>
-          <span class="name">organization_id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>oranization identifier</p>
-</div>
-          
-        </li>
-      
-        <li>
           <span class="name">product_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>product identifier</p>
+<p>Part of <tt>/api/products/:product_id/sync</tt> path</p>
 </div>
           
         </li>
       
         <li>
           <span class="name">provider_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>provider identifier</p>
+<p>Part of <tt>/api/providers/:provider_id/sync</tt> path</p>
 </div>
           
         </li>
       
         <li>
           <span class="name">repository_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>repository identifier</p>
+<p>Part of <tt>/api/repositories/:repository_id/sync</tt> path</p>
 </div>
           
         </li>
@@ -442,12 +429,12 @@
       <pre class="lines">
 
 
-40
-41
-42</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cancel'>cancel</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -523,53 +510,40 @@
     <ul class="option">
       
         <li>
-          <span class="name">organization_id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>oranization identifier</p>
-</div>
-          
-        </li>
-      
-        <li>
           <span class="name">product_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>product identifier</p>
+<p>Part of <tt>/api/products/:product_id/sync</tt> path</p>
 </div>
           
         </li>
       
         <li>
           <span class="name">provider_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>provider identifier</p>
+<p>Part of <tt>/api/providers/:provider_id/sync</tt> path</p>
 </div>
           
         </li>
       
         <li>
           <span class="name">repository_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>repository identifier</p>
+<p>Part of <tt>/api/repositories/:repository_id/sync</tt> path</p>
 </div>
           
         </li>
@@ -604,12 +578,12 @@
       <pre class="lines">
 
 
-28
-29
-30</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync.rb', line 28</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -685,53 +659,40 @@
     <ul class="option">
       
         <li>
-          <span class="name">organization_id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>oranization identifier</p>
-</div>
-          
-        </li>
-      
-        <li>
           <span class="name">product_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>product identifier</p>
+<p>Part of <tt>/api/products/:product_id/sync</tt> path</p>
 </div>
           
         </li>
       
         <li>
           <span class="name">provider_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>provider identifier</p>
+<p>Part of <tt>/api/providers/:provider_id/sync</tt> path</p>
 </div>
           
         </li>
       
         <li>
           <span class="name">repository_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>repository identifier</p>
+<p>Part of <tt>/api/repositories/:repository_id/sync</tt> path</p>
 </div>
           
         </li>
@@ -766,12 +727,12 @@
       <pre class="lines">
 
 
+15
 16
-17
-18</pre>
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -786,7 +747,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 31 13:03:38 2013 by
+  Generated on Fri Nov  1 10:42:16 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-1.9.3).
 </div>

@@ -5,7 +5,7 @@ $:.unshift(File.expand_path("../../lib", __FILE__))
 require 'optparse'
 require 'katello_api/generator/base'
 
-options = {:katello_apidoc_url => "https://localhost:3000/katello/apidoc"}
+options = {:apidoc_url => "https://localhost:3000/katello/apidoc", :api_version => "v2"}
 
 optparse = OptionParser.new do |opts|
   opts.banner = <<-BANNER
@@ -14,8 +14,12 @@ Generate Ruby API bindings for Katello's API from Apipie docs.
 USAGE: #{__FILE__} [FLAGS]
   BANNER
 
-  opts.on("-u", "--url KATELLO_APIDOC_URL", "By default #{options[:katello_apidoc_url]}") do |val|
-    options[:katello_apidoc_url] = val
+  opts.on("-u", "--url APIDOC_URL", "By default #{options[:apidoc_url]}") do |val|
+    options[:apidoc_url] = val
+  end
+
+  opts.on("--api-version VERSION", "version of the API to hit (default: #{options[:api_version]}") do |val|
+    options[:api_version] = val
   end
 
 end
@@ -23,9 +27,9 @@ end
 begin
   optparse.parse!
 
-  options[:katello_apidoc_url].sub!(/\Z\//, "")
+  options[:apidoc_url].sub!(/\Z\//, "")
 
-  KatelloApi::Generator::Base.start(options[:katello_apidoc_url])
+  KatelloApi::Generator::Base.start(options[:apidoc_url], options[:api_version])
   system("yard doc")
 rescue OptionParser::InvalidOption => e
   puts "#{e.message}\n\n#{optparse}"

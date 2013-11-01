@@ -212,6 +212,30 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#checkin-instance_method" title="#checkin (instance method)">- (Array) <strong>checkin</strong>(params = {}, headers = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>First item: parsed data; second item: raw body.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#create-instance_method" title="#create (instance method)">- (Array) <strong>create</strong>(params = {}, headers = {}) </a>
     
 
@@ -404,6 +428,30 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#refresh_subscriptions-instance_method" title="#refresh_subscriptions (instance method)">- (Array) <strong>refresh_subscriptions</strong>(params = {}, headers = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>First item: parsed data; second item: raw body.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#regenerate_identity_certificates-instance_method" title="#regenerate_identity_certificates (instance method)">- (Array) <strong>regenerate_identity_certificates</strong>(params = {}, headers = {}) </a>
     
 
@@ -524,7 +572,31 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#task_show-instance_method" title="#task_show (instance method)">- (Array) <strong>task_show</strong>(params = {}, headers = {}) </a>
+      <a href="#subscription_status-instance_method" title="#subscription_status (instance method)">- (Array) <strong>subscription_status</strong>(params = {}, headers = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>First item: parsed data; second item: raw body.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#task-instance_method" title="#task (instance method)">- (Array) <strong>task</strong>(params = {}, headers = {}) </a>
     
 
     
@@ -792,7 +864,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>key-value hash of system-specific facts</p>
+<p>Key-value hash of system-specific facts</p>
 </div>
           
         </li>
@@ -805,7 +877,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>list of products installed on the system</p>
+<p>List of products installed on the system</p>
 </div>
           
         </li>
@@ -818,7 +890,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>physical of the system</p>
+<p>Physical of the system</p>
 </div>
           
         </li>
@@ -831,7 +903,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>name of the system</p>
+<p>Name of the system</p>
 </div>
           
         </li>
@@ -844,7 +916,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>a service level for auto-healing process, e.g. self-support</p>
+<p>A service level for auto-healing process, e.g. self-support</p>
 </div>
           
         </li>
@@ -857,7 +929,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>type of the system, it should always be ‘system’</p>
+<p>Type of the system, it should always be &amp;#8216;system&amp;#8217;</p>
 </div>
           
         </li>
@@ -995,7 +1067,7 @@
             &mdash; <div class='inline'>
 <p>allowed keys are:</p>
 <ul><li>
-<p>system_group_ids [String]  list of group ids to add the system to</p>
+<p>system_group_ids [String] List of group ids the system belongs to</p>
 </li></ul>
 </div>
           
@@ -1031,14 +1103,150 @@
       <pre class="lines">
 
 
-199
-200
-201</pre>
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 199</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 211</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_system_groups'>add_system_groups</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="checkin-instance_method">
+  
+    - (<tt>Array</tt>) <strong>checkin</strong>(params = {}, headers = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns First item: parsed data; second item: raw body</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a hash of params to be passed to the service</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>headers</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional http headers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>params</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">id</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Part of <tt>/api/consumers/:id/checkin</tt> path</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">date</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Check-in time</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>First item: parsed data; second item: raw body</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_checkin'>checkin</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1137,7 +1345,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>key-value hash of system-specific facts</p>
+<p>Key-value hash of system-specific facts</p>
 </div>
           
         </li>
@@ -1150,7 +1358,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>list of products installed on the system</p>
+<p>List of products installed on the system</p>
 </div>
           
         </li>
@@ -1163,7 +1371,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>physical of the system</p>
+<p>Physical of the system</p>
 </div>
           
         </li>
@@ -1176,7 +1384,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>name of the system</p>
+<p>Name of the system</p>
 </div>
           
         </li>
@@ -1189,7 +1397,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>a service level for auto-healing process, e.g. self-support</p>
+<p>A service level for auto-healing process, e.g. self-support</p>
 </div>
           
         </li>
@@ -1202,7 +1410,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>type of the system, it should always be ‘system’</p>
+<p>Type of the system, it should always be &amp;#8216;system&amp;#8217;</p>
 </div>
           
         </li>
@@ -1325,7 +1533,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>uuid of the system</p>
+<p>Uuid of the system</p>
 </div>
           
         </li>
@@ -1360,12 +1568,12 @@
       <pre class="lines">
 
 
-103
-104
-105</pre>
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1453,6 +1661,22 @@
           
         </li>
       
+        <li>
+          <span class="name">enabled_repos</span>
+          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>allowed keys are:</p>
+<ul><li>
+<p>repos [String]</p>
+</li></ul>
+</div>
+          
+        </li>
+      
     </ul>
   
     
@@ -1483,12 +1707,12 @@
       <pre class="lines">
 
 
-187
-188
-189</pre>
+199
+200
+201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 199</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_enabled_repos'>enabled_repos</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1571,7 +1795,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>uuid of the system</p>
+<p>Uuid of the system</p>
 </div>
           
         </li>
@@ -1606,12 +1830,12 @@
       <pre class="lines">
 
 
-139
-140
-141</pre>
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 139</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_errata'>errata</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1819,7 +2043,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>filter systems by subscribed pool</p>
+<p>Filter systems by subscribed pool</p>
 </div>
           
         </li>
@@ -1832,7 +2056,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>filter systems by name</p>
+<p>Filter systems by name</p>
 </div>
           
         </li>
@@ -1845,7 +2069,20 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>filter systems by advanced search query</p>
+<p>Filter systems by advanced search query</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">uuid</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Filter systems by uuid</p>
 </div>
           
         </li>
@@ -1880,12 +2117,12 @@
       <pre class="lines">
 
 
-85
-86
-87</pre>
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1968,7 +2205,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>uuid of the system</p>
+<p>Uuid of the system</p>
 </div>
           
         </li>
@@ -2003,12 +2240,12 @@
       <pre class="lines">
 
 
-130
-131
-132</pre>
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_package_profile'>package_profile</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -2091,7 +2328,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>uuid of the system</p>
+<p>Uuid of the system</p>
 </div>
           
         </li>
@@ -2126,14 +2363,137 @@
       <pre class="lines">
 
 
-112
-113
-114</pre>
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pools'>pools</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="refresh_subscriptions-instance_method">
+  
+    - (<tt>Array</tt>) <strong>refresh_subscriptions</strong>(params = {}, headers = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns First item: parsed data; second item: raw body</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a hash of params to be passed to the service</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>headers</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional http headers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>params</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Uuid of the system</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>First item: parsed data; second item: raw body</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+232
+233
+234</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 232</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_refresh_subscriptions'>refresh_subscriptions</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2214,7 +2574,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>uuid of the consumer</p>
+<p>Uuid of the consumer</p>
 </div>
           
         </li>
@@ -2337,7 +2697,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>uuid of the system</p>
+<p>Uuid of the system</p>
 </div>
           
         </li>
@@ -2372,12 +2732,12 @@
       <pre class="lines">
 
 
-121
-122
-123</pre>
+141
+142
+143</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_releases'>releases</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -2475,7 +2835,7 @@
             &mdash; <div class='inline'>
 <p>allowed keys are:</p>
 <ul><li>
-<p>system_group_ids [String]  list of group ids to add the system to</p>
+<p>system_group_ids [String] List of group ids to add the system to</p>
 </li></ul>
 </div>
           
@@ -2511,12 +2871,12 @@
       <pre class="lines">
 
 
-211
-212
-213</pre>
+223
+224
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 211</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 223</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_system_groups'>remove_system_groups</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -2647,12 +3007,12 @@
       <pre class="lines">
 
 
-158
-159
-160</pre>
+178
+179
+180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 158</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 178</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_report'>report</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -2735,7 +3095,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>uuid of the system</p>
+<p>Uuid of the system</p>
 </div>
           
         </li>
@@ -2770,12 +3130,12 @@
       <pre class="lines">
 
 
-94
-95
-96</pre>
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -2786,9 +3146,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="task_show-instance_method">
+  <h3 class="signature " id="subscription_status-instance_method">
   
-    - (<tt>Array</tt>) <strong>task_show</strong>(params = {}, headers = {}) 
+    - (<tt>Array</tt>) <strong>subscription_status</strong>(params = {}, headers = {}) 
   
 
   
@@ -2858,7 +3218,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>uuid of the task</p>
+<p>Uuid of the system</p>
 </div>
           
         </li>
@@ -2893,14 +3253,137 @@
       <pre class="lines">
 
 
-178
-179
-180</pre>
+123
+124
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 178</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 123</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_task_show'>task_show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_subscription_status'>subscription_status</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="task-instance_method">
+  
+    - (<tt>Array</tt>) <strong>task</strong>(params = {}, headers = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns First item: parsed data; second item: raw body</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a hash of params to be passed to the service</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>headers</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional http headers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>params</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">task_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Id of the task</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>First item: parsed data; second item: raw body</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+241
+242
+243</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 241</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_task'>task</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2974,40 +3457,14 @@
     <ul class="option">
       
         <li>
-          <span class="name">organization_id</span>
+          <span class="name">id</span>
           <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>Part of <tt>/api/organizations/:organization_id/systems/tasks</tt> path</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">system_name</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>name of the system</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">system_uuid</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>uuid of the system</p>
+<p>Part of <tt>/api/systems/:id/tasks</tt> path</p>
 </div>
           
         </li>
@@ -3042,12 +3499,12 @@
       <pre class="lines">
 
 
-169
-170
-171</pre>
+187
+188
+189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 169</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 187</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tasks'>tasks</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -3161,7 +3618,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>key-value hash of system-specific facts</p>
+<p>Key-value hash of system-specific facts</p>
 </div>
           
         </li>
@@ -3174,7 +3631,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>list of products installed on the system</p>
+<p>List of products installed on the system</p>
 </div>
           
         </li>
@@ -3187,7 +3644,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>physical of the system</p>
+<p>Physical of the system</p>
 </div>
           
         </li>
@@ -3200,7 +3657,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>name of the system</p>
+<p>Name of the system</p>
 </div>
           
         </li>
@@ -3213,7 +3670,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>a service level for auto-healing process, e.g. self-support</p>
+<p>A service level for auto-healing process, e.g. self-support</p>
 </div>
           
         </li>
@@ -3226,7 +3683,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>type of the system, it should always be ‘system’</p>
+<p>Type of the system, it should always be &amp;#8216;system&amp;#8217;</p>
 </div>
           
         </li>
@@ -3349,7 +3806,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>uuid of the system</p>
+<p>Uuid of the system</p>
 </div>
           
         </li>
@@ -3384,12 +3841,12 @@
       <pre class="lines">
 
 
-148
-149
-150</pre>
+168
+169
+170</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_upload_package_profile'>upload_package_profile</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -3404,7 +3861,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 31 13:03:38 2013 by
+  Generated on Fri Nov  1 10:42:17 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-1.9.3).
 </div>

@@ -385,15 +385,6 @@
     <ul class="option">
       
         <li>
-          <span class="name">organization_id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
           <span class="name">role_id</span>
           <span class="type">(<tt>Object</tt>)</span>
           <span class="default">
@@ -407,71 +398,31 @@
         </li>
       
         <li>
-          <span class="name">all_tags</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">permission</span>
+          <span class="type">(<tt>Hash</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>true if the permission should use all tags</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">description</span>
-          <span class="type">(<tt>String</tt>, <tt>nil</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
-          <span class="name">name</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
-          <span class="name">tags</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>array of tag ids</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">type</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>name of a resource or ‘all’</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">verbs</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>array of permission verbs</p>
+<p>allowed keys are:</p>
+<ul><li>
+<p>organization_id [String]</p>
+</li><li>
+<p>all_tags [String] True if the permission should use all tags</p>
+</li><li>
+<p>all_verbs [String] True if the permission should use all verbs</p>
+</li><li>
+<p>description [String, nil]</p>
+</li><li>
+<p>name [String]</p>
+</li><li>
+<p>tags [String] Array of tag ids</p>
+</li><li>
+<p>type [String] Name of a resource or &amp;#8216;all&amp;#8217;</p>
+</li><li>
+<p>verbs [String] Array of permission verbs</p>
+</li></ul>
 </div>
           
         </li>
@@ -506,12 +457,12 @@
       <pre class="lines">
 
 
-43
-44
-45</pre>
+46
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/permission.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/permission.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -642,12 +593,12 @@
       <pre class="lines">
 
 
-53
-54
-55</pre>
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/permission.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/permission.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -743,7 +694,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>filter by all_flags flag</p>
+<p>Filter by all_flags flag</p>
 </div>
           
         </li>
@@ -756,7 +707,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>filter by all_verbs flag</p>
+<p>Filter by all_verbs flag</p>
 </div>
           
         </li>
@@ -769,7 +720,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>filter by description</p>
+<p>Filter by description</p>
 </div>
           
         </li>
@@ -782,7 +733,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>filter by name</p>
+<p>Filter by name</p>
 </div>
           
         </li>
@@ -973,7 +924,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 31 13:03:41 2013 by
+  Generated on Fri Nov  1 10:42:19 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-1.9.3).
 </div>

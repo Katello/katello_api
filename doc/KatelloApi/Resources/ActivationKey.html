@@ -547,12 +547,12 @@
       <pre class="lines">
 
 
-62
-63
-64</pre>
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/activation_key.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/activation_key.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_pool'>add_pool</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -635,24 +635,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>Part of
-<tt>/api/organizations/:organization_id/activation_keys/:id/system_groups</tt>
-path</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">organization_id</span>
-          <span class="type">(<tt>Object</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>Part of
-<tt>/api/organizations/:organization_id/activation_keys/:id/system_groups</tt>
-path</p>
+<p>Part of <tt>/api/activation_keys/:id/system_groups</tt> path</p>
 </div>
           
         </li>
@@ -687,12 +670,12 @@ path</p>
       <pre class="lines">
 
 
+90
 91
-92
-93</pre>
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/activation_key.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/activation_key.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_system_groups'>add_system_groups</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -790,11 +773,11 @@ path</p>
             &mdash; <div class='inline'>
 <p>allowed keys are:</p>
 <ul><li>
-<p>content_view_id [String, nil]  content view id</p>
+<p>content_view_id [String] Content view id</p>
 </li><li>
 <p>description [String, nil]</p>
 </li><li>
-<p>name [String]  activation key identifier (alphanum characters, space, _ and
+<p>name [String] Activation key identifier (alphanum characters, space, _ and
 -)</p>
 </li></ul>
 </div>
@@ -954,12 +937,12 @@ path</p>
       <pre class="lines">
 
 
-81
-82
-83</pre>
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/activation_key.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/activation_key.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1068,7 +1051,7 @@ path</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>lists by activation key name</p>
+<p>Lists by activation key name</p>
 </div>
           
         </li>
@@ -1239,12 +1222,12 @@ path</p>
       <pre class="lines">
 
 
-72
-73
-74</pre>
+81
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/activation_key.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/activation_key.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_pool'>remove_pool</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1327,24 +1310,7 @@ path</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Part of
-<tt>/api/organizations/:organization_id/activation_keys/:id/system_groups</tt>
-path</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">organization_id</span>
-          <span class="type">(<tt>Object</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>Part of
-<tt>/api/organizations/:organization_id/activation_keys/:id/system_groups</tt>
-path</p>
+<p>Part of <tt>/api/activation_keys/:id/system_groups</tt> path</p>
 </div>
           
         </li>
@@ -1379,12 +1345,12 @@ path</p>
       <pre class="lines">
 
 
-101
-102
-103</pre>
+99
+100
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/activation_key.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/activation_key.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_system_groups'>remove_system_groups</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1605,13 +1571,13 @@ path</p>
             &mdash; <div class='inline'>
 <p>allowed keys are:</p>
 <ul><li>
-<p>content_view_id [String, nil]  content view id</p>
+<p>content_view_id [String] Content view id</p>
 </li><li>
 <p>environment_id [String, nil]</p>
 </li><li>
 <p>description [String, nil]</p>
 </li><li>
-<p>name [String]  activation key identifier (alphanum characters, space, _ and
+<p>name [String] Activation key identifier (alphanum characters, space, _ and
 -)</p>
 </li></ul>
 </div>
@@ -1668,7 +1634,7 @@ path</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 31 13:03:42 2013 by
+  Generated on Fri Nov  1 10:42:22 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-1.9.3).
 </div>

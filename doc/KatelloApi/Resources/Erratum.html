@@ -344,7 +344,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>id of environment containing the errata.</p>
+<p>The environment containing the errata.</p>
 </div>
           
         </li>
@@ -357,33 +357,20 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>the product which contains the errata.</p>
+<p>The product which contains errata.</p>
 </div>
           
         </li>
       
         <li>
           <span class="name">repository_id</span>
-          <span class="type">(<tt>Object</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>Part of <tt>/api/repositories/:repository_id/errata</tt> path</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">repoid</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>id of repository containing the errata.</p>
+<p>The repository which contains errata.</p>
 </div>
           
         </li>
@@ -396,7 +383,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>severity of errata. usually one of: critical, important, moderate, low.
+<p>Severity of errata. usually one of: critical, important, moderate, low.
 case insensitive.</p>
 </div>
           
@@ -410,7 +397,7 @@ case insensitive.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>type of errata. usually one of: security, bugfix, enhancement. case
+<p>Type of errata. usually one of: security, bugfix, enhancement. case
 insensitive.</p>
 </div>
           
@@ -446,12 +433,12 @@ insensitive.</p>
       <pre class="lines">
 
 
+17
 18
-19
-20</pre>
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/erratum.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/erratum.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -582,12 +569,12 @@ insensitive.</p>
       <pre class="lines">
 
 
+27
 28
-29
-30</pre>
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/erratum.rb', line 28</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/erratum.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -602,7 +589,7 @@ insensitive.</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 31 13:03:39 2013 by
+  Generated on Fri Nov  1 10:42:18 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-1.9.3).
 </div>
