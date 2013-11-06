@@ -3,9 +3,9 @@
 == Summary
 
   require 'katello_api'
-  envs = KatelloApi::Resources::Environment.new(:base_url => 'https://localhost:3000/katello',
+  envs = KatelloApi::Resources::Environment.new(:base_url => 'https://localhost/katello',
                                                 :username => 'admin',
-                                                :password => 'changeme')
+                                                :password => 'admin')
 
   data, raw_response = envs.index(:organization_id => "ACME_Corporation")
   pp data # parsed data of the response
@@ -39,7 +39,7 @@ Only files under +lib/katello_api/resources+ are touched by the generator.
 
 === Authentication
 
-Katello API supports authentication with username/password and OAuth.
+Katello API supports authentication with username/password or OAuth.
 For use of OAuth with the bindings you only have to change the params
 
   envs = KatelloApi::Resources::Environment.new(:base_url => 'https://localhost:3000/katello',
