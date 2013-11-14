@@ -6,7 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Product numeric identifier
+      # @option params [String] id  product numeric identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -15,10 +15,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Product numeric identifier
-      # @option params [String] gpg_key_id Identifier of the gpg key
-      # @option params [String] provider_id Provider the product belongs to
-      # @option params [String] description Product description
+      # @option params [String] id  product numeric identifier 
+      # @option params [String] gpg_key_id  identifier of the gpg key 
+      # @option params [String] provider_id  provider the product belongs to 
+      # @option params [String] description  product description 
       # @option params [String] label
       # @option params [String] name
       #
@@ -29,13 +29,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] limit Number of results to return
-      # @option params [String] offset Starting location to retrieve data from
-      # @option params [String] search Search string
+      # @option params [String] limit  number of results to return 
+      # @option params [String] offset  starting location to retrieve data from 
+      # @option params [String] search  search string 
       # @option params [Hash] sort
       #   allowed keys are:
-      #   * by [String] Field to sort the results on
-      #   * order [String] How to order the sorted results (e.g. asc for ascending)
+      #   * by [String]  field to sort the results on 
+      #   * order [String]  how to order the sorted results (e.g. asc for ascending) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -44,7 +44,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Product numeric identifier
+      # @option params [String] id  product numeric identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -53,12 +53,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Product numeric identifier
-      # @option params [String] content_view_id Find repos in content view instead of default content view
-      # @option params [String] environment_id Environment identifier
-      # @option params [String] organization_id Organization identifier
-      # @option params [String] include_disabled Set to true if you want to list disabled repositories
-      # @option params [String] name Repository identifier
+      # @option params [String] id  product numeric identifier 
+      # @option params [String] content_view_id  find repos in content view instead of default content view 
+      # @option params [String] environment_id  environment identifier 
+      # @option params [String] organization_id  organization identifier 
+      # @option params [String] include_disabled  set to true if you want to list disabled repositories 
+      # @option params [String] name  repository identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -67,9 +67,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Product numeric identifier
-      # @option params [String] organization_id Organization identifier
-      # @option params [String] plan_id Plan numeric identifier
+      # @option params [String] id  product numeric identifier 
+      # @option params [String] organization_id  organization identifier 
+      # @option params [String] plan_id  plan numeric identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -78,9 +78,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Product numeric identifier
-      # @option params [String] organization_id Organization identifier
-      # @option params [String] plan_id Plan numeric identifier
+      # @option params [String] id  product numeric identifier 
+      # @option params [String] organization_id  organization identifier 
+      # @option params [String] plan_id  plan numeric identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -89,9 +89,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] gpg_key_id Identifier of the gpg key
-      # @option params [String] provider_id Provider the product belongs to
-      # @option params [String] description Product description
+      # @option params [String] gpg_key_id  identifier of the gpg key 
+      # @option params [String] provider_id  provider the product belongs to 
+      # @option params [String] description  product description 
       # @option params [String] label
       # @option params [String] name
       #

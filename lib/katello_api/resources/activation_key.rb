@@ -8,7 +8,7 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] environment_id Part of +/api/environments/:environment_id/activation_keys+ path
       # @option params [Object] organization_id Part of +/api/organizations/:organization_id/activation_keys+ path
-      # @option params [String] name Lists by activation key name
+      # @option params [String] name  lists by activation key name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -29,9 +29,9 @@ module KatelloApi
       # @option params [Object] environment_id Part of +/api/environments/:environment_id/activation_keys+ path
       # @option params [Hash] activation_key
       #   allowed keys are:
-      #   * content_view_id [String] Content view id
+      #   * content_view_id [String]  content view id 
       #   * description [String, nil]
-      #   * name [String] Activation key identifier (alphanum characters, space, _ and -)
+      #   * name [String]  activation key identifier (alphanum characters, space, _ and -) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -43,10 +43,10 @@ module KatelloApi
       # @option params [Object] id Part of +/api/activation_keys/:id+ path
       # @option params [Hash] activation_key
       #   allowed keys are:
-      #   * content_view_id [String] Content view id
+      #   * content_view_id [String]  content view id 
       #   * environment_id [String, nil]
       #   * description [String, nil]
-      #   * name [String] Activation key identifier (alphanum characters, space, _ and -)
+      #   * name [String]  activation key identifier (alphanum characters, space, _ and -) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

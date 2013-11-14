@@ -9,15 +9,15 @@ module KatelloApi
       # @option params [Object] environment_id Part of +/api/environments/:environment_id/distributors+ path
       # @option params [Hash] distributor
       #   allowed keys are:
-      #   * capabilities [String, nil] List of subscription capabilities
-      #   * facts [Hash, nil] Key-value hash of distributor-specific facts
-      #   * installedProducts [String, nil] List of products installed on the distributor
-      #   * location [String, nil] Physical of the distributor
-      #   * name [String] Name of the distributor
-      #   * releaseVer [String, nil] Release of the os. the $releasever variable in repo url will be replaced with this value
-      #   * serviceLevel [String, nil] A service level for auto-healing process, e.g. self-support
-      #   * type [String] Type of the distributor, it should always be &#8216;distributor&#8217;
-      #   * version [String, nil] Version of the distributor. defaults to the latest if not given.
+      #   * capabilities [Array, nil]  list of subscription capabilities 
+      #   * facts [Hash, nil]  key-value hash of distributor-specific facts 
+      #   * installedProducts [Array, nil]  list of products installed on the distributor 
+      #   * location [String, nil]  physical of the distributor 
+      #   * name [String]  name of the distributor 
+      #   * releaseVer [String, nil]  release of the os. the $releasever variable in repo url will be replaced with this value 
+      #   * serviceLevel [String, nil]  a service level for auto-healing process, e.g. self-support 
+      #   * type [String]  type of the distributor, it should always be ‘distributor’ 
+      #   * version [String, nil]  version of the distributor. defaults to the latest if not given. 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -27,16 +27,16 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] id Part of +/api/distributors/:id+ path
-      # @option params [String] capabilities For backwards capability with red hat hosted candlepin - list of subscription capabilities
+      # @option params [Array] capabilities  for backwards capability with red hat hosted candlepin - list of subscription capabilities 
       # @option params [Hash] distributor
       #   allowed keys are:
-      #   * capabilities [String, nil] List of subscription capabilities
-      #   * facts [Hash, nil] Key-value hash of distributor-specific facts
-      #   * installedProducts [String, nil] List of products installed on the distributor
-      #   * location [String, nil] Physical of the distributor
-      #   * name [String] Name of the distributor
-      #   * releaseVer [String, nil] Release of the os. the $releasever variable in repo url will be replaced with this value
-      #   * serviceLevel [String, nil] A service level for auto-healing process, e.g. self-support
+      #   * capabilities [Array, nil]  list of subscription capabilities 
+      #   * facts [Hash, nil]  key-value hash of distributor-specific facts 
+      #   * installedProducts [Array, nil]  list of products installed on the distributor 
+      #   * location [String, nil]  physical of the distributor 
+      #   * name [String]  name of the distributor 
+      #   * releaseVer [String, nil]  release of the os. the $releasever variable in repo url will be replaced with this value 
+      #   * serviceLevel [String, nil]  a service level for auto-healing process, e.g. self-support 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -47,8 +47,8 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] environment_id Part of +/api/environments/:environment_id/distributors+ path
       # @option params [Object] organization_id Part of +/api/organizations/:organization_id/distributors+ path
-      # @option params [String] pool_id Filter distributors by subscribed pool
-      # @option params [String] name Filter distributors by name
+      # @option params [String] pool_id  filter distributors by subscribed pool 
+      # @option params [String] name  filter distributors by name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -57,7 +57,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Uuid of the distributor
+      # @option params [String] id  uuid of the distributor 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -66,7 +66,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Uuid of the distributor
+      # @option params [String] id  uuid of the distributor 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -75,7 +75,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Uuid of the distributor
+      # @option params [String] id  uuid of the distributor 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -84,7 +84,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Uuid of the distributor
+      # @option params [String] id  uuid of the distributor 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -104,8 +104,8 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] organization_id Part of +/api/organizations/:organization_id/distributors/tasks+ path
-      # @option params [String] distributor_name Name of the distributor
-      # @option params [String] distributor_uuid Uuid of the distributor
+      # @option params [String] distributor_name  name of the distributor 
+      # @option params [String] distributor_uuid  uuid of the distributor 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -114,7 +114,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Uuid of the task
+      # @option params [String] id  uuid of the task 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

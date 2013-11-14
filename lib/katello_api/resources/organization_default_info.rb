@@ -6,12 +6,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] informable_id Resource identifier
+      # @option params [String] informable_id  resource identifier 
       # @option params [Object] organization_id Part of +/api/organizations/:organization_id/default_info/:informable_type+ path
       # @option params [Hash] default_info
       #   allowed keys are:
       #   * keyname [String]
-      # @option params [String] informable_type Name of the resource
+      # @option params [String] informable_type  name of the resource 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -20,10 +20,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] informable_id Resource identifier
+      # @option params [String] informable_id  resource identifier 
       # @option params [Object] organization_id Part of +/api/organizations/:organization_id/default_info/:informable_type/:informable_id/:keyname+ path
-      # @option params [String] informable_type Name of the resource
-      # @option params [String] keyname Custom info key
+      # @option params [String] informable_type  name of the resource 
+      # @option params [String] keyname  custom info key 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -32,10 +32,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] informable_id Resource identifier
+      # @option params [String] informable_id  resource identifier 
       # @option params [Object] organization_id Part of +/api/organizations/:organization_id/default_info/:informable_type/apply+ path
-      # @option params [String] async Directive to run this asynchronously or not
-      # @option params [String] informable_type Name of the resource
+      # @option params [String] async  directive to run this asynchronously or not 
+      # @option params [String] informable_type  name of the resource 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

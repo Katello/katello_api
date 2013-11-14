@@ -6,8 +6,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id Organization identifier
-      # @option params [String] name System group name to filter by
+      # @option params [String] organization_id  organization identifier 
+      # @option params [String] name  system group name to filter by 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -16,7 +16,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
+      # @option params [String] id  id of the system group 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -25,12 +25,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
+      # @option params [String] id  id of the system group 
       # @option params [Hash] system_group
       #   allowed keys are:
       #   * description [String, nil]
-      #   * max_systems [Numeric, nil] Maximum number of systems in the group
-      #   * name [String] System group name
+      #   * max_systems [Numeric, nil]  maximum number of systems in the group 
+      #   * name [String]  system group name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -39,7 +39,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
+      # @option params [String] id  id of the system group 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -48,10 +48,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
+      # @option params [String] id  id of the system group 
       # @option params [Hash] system_group
       #   allowed keys are:
-      #   * system_ids [String] Array of system ids
+      #   * system_ids [Array]  array of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -60,10 +60,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
+      # @option params [String] id  id of the system group 
       # @option params [Hash] system_group
       #   allowed keys are:
-      #   * system_ids [String] Array of system ids
+      #   * system_ids [Array]  array of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -72,7 +72,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
+      # @option params [String] id  id of the system group 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -81,8 +81,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
-      # @option params [String] job_id Id of a job for filtering
+      # @option params [String] id  id of the system group 
+      # @option params [String] job_id  id of a job for filtering 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -91,12 +91,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id Organization identifier
+      # @option params [String] organization_id  organization identifier 
       # @option params [Hash] system_group
       #   allowed keys are:
       #   * description [String, nil]
-      #   * max_systems [Numeric, nil] Maximum number of systems in the group
-      #   * name [String] System group name
+      #   * max_systems [Numeric, nil]  maximum number of systems in the group 
+      #   * name [String]  system group name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -105,12 +105,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
+      # @option params [String] id  id of the system group 
       # @option params [Hash] system_group
       #   allowed keys are:
       #   * description [String, nil]
-      #   * max_systems [Numeric, nil] Maximum number of systems in the group
-      #   * new_name [String] System group name
+      #   * max_systems [Numeric, nil]  maximum number of systems in the group 
+      #   * new_name [String]  system group name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -119,7 +119,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
+      # @option params [String] id  id of the system group 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -128,7 +128,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
+      # @option params [String] id  id of the system group 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -137,12 +137,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the system group
-      # @option params [String] organization_id Organization identifier
+      # @option params [String] id  id of the system group 
+      # @option params [String] organization_id  organization identifier 
       # @option params [Hash] system_group
       #   allowed keys are:
-      #   * content_view_id [String] Id of the content view to set systems to
-      #   * environment_id [String] Id of the enviornment to set systems to
+      #   * content_view_id [String]  id of the content view to set systems to 
+      #   * environment_id [String]  id of the enviornment to set systems to 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

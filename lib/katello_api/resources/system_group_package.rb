@@ -6,10 +6,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id Oranization identifier
-      # @option params [String] system_group_id System_group identifier
-      # @option params [String] groups List of package group names
-      # @option params [String] packages List of package names
+      # @option params [String] organization_id  oranization identifier 
+      # @option params [String] system_group_id  system_group identifier 
+      # @option params [Array] groups  list of package group names 
+      # @option params [Array] packages  list of package names 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -18,10 +18,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id Oranization identifier
-      # @option params [String] system_group_id System_group identifier
-      # @option params [String] groups List of package group names
-      # @option params [String] packages List of package names
+      # @option params [String] organization_id  oranization identifier 
+      # @option params [String] system_group_id  system_group identifier 
+      # @option params [Array] groups  list of package group names 
+      # @option params [Array] packages  list of package names 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -30,10 +30,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id Oranization identifier
-      # @option params [String] system_group_id System_group identifier
-      # @option params [String] groups List of package group names
-      # @option params [String] packages List of package names
+      # @option params [String] organization_id  oranization identifier 
+      # @option params [String] system_group_id  system_group identifier 
+      # @option params [Array] groups  list of package group names 
+      # @option params [Array] packages  list of package names 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

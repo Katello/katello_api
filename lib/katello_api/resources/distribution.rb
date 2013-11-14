@@ -16,7 +16,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] id Part of +/api/repositories/:repository_id/distributions/:id+ path
-      # @option params [String] repository_id Repository numeric id
+      # @option params [String] repository_id  repository numeric id 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

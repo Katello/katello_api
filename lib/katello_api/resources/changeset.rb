@@ -7,7 +7,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] environment_id Part of +/api/environments/:environment_id/changesets+ path
-      # @option params [String] name An optional changeset name to filter upon
+      # @option params [String] name  an optional changeset name to filter upon 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -28,8 +28,8 @@ module KatelloApi
       # @option params [Object] id Part of +/api/changesets/:id+ path
       # @option params [Hash] changeset
       #   allowed keys are:
-      #   * description [String, nil] The description of the changeset
-      #   * name [String] The name of the changeset
+      #   * description [String, nil]  the description of the changeset 
+      #   * name [String]  the name of the changeset 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -41,8 +41,8 @@ module KatelloApi
       # @option params [Object] environment_id Part of +/api/environments/:environment_id/changesets+ path
       # @option params [Hash] changeset
       #   allowed keys are:
-      #   * description [String, nil] The description of the changeset
-      #   * name [String] The name of the changeset
+      #   * description [String, nil]  the description of the changeset 
+      #   * name [String]  the name of the changeset 
       #   * type [String]
       #
       # @param [Hash] headers additional http headers
