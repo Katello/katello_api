@@ -30,7 +30,7 @@ module KatelloApi
 
     def initialize(config, options = {})
       headers = { :content_type => 'application/json',
-                  :accept => "application/json;version=#{API_VERSION}" }
+                  :accept => "application/json,version=#{API_VERSION}" }
 
       @client = RestClient::Resource.new(
           config[:base_url],
