@@ -9,7 +9,7 @@ module KatelloApi
       # @option params [Object] role_id Part of +/api/roles/:role_id/ldap_groups+ path
       # @option params [Hash] ldap_group
       #   allowed keys are:
-      #   * name [String] Name of the ldap group
+      #   * name [String]  name of the ldap group 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -18,8 +18,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Ldap group (name)
-      # @option params [String] role_id Role identifier
+      # @option params [String] id  ldap group (name) 
+      # @option params [String] role_id  role identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -28,7 +28,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] role_id Role identifier
+      # @option params [String] role_id  role identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

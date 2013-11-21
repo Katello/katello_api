@@ -6,10 +6,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Content view id
-      # @option params [String] organization_id Organization identifier
-      # @option params [String] label Content view label
-      # @option params [String] name Content view name
+      # @option params [String] id  content view id 
+      # @option params [String] organization_id  organization identifier 
+      # @option params [String] label  content view label 
+      # @option params [String] name  content view name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -18,12 +18,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id Organization identifier
+      # @option params [String] organization_id  organization identifier 
       # @option params [Hash] content_view_definition
       #   allowed keys are:
-      #   * description [String, nil] Definition description
-      #   * label [String] Content view identifier
-      #   * name [String] Content view definition name
+      #   * description [String, nil]  definition description 
+      #   * label [String]  content view identifier 
+      #   * name [String]  content view definition name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -32,12 +32,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Definition identifier
+      # @option params [String] id  definition identifier 
       # @option params [Hash] content_view_definition
       #   allowed keys are:
-      #   * description [String, nil] Definition description
-      #   * name [String] Content view definition name
-      # @option params [String] org Organization name
+      #   * description [String, nil]  definition description 
+      #   * name [String]  content view definition name 
+      # @option params [String] org  organization name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -46,7 +46,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Definition identifier
+      # @option params [String] id  definition identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -55,10 +55,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Definition identifier
-      # @option params [String] description Description for the new content view
-      # @option params [String] label Label for the new content view
-      # @option params [String] name Name for the new content view
+      # @option params [String] id  definition identifier 
+      # @option params [String] description  description for the new content view 
+      # @option params [String] label  label for the new content view 
+      # @option params [String] name  name for the new content view 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -67,7 +67,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Definition identifier
+      # @option params [String] id  definition identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -76,12 +76,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Definition identifier
+      # @option params [String] id  definition identifier 
       # @option params [Hash] content_view_definition
       #   allowed keys are:
-      #   * description [String, nil] Definition description
-      #   * label [String] Content view identifier
-      #   * name [String] Content view definition name
+      #   * description [String, nil]  definition description 
+      #   * label [String]  content view identifier 
+      #   * name [String]  content view definition name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -90,7 +90,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Definition identifier
+      # @option params [String] id  definition identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -99,8 +99,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id Definition identifier
-      # @option params [String] views Updated list of view ids
+      # @option params [String] content_view_definition_id  definition identifier 
+      # @option params [Array] views  updated list of view ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -109,7 +109,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id Definition id
+      # @option params [String] content_view_definition_id  definition id 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -118,8 +118,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id Content view definition identifier
-      # @option params [String] repos Updated list of repo ids
+      # @option params [String] content_view_definition_id  content view definition identifier 
+      # @option params [Array] repos  updated list of repo ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -128,8 +128,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id Content view definition identifier
-      # @option params [String] organization_id Organization identifier
+      # @option params [String] content_view_definition_id  content view definition identifier 
+      # @option params [String] organization_id  organization identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -138,8 +138,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id Content view definition identifier
-      # @option params [String] products Updated list of products
+      # @option params [String] content_view_definition_id  content view definition identifier 
+      # @option params [Array] products  updated list of products 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -148,7 +148,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id Content view definition identifier
+      # @option params [String] content_view_definition_id  content view definition identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

@@ -6,7 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id Id of the content view definition
+      # @option params [String] content_view_definition_id  id of the content view definition 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -15,10 +15,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id Id of the content view definition
+      # @option params [String] content_view_definition_id  id of the content view definition 
       # @option params [Hash] filter
       #   allowed keys are:
-      #   * name [String] Name of the filter
+      #   * name [String]  name of the filter 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -27,8 +27,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Name of the filter
-      # @option params [String] content_view_definition_id Id of the content view definition
+      # @option params [String] id  name of the filter 
+      # @option params [String] content_view_definition_id  id of the content view definition 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -37,8 +37,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Name of the filter
-      # @option params [String] content_view_definition_id Id of the content view definition
+      # @option params [String] id  name of the filter 
+      # @option params [String] content_view_definition_id  id of the content view definition 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -47,8 +47,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Name of the filter
-      # @option params [String] content_view_definition_id Id of the content view definition
+      # @option params [String] id  name of the filter 
+      # @option params [String] content_view_definition_id  id of the content view definition 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -57,9 +57,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Name of the filter
-      # @option params [String] content_view_definition_id Content view definition identifier
-      # @option params [String] products Updated list of product ids
+      # @option params [String] id  name of the filter 
+      # @option params [String] content_view_definition_id  content view definition identifier 
+      # @option params [Array] products  updated list of product ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -68,8 +68,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Name of the filter
-      # @option params [String] content_view_definition_id Id of the content view definition
+      # @option params [String] id  name of the filter 
+      # @option params [String] content_view_definition_id  id of the content view definition 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -78,9 +78,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Name of the filter
-      # @option params [String] content_view_definition_id Id of the content view definition
-      # @option params [String] repos Updated list of repo ids
+      # @option params [String] id  name of the filter 
+      # @option params [String] content_view_definition_id  id of the content view definition 
+      # @option params [Array] repos  updated list of repo ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

@@ -6,13 +6,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id Id of the content view definition
-      # @option params [String] filter_id Name of the filter
+      # @option params [String] content_view_definition_id  id of the content view definition 
+      # @option params [String] filter_id  name of the filter 
       # @option params [Hash] rule
       #   allowed keys are:
-      #   * content [String] Content type of the rule
-      #   * inclusion [String, nil] True if its an includes rule, false otherwise. defauls to true
-      #   * rule [String] A specification of the rule in json format (required).
+      #   * content [String]  content type of the rule 
+      #   * inclusion [String, nil]  true if its an includes rule, false otherwise. defauls to true 
+      #   * rule [String]  a specification of the rule in json format (required). 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -21,9 +21,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Id of the filter rule
-      # @option params [String] content_view_definition_id Id of the content view definition
-      # @option params [String] filter_id Name of the filter
+      # @option params [String] id  id of the filter rule 
+      # @option params [String] content_view_definition_id  id of the content view definition 
+      # @option params [String] filter_id  name of the filter 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

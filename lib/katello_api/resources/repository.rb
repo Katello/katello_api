@@ -6,13 +6,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] product_id Product the repository belongs to
-      # @option params [String] content_type Type of repo (either &#8216;yum&#8217; or &#8216;puppet&#8217;, defaults to &#8216;yum&#8217;)
-      # @option params [String] enabled Flag that enables/disables the repository
-      # @option params [String] gpg_key_name Name of a gpg key that will be assigned to the new repository
+      # @option params [String] product_id  product the repository belongs to 
+      # @option params [String] content_type  type of repo (either ‘yum’ or ‘puppet’, defaults to ‘yum’) 
+      # @option params [String] enabled  flag that enables/disables the repository 
+      # @option params [String] gpg_key_name  name of a gpg key that will be assigned to the new repository 
       # @option params [String] label
       # @option params [String] name
-      # @option params [String] url Repository source url
+      # @option params [String] url  repository source url 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -21,7 +21,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Repository id
+      # @option params [String] id  repository id 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -30,8 +30,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Repository id
-      # @option params [String] gpg_key_id Id of a gpg key that will be assigned to this repository
+      # @option params [String] id  repository id 
+      # @option params [String] gpg_key_id  id of a gpg key that will be assigned to this repository 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -85,18 +85,18 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] environment_id Id of an environment to show repositories in
-      # @option params [String] organization_id Id of an organization to show repositories in
-      # @option params [String] product_id Id of a product to show repositories of
-      # @option params [String] enabled Limit to only enabled repositories
-      # @option params [String] library Show repositories in library and the default content view
-      # @option params [String] limit Number of results to return
-      # @option params [String] offset Starting location to retrieve data from
-      # @option params [String] search Search string
+      # @option params [String] environment_id  id of an environment to show repositories in 
+      # @option params [String] organization_id  id of an organization to show repositories in 
+      # @option params [String] product_id  id of a product to show repositories of 
+      # @option params [String] enabled  limit to only enabled repositories 
+      # @option params [String] library  show repositories in library and the default content view 
+      # @option params [String] limit  number of results to return 
+      # @option params [String] offset  starting location to retrieve data from 
+      # @option params [String] search  search string 
       # @option params [Hash] sort
       #   allowed keys are:
-      #   * by [String] Field to sort the results on
-      #   * order [String] How to order the sorted results (e.g. asc for ascending)
+      #   * by [String]  field to sort the results on 
+      #   * order [String]  how to order the sorted results (e.g. asc for ascending) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -105,7 +105,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Repository id
+      # @option params [String] id  repository id 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

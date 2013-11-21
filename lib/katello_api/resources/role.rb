@@ -58,7 +58,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id With this option specified the listed tags are scoped to the organization.
+      # @option params [String] organization_id  with this option specified the listed tags are scoped to the organization. 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

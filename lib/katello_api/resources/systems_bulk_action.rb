@@ -6,8 +6,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] system_group_ids List of system group ids
-      # @option params [String] ids List of system ids
+      # @option params [Array] system_group_ids  list of system group ids 
+      # @option params [Array] ids  list of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -16,8 +16,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] system_group_ids List of system group ids
-      # @option params [String] ids List of system ids
+      # @option params [Array] system_group_ids  list of system group ids 
+      # @option params [Array] ids  list of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -26,9 +26,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content List of content (e.g. package names, package group names or errata ids)
-      # @option params [String] content_type The type of content. the following types are supported: &#8216;package&#8217;, &#8216;package_group&#8217; and &#8216;errata&#8217;.
-      # @option params [String] ids List of system ids
+      # @option params [Array] content  list of content (e.g. package names, package group names or errata ids) 
+      # @option params [String] content_type  the type of content. the following types are supported: ‘package’, ‘package_group’ and ‘errata’. 
+      # @option params [Array] ids  list of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -37,9 +37,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content List of content (e.g. package or package group names)
-      # @option params [String] content_type The type of content. the following types are supported: &#8216;package&#8217; and &#8216;package_group.
-      # @option params [String] ids List of system ids
+      # @option params [Array] content  list of content (e.g. package or package group names) 
+      # @option params [String] content_type  the type of content. the following types are supported: ‘package’ and ‘package_group. 
+      # @option params [Array] ids  list of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -48,9 +48,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content List of content (e.g. package or package group names)
-      # @option params [String] content_type The type of content. the following types are supported: &#8216;package&#8217; and &#8216;package_group.
-      # @option params [String] ids List of system ids
+      # @option params [Array] content  list of content (e.g. package or package group names) 
+      # @option params [String] content_type  the type of content. the following types are supported: ‘package’ and ‘package_group. 
+      # @option params [Array] ids  list of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -59,7 +59,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] ids List of system ids
+      # @option params [Array] ids  list of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

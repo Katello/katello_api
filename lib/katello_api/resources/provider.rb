@@ -6,13 +6,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] limit Number of results to return
-      # @option params [String] offset Starting location to retrieve data from
-      # @option params [String] search Search string
+      # @option params [String] limit  number of results to return 
+      # @option params [String] offset  starting location to retrieve data from 
+      # @option params [String] search  search string 
       # @option params [Hash] sort
       #   allowed keys are:
-      #   * by [String] Field to sort the results on
-      #   * order [String] How to order the sorted results (e.g. asc for ascending)
+      #   * by [String]  field to sort the results on 
+      #   * order [String]  how to order the sorted results (e.g. asc for ascending) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -21,7 +21,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Provider numeric identifier
+      # @option params [String] id  provider numeric identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -30,7 +30,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] name Provider name
+      # @option params [String] name  provider name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -39,12 +39,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Provider numeric identifier
+      # @option params [String] id  provider numeric identifier 
       # @option params [Hash] provider
       #   allowed keys are:
-      #   * description [String, nil] Provider description
-      #   * name [String] Provider name
-      #   * repository_url [String, nil] Repository url
+      #   * description [String, nil]  provider description 
+      #   * name [String]  provider name 
+      #   * repository_url [String, nil]  repository url 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -53,7 +53,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Provider numeric identifier
+      # @option params [String] id  provider numeric identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -62,8 +62,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Provider numeric identifier
-      # @option params [String] include_marketing Include marketing products in results
+      # @option params [String] id  provider numeric identifier 
+      # @option params [String] include_marketing  include marketing products in results 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -72,9 +72,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Provider numeric identifier
-      # @option params [String] force Force import
-      # @option params [String] import Manifest file
+      # @option params [String] id  provider numeric identifier 
+      # @option params [String] force  force import 
+      # @option params [String] import  manifest file 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -83,7 +83,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Provider numeric identifier
+      # @option params [String] id  provider numeric identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -92,7 +92,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Provider numeric identifier
+      # @option params [String] id  provider numeric identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -101,7 +101,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Provider numeric identifier
+      # @option params [String] id  provider numeric identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

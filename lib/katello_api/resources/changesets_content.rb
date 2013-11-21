@@ -6,10 +6,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] changeset_id Id of the product to remove
+      # @option params [String] changeset_id  id of the product to remove 
       # @option params [Hash] content_view
       #   allowed keys are:
-      #   * id [String] Id of the content view to add
+      #   * id [String]  id of the content view to add 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -19,7 +19,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] changeset_id
-      # @option params [String] content_view_id Id of the content view to remove
+      # @option params [String] content_view_id  id of the content view to remove 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

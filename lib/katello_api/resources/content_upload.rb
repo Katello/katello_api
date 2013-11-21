@@ -6,7 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] repo_id Repository id
+      # @option params [String] repo_id  repository id 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -15,10 +15,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Upload request id
-      # @option params [String] repo_id Repository id
-      # @option params [String] content File contents
-      # @option params [String] offset The offset at which pulp will store the file contents
+      # @option params [String] id  upload request id 
+      # @option params [String] repo_id  repository id 
+      # @option params [String] content  file contents 
+      # @option params [String] offset  the offset at which pulp will store the file contents 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -27,8 +27,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id Upload request id
-      # @option params [String] repo_id Repository id
+      # @option params [String] id  upload request id 
+      # @option params [String] repo_id  repository id 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -37,8 +37,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] repo_id Repository id
-      # @option params [String] uploads Array of uploads to import
+      # @option params [String] repo_id  repository id 
+      # @option params [Array] uploads  array of uploads to import 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -48,7 +48,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id
-      # @option params [String] content File contents
+      # @option params [String] content  file contents 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

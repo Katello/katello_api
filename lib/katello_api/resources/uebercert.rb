@@ -7,7 +7,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] organization_id Part of +/api/organizations/:organization_id/uebercert+ path
-      # @option params [String] regenerate When set to &#8216;true&#8217; certificate will be re-issued
+      # @option params [String] regenerate  when set to ‘true’ certificate will be re-issued 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

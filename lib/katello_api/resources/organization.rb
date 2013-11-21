@@ -7,8 +7,8 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] description
-      # @option params [String] label Label for filtering
-      # @option params [String] name Name for the organization
+      # @option params [String] label  label for filtering 
+      # @option params [String] name  name for the organization 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -29,7 +29,7 @@ module KatelloApi
       # @option params [Hash] organization
       #   allowed keys are:
       #   * description [String, nil]
-      #   * name [String] Name for the organization
+      #   * name [String]  name for the organization 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -42,8 +42,8 @@ module KatelloApi
       # @option params [Hash] organization
       #   allowed keys are:
       #   * description [String]
-      #   * name [String] Name for the organization
-      #   * service_level [String] Default service level (sla)
+      #   * name [String]  name for the organization 
+      #   * service_level [String]  default service level (sla) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -52,8 +52,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] label Organization label
-      # @option params [String] url Base url to perform repo discovery on
+      # @option params [String] label  organization label 
+      # @option params [String] url  base url to perform repo discovery on 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -80,8 +80,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] label Organization label
-      # @option params [String] url Base url to perform repo discovery on
+      # @option params [String] label  organization label 
+      # @option params [String] url  base url to perform repo discovery on 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

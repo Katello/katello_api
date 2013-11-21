@@ -6,9 +6,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] disabled Filter by disabled flag
-      # @option params [String] email Filter by email
-      # @option params [String] username Filter by username
+      # @option params [String] disabled  filter by disabled flag 
+      # @option params [String] email  filter by email 
+      # @option params [String] username  filter by username 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

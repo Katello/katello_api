@@ -575,28 +575,27 @@
             &mdash; <div class='inline'>
 <p>allowed keys are:</p>
 <ul><li>
-<p>capabilities [String, nil] List of subscription capabilities</p>
+<p>capabilities [Array, nil]  list of subscription capabilities</p>
 </li><li>
-<p>facts [Hash, nil] Key-value hash of distributor-specific facts</p>
+<p>facts [Hash, nil]  key-value hash of distributor-specific facts</p>
 </li><li>
-<p>installedProducts [String, nil] List of products installed on the
+<p>installedProducts [Array, nil]  list of products installed on the
 distributor</p>
 </li><li>
-<p>location [String, nil] Physical of the distributor</p>
+<p>location [String, nil]  physical of the distributor</p>
 </li><li>
-<p>name [String] Name of the distributor</p>
+<p>name [String]  name of the distributor</p>
 </li><li>
-<p>releaseVer [String, nil] Release of the os. the $releasever variable in
+<p>releaseVer [String, nil]  release of the os. the $releasever variable in
 repo url will be replaced with this value</p>
 </li><li>
-<p>serviceLevel [String, nil] A service level for auto-healing process, e.g.
+<p>serviceLevel [String, nil]  a service level for auto-healing process, e.g.
 self-support</p>
 </li><li>
-<p>type [String] Type of the distributor, it should always be
-&amp;#8216;distributor&amp;#8217;</p>
+<p>type [String]  type of the distributor, it should always be ‘distributor’</p>
 </li><li>
-<p>version [String, nil] Version of the distributor. defaults to the latest if
-not given.</p>
+<p>version [String, nil]  version of the distributor. defaults to the latest
+if not given.</p>
 </li></ul>
 </div>
           
@@ -720,7 +719,7 @@ not given.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Uuid of the distributor</p>
+<p>uuid of the distributor</p>
 </div>
           
         </li>
@@ -843,7 +842,7 @@ not given.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Uuid of the distributor</p>
+<p>uuid of the distributor</p>
 </div>
           
         </li>
@@ -992,7 +991,7 @@ not given.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Filter distributors by subscribed pool</p>
+<p>filter distributors by subscribed pool</p>
 </div>
           
         </li>
@@ -1005,7 +1004,7 @@ not given.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Filter distributors by name</p>
+<p>filter distributors by name</p>
 </div>
           
         </li>
@@ -1128,7 +1127,7 @@ not given.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Uuid of the distributor</p>
+<p>uuid of the distributor</p>
 </div>
           
         </li>
@@ -1387,7 +1386,7 @@ not given.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Uuid of the distributor</p>
+<p>uuid of the distributor</p>
 </div>
           
         </li>
@@ -1510,7 +1509,7 @@ not given.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Uuid of the task</p>
+<p>uuid of the task</p>
 </div>
           
         </li>
@@ -1646,7 +1645,7 @@ not given.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Name of the distributor</p>
+<p>name of the distributor</p>
 </div>
           
         </li>
@@ -1659,7 +1658,7 @@ not given.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>Uuid of the distributor</p>
+<p>uuid of the distributor</p>
 </div>
           
         </li>
@@ -1789,13 +1788,13 @@ not given.</p>
       
         <li>
           <span class="name">capabilities</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="type">(<tt>Array</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>For backwards capability with red hat hosted candlepin - list of
+<p>for backwards capability with red hat hosted candlepin - list of
 subscription capabilities</p>
 </div>
           
@@ -1811,21 +1810,21 @@ subscription capabilities</p>
             &mdash; <div class='inline'>
 <p>allowed keys are:</p>
 <ul><li>
-<p>capabilities [String, nil] List of subscription capabilities</p>
+<p>capabilities [Array, nil]  list of subscription capabilities</p>
 </li><li>
-<p>facts [Hash, nil] Key-value hash of distributor-specific facts</p>
+<p>facts [Hash, nil]  key-value hash of distributor-specific facts</p>
 </li><li>
-<p>installedProducts [String, nil] List of products installed on the
+<p>installedProducts [Array, nil]  list of products installed on the
 distributor</p>
 </li><li>
-<p>location [String, nil] Physical of the distributor</p>
+<p>location [String, nil]  physical of the distributor</p>
 </li><li>
-<p>name [String] Name of the distributor</p>
+<p>name [String]  name of the distributor</p>
 </li><li>
-<p>releaseVer [String, nil] Release of the os. the $releasever variable in
+<p>releaseVer [String, nil]  release of the os. the $releasever variable in
 repo url will be replaced with this value</p>
 </li><li>
-<p>serviceLevel [String, nil] A service level for auto-healing process, e.g.
+<p>serviceLevel [String, nil]  a service level for auto-healing process, e.g.
 self-support</p>
 </li></ul>
 </div>
@@ -1981,7 +1980,7 @@ self-support</p>
 </div>
 
     <div id="footer">
-  Generated on Fri Nov  1 10:42:19 2013 by
+  Generated on Thu Nov 14 15:01:43 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-1.9.3).
 </div>
