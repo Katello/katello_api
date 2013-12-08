@@ -6,18 +6,20 @@
 <title>
   Class: KatelloApi::Base
   
-    &mdash; Documentation by YARD 0.7.2
+    &mdash; Documentation by YARD 0.8.7.3
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '..';
-  if (relpath != '') relpath += '/';
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -26,36 +28,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (B)</a> &raquo; 
+    <a href="../_index.html">Index (B)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../KatelloApi.html" title="KatelloApi (module)">KatelloApi</a></span></span>
      &raquo; 
     <span class="title">Base</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: KatelloApi::Base
   
   
@@ -104,11 +111,12 @@
         <dt id="API_VERSION-constant" class="">API_VERSION =
           
         </dt>
-        <dd><pre class="code"><span class='string val'>&quot;2&quot;</span>
-</pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2</span><span class='tstring_end'>&quot;</span></span></pre></dd>
       
     </dl>
   
+
+
 
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
@@ -124,7 +132,10 @@
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -150,7 +161,10 @@
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -193,6 +207,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -214,6 +229,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -229,6 +245,7 @@
 
     
   </span>
+  
   
   
   
@@ -265,6 +282,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -280,6 +298,7 @@
 
     
   </span>
+  
   
     <span class="note title constructor">constructor</span>
   
@@ -311,6 +330,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -332,6 +352,7 @@
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'></div></span>
@@ -346,22 +367,25 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="KatelloApi::Base (class)">Base</a></span></tt>) <strong>initialize</strong>(config, options = {}) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
-<p>A new instance of Base</p>
+<p>Returns a new instance of Base</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -385,20 +409,19 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/katello_api/base.rb', line 31</span>
 
-<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='config identifier id'>config</span><span class='comma token'>,</span> <span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
-  <span class='headers identifier id'>headers</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:content_type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'application/json'</span><span class='comma token'>,</span>
-              <span class='symbol val'>:accept</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='dstring node'>&quot;application/json,version=#{API_VERSION}&quot;</span> <span class='rbrace token'>}</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:content_type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>application/json</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+              <span class='symbol'>:accept</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>application/json,version=</span><span class='embexpr_beg'>#{</span><span class='const'>API_VERSION</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
 
-  <span class='@client ivar id'>@client</span> <span class='assign token'>=</span> <span class='RestClient constant id'>RestClient</span><span class='colon2 op'>::</span><span class='Resource constant id'>Resource</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span>
-      <span class='config identifier id'>config</span><span class='lbrack token'>[</span><span class='symbol val'>:base_url</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
-      <span class='lbrace token'>{</span> <span class='symbol val'>:user</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='config identifier id'>config</span><span class='lbrack token'>[</span><span class='symbol val'>:username</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
-        <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='config identifier id'>config</span><span class='lbrack token'>[</span><span class='symbol val'>:password</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
-        <span class='symbol val'>:oauth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='config identifier id'>config</span><span class='lbrack token'>[</span><span class='symbol val'>:oauth</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
-        <span class='symbol val'>:headers</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='headers identifier id'>headers</span>
-      <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='merge identifier id'>merge</span><span class='lparen token'>(</span><span class='options identifier id'>options</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
-  <span class='@config ivar id'>@config</span> <span class='assign token'>=</span> <span class='config identifier id'>config</span>
-<span class='end end kw'>end</span>
-</pre>
+  <span class='ivar'>@client</span> <span class='op'>=</span> <span class='const'>RestClient</span><span class='op'>::</span><span class='const'>Resource</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:base_url</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='tstring_content'>/katello</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='lbrace'>{</span> <span class='symbol'>:user</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='symbol'>:password</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:password</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='symbol'>:oauth</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:oauth</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='symbol'>:headers</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_headers'>headers</span>
+      <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@config</span> <span class='op'>=</span> <span class='id identifier rubyid_config'>config</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -411,15 +434,16 @@
     
       
       <span id=""></span>
-      <span id="client-instance_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="client-instance_method">
+  <h3 class="signature first" id="client-instance_method">
   
     - (<tt>Object</tt>) <strong>client</strong>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Returns the value of attribute client</p>
@@ -429,6 +453,7 @@
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -442,10 +467,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/katello_api/base.rb', line 29</span>
 
-<span class='def def kw'>def</span> <span class='client identifier id'>client</span>
-  <span class='@client ivar id'>@client</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_client'>client</span>
+  <span class='ivar'>@client</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -453,15 +477,16 @@
     
       
       <span id=""></span>
-      <span id="config-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="config-instance_method">
+  <h3 class="signature " id="config-instance_method">
   
     - (<tt>Object</tt>) <strong>config</strong>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Returns the value of attribute config</p>
@@ -471,6 +496,7 @@
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -484,10 +510,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/katello_api/base.rb', line 29</span>
 
-<span class='def def kw'>def</span> <span class='config identifier id'>config</span>
-  <span class='@config ivar id'>@config</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_config'>config</span>
+  <span class='ivar'>@config</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -498,23 +523,26 @@
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="doc-class_method">
+  <h3 class="signature first" id="doc-class_method">
   
     + (<tt>Object</tt>) <strong>doc</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
   </div>
 </div>
 <div class="tags">
-  <h3>Raises:</h3>
+  
+<p class="tag_title">Raises:</p>
 <ul class="raise">
   
     <li>
@@ -541,23 +569,24 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/katello_api/base.rb', line 68</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='doc identifier id'>doc</span>
-  <span class='raise identifier id'>raise</span> <span class='NotImplementedError constant id'>NotImplementedError</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="method_doc-class_method">
+  <h3 class="signature " id="method_doc-class_method">
   
     + (<tt>Object</tt>) <strong>method_doc</strong>(method) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -570,23 +599,24 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/katello_api/base.rb', line 76</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='method_doc identifier id'>method_doc</span><span class='lparen token'>(</span><span class='method identifier id'>method</span><span class='rparen token'>)</span>
-  <span class='method_docs identifier id'>method_docs</span><span class='lbrack token'>[</span><span class='method identifier id'>method</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='rbrack token'>]</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_method_doc'>method_doc</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_method_docs'>method_docs</span><span class='lbracket'>[</span><span class='id identifier rubyid_method'>method</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="validation_hash-class_method">
+  <h3 class="signature " id="validation_hash-class_method">
   
     + (<tt>Object</tt>) <strong>validation_hash</strong>(method) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -599,10 +629,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/katello_api/base.rb', line 72</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='validation_hash identifier id'>validation_hash</span><span class='lparen token'>(</span><span class='method identifier id'>method</span><span class='rparen token'>)</span>
-  <span class='validation_hashes identifier id'>validation_hashes</span><span class='lbrack token'>[</span><span class='method identifier id'>method</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='rbrack token'>]</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_validation_hash'>validation_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_validation_hashes'>validation_hashes</span><span class='lbracket'>[</span><span class='id identifier rubyid_method'>method</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -612,16 +641,18 @@
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="http_call-instance_method">
+  <h3 class="signature first" id="http_call-instance_method">
   
     - (<tt>Object</tt>) <strong>http_call</strong>(http_method, path, params = { }, headers = { }) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -644,33 +675,34 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/katello_api/base.rb', line 54</span>
 
-<span class='def def kw'>def</span> <span class='http_call identifier id'>http_call</span><span class='lparen token'>(</span><span class='http_method identifier id'>http_method</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='comma token'>,</span> <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='rbrace token'>}</span><span class='comma token'>,</span> <span class='headers identifier id'>headers</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='rbrace token'>}</span><span class='rparen token'>)</span>
-  <span class='headers identifier id'>headers</span> <span class='opasgn op'>||=</span> <span class='lbrace token'>{</span> <span class='rbrace token'>}</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_http_call'>http_call</span><span class='lparen'>(</span><span class='id identifier rubyid_http_method'>http_method</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_headers'>headers</span> <span class='op'>||=</span> <span class='lbrace'>{</span> <span class='rbrace'>}</span>
 
-  <span class='args identifier id'>args</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='http_method identifier id'>http_method</span><span class='rbrack token'>]</span>
-  <span class='if if kw'>if</span> <span class='dstring node'>%w[post put]</span><span class='dot token'>.</span><span class='include? fid id'>include?</span><span class='lparen token'>(</span><span class='http_method identifier id'>http_method</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='rparen token'>)</span>
-    <span class='args identifier id'>args</span> <span class='lshft op'>&lt;&lt;</span> <span class='params identifier id'>params</span><span class='dot token'>.</span><span class='to_json identifier id'>to_json</span>
-  <span class='else else kw'>else</span>
-    <span class='headers identifier id'>headers</span><span class='lbrack token'>[</span><span class='symbol val'>:params</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='params identifier id'>params</span> <span class='if if_mod kw'>if</span> <span class='params identifier id'>params</span>
-  <span class='end end kw'>end</span>
+  <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_http_method'>http_method</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='qwords_beg'>%w[</span><span class='tstring_content'>post</span><span class='words_sep'> </span><span class='tstring_content'>put</span><span class='words_sep'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_http_method'>http_method</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_args'>args</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_headers'>headers</span><span class='lbracket'>[</span><span class='symbol'>:params</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span> <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span>
+  <span class='kw'>end</span>
 
-  <span class='args identifier id'>args</span> <span class='lshft op'>&lt;&lt;</span> <span class='headers identifier id'>headers</span> <span class='if if_mod kw'>if</span> <span class='headers identifier id'>headers</span>
-  <span class='process_data identifier id'>process_data</span> <span class='client identifier id'>client</span><span class='lbrack token'>[</span><span class='path identifier id'>path</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='send identifier id'>send</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='args identifier id'>args</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+  <span class='id identifier rubyid_args'>args</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_headers'>headers</span> <span class='kw'>if</span> <span class='id identifier rubyid_headers'>headers</span>
+  <span class='id identifier rubyid_process_data'>process_data</span> <span class='id identifier rubyid_client'>client</span><span class='lbracket'>[</span><span class='id identifier rubyid_path'>path</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="perform_call-instance_method">
+  <h3 class="signature " id="perform_call-instance_method">
   
     - (<tt>Object</tt>) <strong>perform_call</strong>(method_name, params, headers) 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -688,35 +720,37 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/katello_api/base.rb', line 45</span>
 
-<span class='def def kw'>def</span> <span class='perform_call identifier id'>perform_call</span><span class='lparen token'>(</span><span class='method_name identifier id'>method_name</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='comma token'>,</span> <span class='headers identifier id'>headers</span><span class='rparen token'>)</span>
-  <span class='method_doc identifier id'>method_doc</span> <span class='assign token'>=</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='method_doc identifier id'>method_doc</span><span class='lparen token'>(</span><span class='method_name identifier id'>method_name</span><span class='rparen token'>)</span>
-  <span class='check_params identifier id'>check_params</span> <span class='params identifier id'>params</span><span class='comma token'>,</span> <span class='symbol val'>:allowed</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='method_doc identifier id'>method_doc</span><span class='lbrack token'>[</span><span class='string val'>'params'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='any? fid id'>any?</span><span class='comma token'>,</span> <span class='symbol val'>:method</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='method_name identifier id'>method_name</span>
-  <span class='method_apis identifier id'>method_apis</span> <span class='assign token'>=</span> <span class='method_doc identifier id'>method_doc</span><span class='lbrack token'>[</span><span class='string val'>'apis'</span><span class='rbrack token'>]</span>
-  <span class='api identifier id'>api</span> <span class='assign token'>=</span> <span class='find_suitable_api_call identifier id'>find_suitable_api_call</span><span class='lparen token'>(</span><span class='method_apis identifier id'>method_apis</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
-  <span class='url identifier id'>url</span><span class='comma token'>,</span> <span class='params identifier id'>params</span> <span class='assign token'>=</span> <span class='fill_params_in_url identifier id'>fill_params_in_url</span> <span class='api identifier id'>api</span><span class='lbrack token'>[</span><span class='string val'>'api_url'</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='params identifier id'>params</span>
-  <span class='return return kw'>return</span> <span class='http_call identifier id'>http_call</span><span class='lparen token'>(</span><span class='api identifier id'>api</span><span class='lbrack token'>[</span><span class='string val'>'http_method'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='downcase identifier id'>downcase</span><span class='comma token'>,</span> <span class='url identifier id'>url</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='comma token'>,</span> <span class='headers identifier id'>headers</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_method_doc'>method_doc</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_method_doc'>method_doc</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_check_params'>check_params</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='symbol'>:allowed</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_method_doc'>method_doc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>params</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span><span class='comma'>,</span> <span class='symbol'>:method</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_method_name'>method_name</span>
+  <span class='id identifier rubyid_method_apis'>method_apis</span> <span class='op'>=</span> <span class='id identifier rubyid_method_doc'>method_doc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>apis</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_api'>api</span> <span class='op'>=</span> <span class='id identifier rubyid_find_suitable_api_call'>find_suitable_api_call</span><span class='lparen'>(</span><span class='id identifier rubyid_method_apis'>method_apis</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='id identifier rubyid_fill_params_in_url'>fill_params_in_url</span> <span class='id identifier rubyid_api'>api</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>api_url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_http_call'>http_call</span><span class='lparen'>(</span><span class='id identifier rubyid_api'>api</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http_method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="validate_params!-instance_method">
+  <h3 class="signature " id="validate_params!-instance_method">
   
     - (<tt>Object</tt>) <strong>validate_params!</strong>(params, rules) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
   </div>
 </div>
 <div class="tags">
-  <h3>Raises:</h3>
+  
+<p class="tag_title">Raises:</p>
 <ul class="raise">
   
     <li>
@@ -752,19 +786,18 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/katello_api/base.rb', line 80</span>
 
-<span class='def def kw'>def</span> <span class='validate_params! fid id'>validate_params!</span><span class='lparen token'>(</span><span class='params identifier id'>params</span><span class='comma token'>,</span> <span class='rules identifier id'>rules</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='unless unless_mod kw'>unless</span> <span class='params identifier id'>params</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='Hash constant id'>Hash</span><span class='rparen token'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_validate_params!'>validate_params!</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_rules'>rules</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
 
-  <span class='invalid_keys identifier id'>invalid_keys</span> <span class='assign token'>=</span> <span class='params identifier id'>params</span><span class='dot token'>.</span><span class='keys identifier id'>keys</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_s</span><span class='rparen token'>)</span> <span class='minus op'>-</span> <span class='lparen token'>(</span><span class='rules identifier id'>rules</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='Hash constant id'>Hash</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='rules identifier id'>rules</span><span class='dot token'>.</span><span class='keys identifier id'>keys</span> <span class='colon op'>:</span> <span class='rules identifier id'>rules</span><span class='rparen token'>)</span>
-  <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='dstring node'>&quot;Invalid keys: #{invalid_keys.join(&quot;, &quot;)}&quot;</span> <span class='unless unless_mod kw'>unless</span> <span class='invalid_keys identifier id'>invalid_keys</span><span class='dot token'>.</span><span class='empty? fid id'>empty?</span>
+  <span class='id identifier rubyid_invalid_keys'>invalid_keys</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='id identifier rubyid_rules'>rules</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_rules'>rules</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span> <span class='op'>:</span> <span class='id identifier rubyid_rules'>rules</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid keys: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_invalid_keys'>invalid_keys</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_invalid_keys'>invalid_keys</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
-  <span class='if if kw'>if</span> <span class='rules identifier id'>rules</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Hash constant id'>Hash</span>
-    <span class='rules identifier id'>rules</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='key identifier id'>key</span><span class='comma token'>,</span> <span class='sub_keys identifier id'>sub_keys</span><span class='bitor op'>|</span>
-      <span class='validate_params! fid id'>validate_params!</span><span class='lparen token'>(</span><span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='sub_keys identifier id'>sub_keys</span><span class='rparen token'>)</span> <span class='if if_mod kw'>if</span> <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span>
-    <span class='end end kw'>end</span>
-  <span class='end end kw'>end</span>
-<span class='end end kw'>end</span>
-</pre>
+  <span class='kw'>if</span> <span class='id identifier rubyid_rules'>rules</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Hash</span>
+    <span class='id identifier rubyid_rules'>rules</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_sub_keys'>sub_keys</span><span class='op'>|</span>
+      <span class='id identifier rubyid_validate_params!'>validate_params!</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_sub_keys'>sub_keys</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -773,11 +806,11 @@
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Fri Dec  6 10:57:05 2013 by 
+  Generated on Sun Dec  8 14:42:33 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.2 (ruby-1.8.7).
+  0.8.7.3 (ruby-1.9.3).
 </div>
 
   </body>

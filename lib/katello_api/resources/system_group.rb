@@ -33,12 +33,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Hash] system_group
-      #   allowed keys are:
-      #   * system_ids [Array, nil]  list of system uuids to be in the group 
-      #   * description [String, nil]
-      #   * max_systems [Numeric, nil]  maximum number of systems in the group 
-      #   * name [String]  system group name 
+      # @option params [String] organization_id  organization identifier 
+      # @option params [Array] system_ids  list of system uuids to be in the group 
+      # @option params [String] description
+      # @option params [Numeric] max_systems  maximum number of systems in the group 
+      # @option params [String] name  system group name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -48,12 +47,10 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [Hash] system_group
-      #   allowed keys are:
-      #   * system_ids [Array, nil]  list of system uuids to be in the group 
-      #   * description [String, nil]
-      #   * max_systems [Numeric, nil]  maximum number of systems in the group 
-      #   * name [String]  system group name 
+      # @option params [Array] system_ids  list of system uuids to be in the group 
+      # @option params [String] description
+      # @option params [Numeric] max_systems  maximum number of systems in the group 
+      # @option params [String] name  system group name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
