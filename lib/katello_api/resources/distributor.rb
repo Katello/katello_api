@@ -93,16 +93,6 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] environment_id Part of +/api/environments/:environment_id/distributors/report+ path
-      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/distributors/report+ path
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def report(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] organization_id Part of +/api/organizations/:organization_id/distributors/tasks+ path
       # @option params [String] distributor_name  name of the distributor 
       # @option params [String] distributor_uuid  uuid of the distributor 
