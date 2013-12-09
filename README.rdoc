@@ -24,7 +24,14 @@ are coming soon.
 === Regenerating bindings
 
 The code for generating the bindings is a part of this repo. The
-generator needs a running Katello instance to load the apidoc.json.
+generator needs a running Foreman instance with Katello as and engine
+to load the `apidoc.json`.
+
+In case the `/apidoc` reports some issues with loading modules, you can
+temporarily commenting out the following line in Foreman's
+`config/initializers/wrap_parameters.rb` file:
+
+    wrap_parameters :format => [:json]
 
 Usage:
 
@@ -32,7 +39,7 @@ Usage:
     Generate Ruby API bindings for Katello's API from Apipie docs.
 
     USAGE: bin/generate.rb [FLAGS]
-        -u, --url APIDOC_URL             By default https://localhost:3000/katello/apidoc
+        -u, --url APIDOC_URL             By default http://localhost:3000/apidoc
             --api-version VERSION        version of the API to hit (default: v2)
 
 Only files under +lib/katello_api/resources+ are touched by the generator.
