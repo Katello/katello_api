@@ -17,7 +17,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] errata_ids  list of errata ids to install 
+      # @option params [Array] errata_ids  list of errata ids to install 
       # @option params [String] organization_id  oranization identifier 
       # @option params [String] system_group_id  system_group identifier 
       #

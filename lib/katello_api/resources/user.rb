@@ -8,7 +8,7 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] disabled  filter by disabled flag 
       # @option params [String] email  filter by email 
-      # @option params [String] username  filter by username 
+      # @option params [String] login  filter by login 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -26,11 +26,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Numeric, nil] default_environment_id
-      # @option params [String, nil] disabled
-      # @option params [String] email
-      # @option params [String] password
-      # @option params [String] username
+      # @option params [Hash] user
+      #   allowed keys are:
+      #   * default_environment_id [Numeric, nil]
+      #   * disabled [String, nil]
+      #   * email [String]
+      #   * login [String]
+      #   * password [String]
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -40,10 +42,12 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] id Part of +/api/users/:id+ path
-      # @option params [Numeric, nil] default_environment_id
-      # @option params [String, nil] disabled
-      # @option params [String] email
-      # @option params [String] password
+      # @option params [Hash] user
+      #   allowed keys are:
+      #   * default_environment_id [Numeric, nil]
+      #   * disabled [String, nil]
+      #   * email [String]
+      #   * password [String]
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -94,14 +98,6 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def remove_role(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def report(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

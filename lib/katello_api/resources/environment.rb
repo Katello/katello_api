@@ -77,6 +77,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  environment identifier 
+      # @option params [String] content_view_id  content view identifier 
       # @option params [String] organization_id  organization identifier 
       # @option params [String] include_disabled  set to true if you want to see also disabled repositories 
       #
@@ -92,6 +93,15 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def releases(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] organization_id  organization identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def systems_registerable(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

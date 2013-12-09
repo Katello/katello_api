@@ -28,8 +28,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  id of an 
-      # @option params [String] product_id  id of a product to list repository sets in 
+      # @option params [String] product_id  id of a product to list repository sets for 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

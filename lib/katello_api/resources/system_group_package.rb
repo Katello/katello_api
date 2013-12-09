@@ -8,8 +8,8 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] organization_id  oranization identifier 
       # @option params [String] system_group_id  system_group identifier 
-      # @option params [String] groups  list of package group names 
-      # @option params [String] packages  list of package names 
+      # @option params [Array] groups  list of package group names 
+      # @option params [Array] packages  list of package names 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -20,8 +20,8 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] organization_id  oranization identifier 
       # @option params [String] system_group_id  system_group identifier 
-      # @option params [String] groups  list of package group names 
-      # @option params [String] packages  list of package names 
+      # @option params [Array] groups  list of package group names 
+      # @option params [Array] packages  list of package names 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -32,8 +32,8 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] organization_id  oranization identifier 
       # @option params [String] system_group_id  system_group identifier 
-      # @option params [String] groups  list of package group names 
-      # @option params [String] packages  list of package names 
+      # @option params [Array] groups  list of package group names 
+      # @option params [Array] packages  list of package names 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
