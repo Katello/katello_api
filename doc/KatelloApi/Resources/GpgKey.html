@@ -6,7 +6,7 @@
 <title>
   Class: KatelloApi::Resources::GpgKey
   
-    &mdash; Documentation by YARD 0.8.7.3
+    &mdash; Documentation by YARD 0.8.7.2
   
 </title>
 
@@ -326,40 +326,27 @@
         </li>
       
         <li>
-          <span class="name">order</span>
+          <span class="name">limit</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>sort field and order, eg. ‘name desc’</p>
+<p>number of results to return</p>
 </div>
           
         </li>
       
         <li>
-          <span class="name">page</span>
+          <span class="name">offset</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>page number, starting at 1</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">per_page</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>number of results per page to return</p>
+<p>starting location to retrieve data from</p>
 </div>
           
         </li>
@@ -385,7 +372,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>hash version of ‘order’ param  allowed keys are:</p>
+<p>allowed keys are:</p>
 <ul><li>
 <p>by [String]  field to sort the results on</p>
 </li><li>
@@ -425,12 +412,12 @@
       <pre class="lines">
 
 
+20
 21
-22
-23</pre>
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/gpg_key.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/gpg_key.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -445,9 +432,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sun Dec  8 14:42:34 2013 by
+  Generated on Tue Dec 10 20:27:14 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.3 (ruby-1.9.3).
+  0.8.7.2 (ruby-1.9.3).
 </div>
 
   </body>
