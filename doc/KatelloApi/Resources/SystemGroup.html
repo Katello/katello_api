@@ -6,7 +6,7 @@
 <title>
   Class: KatelloApi::Resources::SystemGroup
   
-    &mdash; Documentation by YARD 0.8.7.3
+    &mdash; Documentation by YARD 0.8.7.2
   
 </title>
 
@@ -635,12 +635,12 @@
       <pre class="lines">
 
 
-78
-79
-80</pre>
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_systems'>add_systems</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -771,12 +771,12 @@
       <pre class="lines">
 
 
-119
-120
-121</pre>
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_copy'>copy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -852,62 +852,23 @@
     <ul class="option">
       
         <li>
-          <span class="name">organization_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">system_group</span>
+          <span class="type">(<tt>Hash</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>organization identifier</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">system_ids</span>
-          <span class="type">(<tt>Array</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>list of system uuids to be in the group</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">description</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
-          <span class="name">max_systems</span>
-          <span class="type">(<tt>Numeric</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>maximum number of systems in the group</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">name</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>system group name</p>
+<p>allowed keys are:</p>
+<ul><li>
+<p>system_ids [Array, nil]  list of system uuids to be in the group</p>
+</li><li>
+<p>description [String, nil]</p>
+</li><li>
+<p>max_systems [Numeric, nil]  maximum number of systems in the group</p>
+</li><li>
+<p>name [String]  system group name</p>
+</li></ul>
 </div>
           
         </li>
@@ -942,12 +903,12 @@
       <pre class="lines">
 
 
-44
-45
-46</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1065,12 +1026,12 @@
       <pre class="lines">
 
 
-128
-129
-130</pre>
+123
+124
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1188,12 +1149,12 @@
       <pre class="lines">
 
 
-137
-138
-139</pre>
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy_systems'>destroy_systems</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1311,12 +1272,12 @@
       <pre class="lines">
 
 
-99
-100
-101</pre>
+94
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_history'>history</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1447,12 +1408,12 @@
       <pre class="lines">
 
 
-109
-110
-111</pre>
+104
+105
+106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_history_show'>history_show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1553,76 +1514,6 @@
           
         </li>
       
-        <li>
-          <span class="name">order</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>sort field and order, eg. ‘name desc’</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">page</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>page number, starting at 1</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">per_page</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>number of results per page to return</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">search</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>search string</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">sort</span>
-          <span class="type">(<tt>Hash</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>hash version of ‘order’ param  allowed keys are:</p>
-<ul><li>
-<p>by [String]  field to sort the results on</p>
-</li><li>
-<p>order [String]  how to order the sorted results (e.g. asc for ascending)</p>
-</li></ul>
-</div>
-          
-        </li>
-      
     </ul>
   
     
@@ -1653,12 +1544,12 @@
       <pre class="lines">
 
 
-31
-32
-33</pre>
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1792,12 +1683,12 @@
       <pre class="lines">
 
 
-90
-91
-92</pre>
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_systems'>remove_systems</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -2038,12 +1929,12 @@
       <pre class="lines">
 
 
-66
-67
-68</pre>
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_systems'>systems</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -2132,49 +2023,23 @@
         </li>
       
         <li>
-          <span class="name">system_ids</span>
-          <span class="type">(<tt>Array</tt>)</span>
+          <span class="name">system_group</span>
+          <span class="type">(<tt>Hash</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>list of system uuids to be in the group</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">description</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
-          <span class="name">max_systems</span>
-          <span class="type">(<tt>Numeric</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>maximum number of systems in the group</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">name</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>system group name</p>
+<p>allowed keys are:</p>
+<ul><li>
+<p>system_ids [Array, nil]  list of system uuids to be in the group</p>
+</li><li>
+<p>description [String, nil]</p>
+</li><li>
+<p>max_systems [Numeric, nil]  maximum number of systems in the group</p>
+</li><li>
+<p>name [String]  system group name</p>
+</li></ul>
 </div>
           
         </li>
@@ -2209,12 +2074,12 @@
       <pre class="lines">
 
 
-57
-58
-59</pre>
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_group.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -2229,9 +2094,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sun Dec  8 14:42:36 2013 by
+  Generated on Tue Dec 10 20:27:17 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.3 (ruby-1.9.3).
+  0.8.7.2 (ruby-1.9.3).
 </div>
 
   </body>

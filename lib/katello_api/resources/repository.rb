@@ -11,11 +11,10 @@ module KatelloApi
       # @option params [String] product_id  id of a product to show repositories of 
       # @option params [String] enabled  limit to only enabled repositories 
       # @option params [String] library  show repositories in library and the default content view 
-      # @option params [String] order  sort field and order, eg. ‘name desc’ 
-      # @option params [String] page  page number, starting at 1 
-      # @option params [String] per_page  number of results per page to return 
+      # @option params [String] limit  number of results to return 
+      # @option params [String] offset  starting location to retrieve data from 
       # @option params [String] search  search string 
-      # @option params [Hash] sort  hash version of ‘order’ param 
+      # @option params [Hash] sort
       #   allowed keys are:
       #   * by [String]  field to sort the results on 
       #   * order [String]  how to order the sorted results (e.g. asc for ascending) 

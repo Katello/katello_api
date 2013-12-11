@@ -17,14 +17,6 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] organization_id  organization identifier 
       # @option params [String] name  system group name to filter by 
-      # @option params [String] order  sort field and order, eg. ‘name desc’ 
-      # @option params [String] page  page number, starting at 1 
-      # @option params [String] per_page  number of results per page to return 
-      # @option params [String] search  search string 
-      # @option params [Hash] sort  hash version of ‘order’ param 
-      #   allowed keys are:
-      #   * by [String]  field to sort the results on 
-      #   * order [String]  how to order the sorted results (e.g. asc for ascending) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -33,11 +25,12 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  organization identifier 
-      # @option params [Array] system_ids  list of system uuids to be in the group 
-      # @option params [String] description
-      # @option params [Numeric] max_systems  maximum number of systems in the group 
-      # @option params [String] name  system group name 
+      # @option params [Hash] system_group
+      #   allowed keys are:
+      #   * system_ids [Array, nil]  list of system uuids to be in the group 
+      #   * description [String, nil]
+      #   * max_systems [Numeric, nil]  maximum number of systems in the group 
+      #   * name [String]  system group name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -47,10 +40,12 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [Array] system_ids  list of system uuids to be in the group 
-      # @option params [String] description
-      # @option params [Numeric] max_systems  maximum number of systems in the group 
-      # @option params [String] name  system group name 
+      # @option params [Hash] system_group
+      #   allowed keys are:
+      #   * system_ids [Array, nil]  list of system uuids to be in the group 
+      #   * description [String, nil]
+      #   * max_systems [Numeric, nil]  maximum number of systems in the group 
+      #   * name [String]  system group name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

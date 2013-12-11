@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.8.7.3
+    &mdash; Documentation by YARD 0.8.7.2
   
 </title>
 
@@ -88,7 +88,14 @@ soon.</p>
 <h3>Regenerating bindings</h3>
 
 <p>The code for generating the bindings is a part of this repo. The generator
-needs a running Katello instance to load the apidoc.json.</p>
+needs a running Foreman instance with Katello as and engine to load the
+`apidoc.json`.</p>
+
+<p>In case the `/apidoc` reports some issues with loading modules, you can
+temporarily commenting out the following line in Foreman's
+`config/initializers/wrap_parameters.rb` file:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_wrap_parameters'>wrap_parameters</span> <span class='symbol'>:format</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='symbol'>:json</span><span class='rbracket'>]</span></code></pre>
 
 <p>Usage:</p>
 
@@ -96,7 +103,7 @@ needs a running Katello instance to load the apidoc.json.</p>
 Generate Ruby API bindings for Katello's API from Apipie docs.
 
 USAGE: bin/generate.rb [FLAGS]
-    -u, --url APIDOC_URL             By default https://localhost:3000/katello/apidoc
+    -u, --url APIDOC_URL             By default http://localhost:3000/apidoc
         --api-version VERSION        version of the API to hit (default: v2)</code></pre>
 
 <p>Only files under <tt>lib/katello_api/resources</tt> are touched by the
@@ -117,9 +124,9 @@ use of OAuth with the bindings you only have to change the params</p>
 </div></div>
 
     <div id="footer">
-  Generated on Sun Dec  8 14:42:33 2013 by
+  Generated on Tue Dec 10 20:27:12 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.3 (ruby-1.9.3).
+  0.8.7.2 (ruby-1.9.3).
 </div>
 
   </body>
