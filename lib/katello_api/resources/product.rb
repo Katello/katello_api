@@ -6,6 +6,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] organization_id  filter products by organization name or label 
+      # @option params [String] enabled  filter enabled products 
+      # @option params [String] include_marketing  include marketing products in results 
+      # @option params [String] name  filter products by name 
       # @option params [String] order  sort field and order, eg. ‘name desc’ 
       # @option params [String] page  page number, starting at 1 
       # @option params [String] per_page  number of results per page to return 
@@ -23,6 +27,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] gpg_key_id  identifier of the gpg key 
+      # @option params [String] organization_id  organization label or name 
       # @option params [String] provider_id  provider the product belongs to 
       # @option params [String] description  product description 
       # @option params [String] label
@@ -35,7 +40,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  product numeric identifier 
+      # @option params [String] id  candlepin product identifier 
+      # @option params [String] organization_id  shows product by organization label or name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
