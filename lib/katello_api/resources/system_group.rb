@@ -69,9 +69,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [Hash] system_group
-      #   allowed keys are:
-      #   * system_ids [Array]  array of system ids 
+      # @option params [Array] system_ids  array of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -81,9 +79,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [Hash] system_group
-      #   allowed keys are:
-      #   * system_ids [Array]  array of system ids 
+      # @option params [Array] system_ids  array of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

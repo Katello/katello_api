@@ -7,7 +7,13 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Array] system_group_ids  list of system group ids 
-      # @option params [Array] ids  list of system ids 
+      # @option params [Hash] exclude
+      #   allowed keys are:
+      #   * ids [Array, nil]  list of system ids to exclude and not run an action on 
+      # @option params [Hash] include
+      #   allowed keys are:
+      #   * ids [Array, nil]  list of system ids to perform an action on 
+      #   * search [String, nil]  search string for systems to perform an action on 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -17,7 +23,13 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Array] system_group_ids  list of system group ids 
-      # @option params [Array] ids  list of system ids 
+      # @option params [Hash] exclude
+      #   allowed keys are:
+      #   * ids [Array, nil]  list of system ids to exclude and not run an action on 
+      # @option params [Hash] include
+      #   allowed keys are:
+      #   * ids [Array, nil]  list of system ids to perform an action on 
+      #   * search [String, nil]  search string for systems to perform an action on 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
