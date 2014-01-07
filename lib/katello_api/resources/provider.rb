@@ -10,7 +10,7 @@ module KatelloApi
       # @option params [String] order  sort field and order, eg. ‘name desc’ 
       # @option params [String] page  page number, starting at 1 
       # @option params [String] per_page  number of results per page to return 
-      # @option params [String] provider_type  filter the index by provider type 
+      # @option params [String] provider_type  filter providers by type (‘custom’ or ‘red hat’) 
       # @option params [String] search  search string 
       # @option params [Hash] sort  hash version of ‘order’ param 
       #   allowed keys are:
@@ -24,7 +24,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  id of provider 
+      # @option params [String] id  provider numeric identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -45,10 +45,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  provider numeric identifier 
-      # @option params [String] description  description of the provider 
-      # @option params [String] name  name of the provider 
-      # @option params [String] provider_type  the type of the provider 
+      # @option params [String] id  provider identifier 
+      # @option params [String] repository_url  provider repository url 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

@@ -6,11 +6,23 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] organization_id  organization id 
       # @option params [String] system_id  uuid of the system 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def index(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  subscription identifier 
+      # @option params [String] organization_id  organization identifier 
+      # @option params [String] system_id  system uuid 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def show(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
@@ -55,6 +67,16 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy_all(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] organization_id  organization id 
+      # @option params [String] system_id  system uuid 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def upload(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
