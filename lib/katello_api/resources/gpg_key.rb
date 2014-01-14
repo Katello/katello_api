@@ -22,6 +22,56 @@ module KatelloApi
         perform_call(__method__, params, headers)
       end
 
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] organization_id  organization identifier 
+      # @option params [String] content  public key block in der encoding 
+      # @option params [String] name  identifier of the gpg key 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def create(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  gpg key numeric identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def show(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  gpg key numeric identifier 
+      # @option params [String] content  public key block in der encoding 
+      # @option params [String] name  identifier of the gpg key 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def update(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  gpg key numeric identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def destroy(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  gpg key numeric identifier 
+      # @option params [String] content  file contents 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def content(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
     end
   end
 end

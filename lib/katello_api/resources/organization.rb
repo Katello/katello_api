@@ -6,9 +6,14 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] description
-      # @option params [String] label  label for filtering 
-      # @option params [String] name  name for the organization 
+      # @option params [String] order  sort field and order, eg. ‘name desc’ 
+      # @option params [String] page  page number, starting at 1 
+      # @option params [String] per_page  number of results per page to return 
+      # @option params [String] search  search string 
+      # @option params [Hash] sort  hash version of ‘order’ param 
+      #   allowed keys are:
+      #   * by [String]  field to sort the results on 
+      #   * order [String]  how to order the sorted results (e.g. asc for ascending) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -17,7 +22,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] label Part of +/api/organizations/:label+ path
+      # @option params [Object] id Part of +/api/organizations/:id+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -26,10 +31,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Hash] organization
-      #   allowed keys are:
-      #   * description [String, nil]
-      #   * name [String]  name for the organization 
+      # @option params [String] description  description 
+      # @option params [String] label  unique label 
+      # @option params [String] name  name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -39,25 +43,14 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] id Part of +/api/organizations/:id+ path
-      # @option params [Hash] organization
+      # @option params [String] description  description 
+      # @option params [Hash] resource
       #   allowed keys are:
-      #   * description [String]
-      #   * name [String]  name for the organization 
-      #   * service_level [String]  default service level (sla) 
+      #   * name [String]
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def update(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] label  organization label 
-      # @option params [String] url  base url to perform repo discovery on 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def repo_discover(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
@@ -71,21 +64,31 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/organizations/:id/heal+ path
+      # @option params [String] id  organization id, label, or name 
+      # @option params [String] url  base url to perform repo discovery on 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
-      def auto_attach_all_systems(params = {}, headers = {})
+      def repo_discover(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] label  organization label 
+      # @option params [String] id  organization id, label, or name 
       # @option params [String] url  base url to perform repo discovery on 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def cancel_repo_discover(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [Object] id Part of +/api/organizations/:id/autoattach_subscriptions+ path
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def autoattach_subscriptions(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
