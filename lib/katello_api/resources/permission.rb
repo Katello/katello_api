@@ -29,14 +29,17 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id
       # @option params [Object] role_id Part of +/api/roles/:role_id/permissions+ path
-      # @option params [String] all_tags  true if the permission should use all tags 
-      # @option params [String, nil] description
-      # @option params [String] name
-      # @option params [String] tags  array of tag ids 
-      # @option params [String] type  name of a resource or ‘all’ 
-      # @option params [String] verbs  array of permission verbs 
+      # @option params [Hash] permission
+      #   allowed keys are:
+      #   * organization_id [String]
+      #   * all_tags [String]  true if the permission should use all tags 
+      #   * all_verbs [String]  true if the permission should use all verbs 
+      #   * description [String, nil]
+      #   * name [String]
+      #   * tags [Array]  array of tag ids 
+      #   * type [String]  name of a resource or ‘all’ 
+      #   * verbs [Array]  array of permission verbs 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

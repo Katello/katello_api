@@ -3,11 +3,11 @@
 == Summary
 
   require 'katello_api'
-  environments = KatelloApi::Resources::Environment.new(:base_url => 'http://localhost:3000', 
-                                                          :username => 'admin', 
-                                                          :password => 'changeme')
+  envs = KatelloApi::Resources::Environment.new(:base_url => 'https://localhost/katello',
+                                                :username => 'admin',
+                                                :password => 'admin')
 
-  data, raw_response architectures.index(:organization_id => "ACME_Corporation")
+  data, raw_response = envs.index(:organization_id => "ACME_Corporation")
   pp data # parsed data of the response
   pp raw_response # raw string of the response body
 
@@ -24,25 +24,34 @@ are coming soon.
 === Regenerating bindings
 
 The code for generating the bindings is a part of this repo. The
-generator needs a running Katello instance to load the apidoc.json.
+generator needs a running Foreman instance with Katello as and engine
+to load the `apidoc.json`.
+
+In case the `/apidoc` reports some issues with loading modules, you can
+temporarily commenting out the following line in Foreman's
+`config/initializers/wrap_parameters.rb` file:
+
+    wrap_parameters :format => [:json]
 
 Usage:
 
-    bin/generate.rb -h
-    Script for generating API bindings for Katello API from Apipie docs.
-        -u, --url KATELLO_APIDOC_URL     By default http://localhost:3000/apidoc
-        -h, --help
+    $ bin/generate.rb --help
+    Generate Ruby API bindings for Katello's API from Apipie docs.
+
+    USAGE: bin/generate.rb [FLAGS]
+        -u, --url APIDOC_URL             By default http://localhost:3000/apidoc
+            --api-version VERSION        version of the API to hit (default: v2)
 
 Only files under +lib/katello_api/resources+ are touched by the generator.
 
 === Authentication
 
-Katello API supports authentication with username/password and OAuth.
+Katello API supports authentication with username/password or OAuth.
 For use of OAuth with the bindings you only have to change the params
 
-  environments = KatelloApi::Resources::Environment.new(:base_url => 'http://localhost:3000', 
-                                                          :oauth    => { :consumer_key    => 'mykey',
-                                                                         :consumer_secret => 'shhhh' })
+  envs = KatelloApi::Resources::Environment.new(:base_url => 'https://localhost:3000/katello',
+                                                :oauth    => { :consumer_key    => 'mykey',
+                                                               :consumer_secret => 'shhhh' })
 
 == License
 

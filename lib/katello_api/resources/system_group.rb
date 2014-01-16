@@ -6,18 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  organization identifier 
-      # @option params [String] name  system group name to filter by 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def index(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [String] organization_id  organization identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -26,13 +15,42 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  id of the system group 
       # @option params [String] organization_id  organization identifier 
-      # @option params [Hash] system_group
+      # @option params [String] name  system group name to filter by 
+      # @option params [String] order  sort field and order, eg. ‘name desc’ 
+      # @option params [String] page  page number, starting at 1 
+      # @option params [String] per_page  number of results per page to return 
+      # @option params [String] search  search string 
+      # @option params [Hash] sort  hash version of ‘order’ param 
       #   allowed keys are:
-      #   * description [String, nil]
-      #   * max_systems [Numeric, nil]  maximum number of systems in the group 
-      #   * name [String]  system group name 
+      #   * by [String]  field to sort the results on 
+      #   * order [String]  how to order the sorted results (e.g. asc for ascending) 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def index(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] organization_id  organization identifier 
+      # @option params [Array] system_ids  list of system uuids to be in the group 
+      # @option params [String] description
+      # @option params [Numeric] max_systems  maximum number of systems in the group 
+      # @option params [String] name  system group name 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def create(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  id of the system group 
+      # @option params [Array] system_ids  list of system uuids to be in the group 
+      # @option params [String] description
+      # @option params [Numeric] max_systems  maximum number of systems in the group 
+      # @option params [String] name  system group name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -42,7 +60,6 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [String] organization_id  organization identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -52,10 +69,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [String] organization_id  organization identifier 
-      # @option params [Hash] system_group
-      #   allowed keys are:
-      #   * system_ids [String]  array of system ids 
+      # @option params [Array] system_ids  array of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -65,10 +79,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [String] organization_id  organization identifier 
-      # @option params [Hash] system_group
-      #   allowed keys are:
-      #   * system_ids [String]  array of system ids 
+      # @option params [Array] system_ids  array of system ids 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -78,7 +89,6 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [String] organization_id  organization identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -89,7 +99,6 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
       # @option params [String] job_id  id of a job for filtering 
-      # @option params [String] organization_id  organization identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -98,26 +107,30 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  organization identifier 
-      # @option params [Hash] system_group
-      #   allowed keys are:
-      #   * description [String, nil]
-      #   * max_systems [Numeric, nil]  maximum number of systems in the group 
-      #   * name [String]  system group name 
+      # @option params [String] id  id of the system group 
+      # @option params [String] name  new system group name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
-      def create(params = {}, headers = {})
+      def copy(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [String] organization_id  organization identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  id of the system group 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def destroy_systems(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

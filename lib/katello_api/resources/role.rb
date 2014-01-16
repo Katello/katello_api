@@ -6,7 +6,6 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] user_id Part of +/api/users/:user_id/roles+ path
       # @option params [String] name
       #
       # @param [Hash] headers additional http headers
@@ -17,7 +16,6 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] id Part of +/api/roles/:id+ path
-      # @option params [Object] user_id Part of +/api/users/:user_id/roles/:id+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -26,7 +24,6 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] user_id Part of +/api/users/:user_id/roles+ path
       # @option params [Hash] role
       #   allowed keys are:
       #   * description [String, nil]
@@ -40,7 +37,6 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] id Part of +/api/roles/:id+ path
-      # @option params [Object] user_id Part of +/api/users/:user_id/roles/:id+ path
       # @option params [Hash] role
       #   allowed keys are:
       #   * description [String, nil]
@@ -54,7 +50,6 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] id Part of +/api/roles/:id+ path
-      # @option params [Object] user_id Part of +/api/users/:user_id/roles/:id+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

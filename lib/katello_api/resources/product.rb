@@ -6,6 +6,31 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [Object] environment_id Part of +/api/environments/:environment_id/products+ path
+      # @option params [String] organization_id  organization identifier 
+      # @option params [String] include_marketing  include marketing products in results 
+      # @option params [String] name  product identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def index(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] gpg_key_id  identifier of the gpg key 
+      # @option params [String] provider_id  provider the product belongs to 
+      # @option params [String] description  product description 
+      # @option params [String] label
+      # @option params [String] name
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def create(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  product numeric identifier 
       # @option params [String] organization_id  organization identifier 
       #
@@ -31,17 +56,6 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] environment_id  environment identifier 
-      # @option params [String] organization_id  organization identifier 
-      # @option params [String] name  product identifier 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def index(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  product numeric identifier 
       # @option params [String] organization_id  organization identifier 
       #
@@ -53,6 +67,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  product numeric identifier 
+      # @option params [String] content_view_id  find repos in content view instead of default content view 
       # @option params [String] environment_id  environment identifier 
       # @option params [String] organization_id  organization identifier 
       # @option params [String] include_disabled  set to true if you want to list disabled repositories 
@@ -83,25 +98,6 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def remove_sync_plan(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id  content view definition identifier 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def list_content_view_definition_products(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id  content view definition identifier 
-      # @option params [String] products  updated list of products 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def update_content_view_definition_products(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

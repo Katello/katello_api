@@ -6,7 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
+      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/sync_plans+ path
       # @option params [String] interval  filter by interval 
       # @option params [String] name  filter by name 
       # @option params [String] sync_date  filter by sync date 
@@ -19,7 +19,6 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  sync plan numeric identifier 
-      # @option params [String] organization_id  oranization identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -28,7 +27,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
+      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/sync_plans+ path
       # @option params [Hash] sync_plan
       #   allowed keys are:
       #   * description [String, nil]  sync plan description 
@@ -44,7 +43,6 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  sync plan numeric identifier 
-      # @option params [String] organization_id  oranization identifier 
       # @option params [Hash] sync_plan
       #   allowed keys are:
       #   * description [String, nil]  sync plan description 
@@ -60,7 +58,6 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  sync plan numeric identifier 
-      # @option params [String] organization_id  oranization identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
