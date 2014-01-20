@@ -56,7 +56,7 @@ module KatelloApi
 
       args = [http_method]
       if %w[post put].include?(http_method.to_s)
-        args << params.to_json
+        args << params
       else
         headers[:params] = params if params
       end

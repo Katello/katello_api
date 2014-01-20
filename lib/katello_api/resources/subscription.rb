@@ -18,7 +18,6 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  subscription identifier 
       # @option params [String] organization_id  organization identifier 
-      # @option params [String] system_id  system uuid 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -72,7 +71,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] organization_id  organization id 
-      # @option params [String] system_id  system uuid 
+      # @option params [String] content  subscription manifest file 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
