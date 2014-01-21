@@ -24,7 +24,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  provider numeric identifier 
+      # @option params [String] id  id of provider 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -45,8 +45,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  provider identifier 
-      # @option params [String] repository_url  provider repository url 
+      # @option params [String] id  provider numeric identifier 
+      # @option params [String] description  description of the provider 
+      # @option params [String] name  name of the provider 
+      # @option params [String] provider_type  the type of the provider 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

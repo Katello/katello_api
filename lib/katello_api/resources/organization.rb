@@ -44,7 +44,7 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] id Part of +/api/organizations/:id+ path
       # @option params [String] description  description 
-      # @option params [Hash] resource
+      # @option params [Hash, nil] resource
       #   allowed keys are:
       #   * name [String]
       #
