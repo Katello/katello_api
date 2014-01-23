@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>
   File: README
   
@@ -62,20 +62,21 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><div id='filecontents'>
-<h1>Katello API bindings for Ruby</h1>
+<h1 id="label-Katello+API+bindings+for+Ruby">Katello API bindings for Ruby</h1>
 
-<h2>Summary</h2>
+<h2 id="label-Summary">Summary</h2>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>katello_api</span><span class='tstring_end'>'</span></span>
-<span class='id identifier rubyid_envs'>envs</span> <span class='op'>=</span> <span class='const'>KatelloApi</span><span class='op'>::</span><span class='const'>Resources</span><span class='op'>::</span><span class='const'>Environment</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:base_url</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https://localhost/katello</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-                                              <span class='symbol'>:username</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>admin</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-                                              <span class='symbol'>:password</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>admin</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;katello_api&#39;</span>
+<span class="ruby-identifier">envs</span> = <span class="ruby-constant">KatelloApi</span><span class="ruby-operator">::</span><span class="ruby-constant">Resources</span><span class="ruby-operator">::</span><span class="ruby-constant">Environment</span>.<span class="ruby-identifier">new</span>(:<span class="ruby-identifier">base_url</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;https://localhost/katello&#39;</span>,
+                                              :<span class="ruby-identifier">username</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;admin&#39;</span>,
+                                              :<span class="ruby-identifier">password</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;admin&#39;</span>)
 
-<span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_raw_response'>raw_response</span> <span class='op'>=</span> <span class='id identifier rubyid_envs'>envs</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='symbol'>:organization_id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ACME_Corporation</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_pp'>pp</span> <span class='id identifier rubyid_data'>data</span> <span class='comment'># parsed data of the response
-</span><span class='id identifier rubyid_pp'>pp</span> <span class='id identifier rubyid_raw_response'>raw_response</span> <span class='comment'># raw string of the response body</span></code></pre>
+<span class="ruby-identifier">data</span>, <span class="ruby-identifier">raw_response</span> = <span class="ruby-identifier">envs</span>.<span class="ruby-identifier">index</span>(:<span class="ruby-identifier">organization_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ACME_Corporation&quot;</span>)
+<span class="ruby-identifier">pp</span> <span class="ruby-identifier">data</span> <span class="ruby-comment"># parsed data of the response</span>
+<span class="ruby-identifier">pp</span> <span class="ruby-identifier">raw_response</span> <span class="ruby-comment"># raw string of the response body</span>
+</pre>
 
-<h2>Description</h2>
+<h2 id="label-Description">Description</h2>
 
 <p>This gem contains Katello API bindings for the Ruby language. The bindings
 are generated from API documentation using <a
@@ -85,48 +86,50 @@ href="https://github.com/Pajk/apipie-rails">Apidoc</a> tool.</p>
 yet. The number of supported controllers is limited but more are coming
 soon.</p>
 
-<h3>Regenerating bindings</h3>
+<h3 id="label-Regenerating+bindings">Regenerating bindings</h3>
 
 <p>The code for generating the bindings is a part of this repo. The generator
 needs a running Foreman instance with Katello as and engine to load the
 `apidoc.json`.</p>
 
 <p>In case the `/apidoc` reports some issues with loading modules, you can
-temporarily commenting out the following line in Foreman's
+temporarily commenting out the following line in Foreman&#39;s
 `config/initializers/wrap_parameters.rb` file:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_wrap_parameters'>wrap_parameters</span> <span class='symbol'>:format</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='symbol'>:json</span><span class='rbracket'>]</span></code></pre>
+<pre class="ruby"><span class="ruby-identifier">wrap_parameters</span> :<span class="ruby-identifier">format</span> =<span class="ruby-operator">&gt;</span> [:<span class="ruby-identifier">json</span>]
+</pre>
 
 <p>Usage:</p>
 
 <pre class="code ruby"><code class="ruby">$ bin/generate.rb --help
-Generate Ruby API bindings for Katello's API from Apipie docs.
+Generate Ruby API bindings for Katello&#39;s API from Apipie docs.
 
 USAGE: bin/generate.rb [FLAGS]
     -u, --url APIDOC_URL             By default http://localhost:3000/apidoc
         --api-version VERSION        version of the API to hit (default: v2)</code></pre>
 
-<p>Only files under <tt>lib/katello_api/resources</tt> are touched by the
+<p>Only files under <code>lib/katello_api/resources</code> are touched by the
 generator.</p>
 
-<h3>Authentication</h3>
+<h3 id="label-Authentication">Authentication</h3>
 
 <p>Katello API supports authentication with username/password or OAuth. For
 use of OAuth with the bindings you only have to change the params</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_envs'>envs</span> <span class='op'>=</span> <span class='const'>KatelloApi</span><span class='op'>::</span><span class='const'>Resources</span><span class='op'>::</span><span class='const'>Environment</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:base_url</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https://localhost:3000/katello</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-                                              <span class='symbol'>:oauth</span>    <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='symbol'>:consumer_key</span>    <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>mykey</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-                                                             <span class='symbol'>:consumer_secret</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>shhhh</span><span class='tstring_end'>'</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
+<pre class="ruby"><span class="ruby-identifier">envs</span> = <span class="ruby-constant">KatelloApi</span><span class="ruby-operator">::</span><span class="ruby-constant">Resources</span><span class="ruby-operator">::</span><span class="ruby-constant">Environment</span>.<span class="ruby-identifier">new</span>(:<span class="ruby-identifier">base_url</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;https://localhost:3000/katello&#39;</span>,
+                                              :<span class="ruby-identifier">oauth</span>    =<span class="ruby-operator">&gt;</span> { :<span class="ruby-identifier">consumer_key</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;mykey&#39;</span>,
+                                                             :<span class="ruby-identifier">consumer_secret</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;shhhh&#39;</span> })
+</pre>
 
-<h2>License</h2>
+<h2 id="label-License">License</h2>
 
 <p>The bindings are released under MIT license</p>
 </div></div>
 
     <div id="footer">
-  Generated on Tue Jan 21 10:17:54 2014 by
+  Generated on Thu Jan 23 14:39:41 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.3 (ruby-1.9.3).
+  0.8.7.3 (ruby-2.0.0).
 </div>
 
   </body>
