@@ -16,6 +16,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] organization_id  organization identifier 
+      # @option params [String] full_results  whether or not to show all results 
       # @option params [String] name  system group name to filter by 
       # @option params [String] order  sort field and order, eg. ‘name desc’ 
       # @option params [String] page  page number, starting at 1 

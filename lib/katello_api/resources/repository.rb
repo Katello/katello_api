@@ -10,6 +10,7 @@ module KatelloApi
       # @option params [String] organization_id  id of an organization to show repositories in 
       # @option params [String] product_id  id of a product to show repositories of 
       # @option params [String] enabled  limit to only enabled repositories 
+      # @option params [String] full_results  whether or not to show all results 
       # @option params [String] library  show repositories in library and the default content view 
       # @option params [String] order  sort field and order, eg. ‘name desc’ 
       # @option params [String] page  page number, starting at 1 
