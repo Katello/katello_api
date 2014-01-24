@@ -236,30 +236,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#show-instance_method" title="#show (instance method)">- (Array) <strong>show</strong>(params = {}, headers = {}) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>First item: parsed data; second item: raw body.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#update-instance_method" title="#update (instance method)">- (Array) <strong>update</strong>(params = {}, headers = {}) </a>
     
 
@@ -410,35 +386,65 @@
       
         <li>
           <span class="name">organization_id</span>
-          <span class="type">(<tt>Object</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>Part of <tt>/api/organizations/:organization_id/sync_plans</tt> path</p>
+<p>filter products by organization name or label</p>
 </div>
           
         </li>
       
         <li>
-          <span class="name">sync_plan</span>
-          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="name">description</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>allowed keys are:</p>
-<ul><li>
-<p>description [String, nil]  sync plan description</p>
-</li><li>
-<p>interval [String, nil]  how often synchronization should run</p>
-</li><li>
-<p>name [String]  sync plan name</p>
-</li><li>
-<p>sync_date [String, nil]  start datetime of synchronization</p>
-</li></ul>
+<p>sync plan description</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">interval</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>how often synchronization should run</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">name</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>sync plan name</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">sync_date</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>start datetime of synchronization</p>
 </div>
           
         </li>
@@ -473,12 +479,12 @@
       <pre class="lines">
 
 
-40
-41
-42</pre>
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync_plan.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync_plan.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -566,6 +572,19 @@
           
         </li>
       
+        <li>
+          <span class="name">organization_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>filter products by organization name or label</p>
+</div>
+          
+        </li>
+      
     </ul>
   
     
@@ -596,12 +615,12 @@
       <pre class="lines">
 
 
-64
-65
-66</pre>
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync_plan.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync_plan.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -678,13 +697,13 @@
       
         <li>
           <span class="name">organization_id</span>
-          <span class="type">(<tt>Object</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>Part of <tt>/api/organizations/:organization_id/sync_plans</tt> path</p>
+<p>filter products by organization name or label</p>
 </div>
           
         </li>
@@ -774,129 +793,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="show-instance_method">
-  
-    - (<tt>Array</tt>) <strong>show</strong>(params = {}, headers = {}) 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns First item: parsed data; second item: raw body</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>params</span>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>{}</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>a hash of params to be passed to the service</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>headers</span>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>{}</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>additional http headers</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-  
-    
-    
-    <p class="tag_title">Options Hash (<tt>params</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>sync plan numeric identifier</p>
-</div>
-          
-        </li>
-      
-    </ul>
-  
-    
-    
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Array</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>First item: parsed data; second item: raw body</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-25
-26
-27</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync_plan.rb', line 25</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="update-instance_method">
   
     - (<tt>Array</tt>) <strong>update</strong>(params = {}, headers = {}) 
@@ -975,23 +871,66 @@
         </li>
       
         <li>
-          <span class="name">sync_plan</span>
-          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="name">organization_id</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>allowed keys are:</p>
-<ul><li>
-<p>description [String, nil]  sync plan description</p>
-</li><li>
-<p>interval [String, nil]  how often synchronization should run</p>
-</li><li>
-<p>name [String]  sync plan name</p>
-</li><li>
-<p>sync_date [String, nil]  start datetime of synchronization</p>
-</li></ul>
+<p>filter products by organization name or label</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">description</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>sync plan description</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">interval</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>how often synchronization should run</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">name</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>sync plan name</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">sync_date</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>start datetime of synchronization</p>
 </div>
           
         </li>
@@ -1026,12 +965,12 @@
       <pre class="lines">
 
 
-55
-56
-57</pre>
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync_plan.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/sync_plan.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1046,7 +985,7 @@
 </div>
 
     <div id="footer">
-  Generated on Tue Jan 21 10:17:57 2014 by
+  Generated on Fri Jan 24 14:25:22 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>

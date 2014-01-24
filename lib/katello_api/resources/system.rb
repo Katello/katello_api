@@ -10,6 +10,7 @@ module KatelloApi
       # @option params [String] organization_id  specify the organization 
       # @option params [String] pool_id  filter systems by subscribed pool 
       # @option params [String] system_group_id  filter by system group 
+      # @option params [String] full_results  whether or not to show all results 
       # @option params [String] name  filter systems by name 
       # @option params [String] order  sort field and order, eg. ‘name desc’ 
       # @option params [String] page  page number, starting at 1 
@@ -85,6 +86,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Object] id Part of +/api/systems/:id/available_system_groups+ path
+      # @option params [String] full_results  whether or not to show all results 
       # @option params [String] name  system group name to filter by 
       # @option params [String] order  sort field and order, eg. ‘name desc’ 
       # @option params [String] page  page number, starting at 1 
