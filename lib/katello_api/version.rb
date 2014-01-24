@@ -1,3 +1,3 @@
 module KatelloApi
-  VERSION = "0.0.6" unless defined? KatelloApi::VERSION
+  VERSION = "0.0.7" unless defined? KatelloApi::VERSION
 end
