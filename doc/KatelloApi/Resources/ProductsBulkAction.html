@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  Class: KatelloApi::Resources::Task
+  Class: KatelloApi::Resources::ProductsBulkAction
   
     &mdash; Documentation by YARD 0.8.7.3
   
@@ -31,10 +31,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (T)</a> &raquo;
+    <a href="../../_index.html">Index (P)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../KatelloApi.html" title="KatelloApi (module)">KatelloApi</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Resources.html" title="KatelloApi::Resources (module)">Resources</a></span></span>
      &raquo; 
-    <span class="title">Task</span>
+    <span class="title">ProductsBulkAction</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -63,7 +63,7 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><h1>Class: KatelloApi::Resources::Task
+    <div id="content"><h1>Class: KatelloApi::Resources::ProductsBulkAction
   
   
   
@@ -80,7 +80,7 @@
           
             <li class="next"><span class='object_link'><a href="../Base.html" title="KatelloApi::Base (class)">Base</a></span></li>
           
-            <li class="next">KatelloApi::Resources::Task</li>
+            <li class="next">KatelloApi::Resources::ProductsBulkAction</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -96,7 +96,7 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/katello_api/resources/task.rb</dd>
+    <dd class="r2 last">lib/katello_api/resources/products_bulk_action.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -164,7 +164,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#index-instance_method" title="#index (instance method)">- (Array) <strong>index</strong>(params = {}, headers = {}) </a>
+      <a href="#destroy_products-instance_method" title="#destroy_products (instance method)">- (Array) <strong>destroy_products</strong>(params = {}, headers = {}) </a>
     
 
     
@@ -188,7 +188,31 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#show-instance_method" title="#show (instance method)">- (Array) <strong>show</strong>(params = {}, headers = {}) </a>
+      <a href="#sync_products-instance_method" title="#sync_products (instance method)">- (Array) <strong>sync_products</strong>(params = {}, headers = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>First item: parsed data; second item: raw body.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_sync_plans-instance_method" title="#update_sync_plans (instance method)">- (Array) <strong>update_sync_plans</strong>(params = {}, headers = {}) </a>
     
 
     
@@ -255,10 +279,10 @@
 6</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/task.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/products_bulk_action.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span>
-  <span class='ivar'>@doc</span> <span class='op'>||=</span> <span class='const'>KatelloApi</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>resources</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tasks</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='ivar'>@doc</span> <span class='op'>||=</span> <span class='const'>KatelloApi</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>resources</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>products_bulk_actions</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -272,9 +296,9 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="index-instance_method">
+  <h3 class="signature first" id="destroy_products-instance_method">
   
-    - (<tt>Array</tt>) <strong>index</strong>(params = {}, headers = {}) 
+    - (<tt>Array</tt>) <strong>destroy_products</strong>(params = {}, headers = {}) 
   
 
   
@@ -337,14 +361,14 @@
     <ul class="option">
       
         <li>
-          <span class="name">organization_id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">ids</span>
+          <span class="type">(<tt>Array</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>organization identifier</p>
+<p>list of product ids</p>
 </div>
           
         </li>
@@ -384,9 +408,9 @@
 15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/task.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/products_bulk_action.rb', line 13</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_destroy_products'>destroy_products</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -395,9 +419,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="show-instance_method">
+  <h3 class="signature " id="sync_products-instance_method">
   
-    - (<tt>Array</tt>) <strong>show</strong>(params = {}, headers = {}) 
+    - (<tt>Array</tt>) <strong>sync_products</strong>(params = {}, headers = {}) 
   
 
   
@@ -460,14 +484,14 @@
     <ul class="option">
       
         <li>
-          <span class="name">id</span>
-          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">ids</span>
+          <span class="type">(<tt>Array</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>task identifier</p>
+<p>list of product ids</p>
 </div>
           
         </li>
@@ -507,9 +531,145 @@
 24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/task.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/products_bulk_action.rb', line 22</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_sync_products'>sync_products</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_sync_plans-instance_method">
+  
+    - (<tt>Array</tt>) <strong>update_sync_plans</strong>(params = {}, headers = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns First item: parsed data; second item: raw body</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a hash of params to be passed to the service</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>headers</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional http headers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>params</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">plan_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>sync plan identifier to attach</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">ids</span>
+          <span class="type">(<tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>list of product ids</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>First item: parsed data; second item: raw body</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/products_bulk_action.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_sync_plans'>update_sync_plans</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -522,7 +682,7 @@
 </div>
 
     <div id="footer">
-  Generated on Fri Jan 31 16:42:14 2014 by
+  Generated on Fri Jan 31 16:42:22 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>
