@@ -6,7 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id  id of the content view definition 
+      # @option params [String] content_view_id  content view identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -15,10 +15,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id  id of the content view definition 
-      # @option params [Hash] filter
-      #   allowed keys are:
-      #   * name [String]  name of the filter 
+      # @option params [String] content_view_id  content view identifier 
+      # @option params [Array] repository_ids  list of repository ids 
+      # @option params [String] name  name of the filter 
+      # @option params [String] parameters  the filter parameters rules 
+      # @option params [String] type  type of filter (e.g. rpm, package_group, erratum, puppet_module) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -27,8 +28,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  name of the filter 
-      # @option params [String] content_view_definition_id  id of the content view definition 
+      # @option params [String] id  filter identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -37,54 +37,23 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  name of the filter 
-      # @option params [String] content_view_definition_id  id of the content view definition 
+      # @option params [String] id  filter identifierr 
+      # @option params [Array] repository_ids  list of repository ids 
+      # @option params [String] name  new name for the filter 
+      # @option params [String] parameters  the filter parameters rules 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def update(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  filter identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  name of the filter 
-      # @option params [String] content_view_definition_id  id of the content view definition 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def list_products(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  name of the filter 
-      # @option params [String] content_view_definition_id  content view definition identifier 
-      # @option params [Array] products  updated list of product ids 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def update_products(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  name of the filter 
-      # @option params [String] content_view_definition_id  id of the content view definition 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def list_repositories(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  name of the filter 
-      # @option params [String] content_view_definition_id  id of the content view definition 
-      # @option params [Array] repos  updated list of repo ids 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def update_repositories(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
