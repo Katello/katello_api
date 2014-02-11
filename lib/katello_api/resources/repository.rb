@@ -6,6 +6,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [Object] id Part of +/api/content_views/:id/repositories+ path
+      # @option params [String] content_view_id  id of a content view to show repositories in 
       # @option params [String] environment_id  id of an environment to show repositories in 
       # @option params [String] organization_id  id of an organization to show repositories in 
       # @option params [String] product_id  id of a product to show repositories of 
