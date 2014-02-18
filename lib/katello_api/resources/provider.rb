@@ -34,18 +34,6 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  organization identifier 
-      # @option params [String] description  description of the provider 
-      # @option params [String] name  name of the provider 
-      # @option params [String] provider_type  the type of the provider 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def create(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  provider numeric identifier 
       # @option params [String] description  description of the provider 
       # @option params [String] name  name of the provider 
@@ -54,15 +42,6 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def update(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  provider numeric identifier 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def destroy(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

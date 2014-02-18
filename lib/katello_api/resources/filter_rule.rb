@@ -6,13 +6,24 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] content_view_definition_id  id of the content view definition 
-      # @option params [String] filter_id  name of the filter 
-      # @option params [Hash] rule
-      #   allowed keys are:
-      #   * content [String]  content type of the rule 
-      #   * inclusion [String, nil]  true if its an includes rule, false otherwise. defauls to true 
-      #   * rule [String]  a specification of the rule in json format (required). 
+      # @option params [String] filter_id  filter identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def index(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] errata_id  erratum: id 
+      # @option params [String] filter_id  filter identifier 
+      # @option params [String] end_date  erratum: end date (yyyy-mm-dd) 
+      # @option params [String] max_version  package: maximum version 
+      # @option params [String] min_version  package: minimum version 
+      # @option params [String] name  package or package group: name 
+      # @option params [String] start_date  erratum: start date (yyyy-mm-dd) 
+      # @option params [Array] types  erratum: types (enhancement, bugfix, security) 
+      # @option params [String] version  package: version 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -21,9 +32,36 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  id of the filter rule 
-      # @option params [String] content_view_definition_id  id of the content view definition 
-      # @option params [String] filter_id  name of the filter 
+      # @option params [String] id  rule identifier 
+      # @option params [String] filter_id  filter identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def show(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  rule identifier 
+      # @option params [String] errata_id  erratum: id 
+      # @option params [String] filter_id  filter identifier 
+      # @option params [String] end_date  erratum: end date (yyyy-mm-dd) 
+      # @option params [String] max_version  package: maximum version 
+      # @option params [String] min_version  package: minimum version 
+      # @option params [String] name  package or package group: name 
+      # @option params [String] start_date  erratum: start date (yyyy-mm-dd) 
+      # @option params [Array] types  erratum: types (enhancement, bugfix, security) 
+      # @option params [String] version  package: version 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def update(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  rule identifier 
+      # @option params [String] filter_id  filter identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
