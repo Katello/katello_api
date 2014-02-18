@@ -435,6 +435,20 @@
         </li>
       
         <li>
+          <span class="name">inclusion</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>specifies if content should be included or excluded, default:
+inclusion=false</p>
+</div>
+          
+        </li>
+      
+        <li>
           <span class="name">name</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
@@ -448,19 +462,6 @@
         </li>
       
         <li>
-          <span class="name">parameters</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>the filter parameters rules</p>
-</div>
-          
-        </li>
-      
-        <li>
           <span class="name">type</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
@@ -468,7 +469,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>type of filter (e.g. rpm, package_group, erratum, puppet_module)</p>
+<p>type of filter (e.g. rpm, package_group, erratum)</p>
 </div>
           
         </li>
@@ -596,6 +597,19 @@
           
         </li>
       
+        <li>
+          <span class="name">content_view_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>content view identifier</p>
+</div>
+          
+        </li>
+      
     </ul>
   
     
@@ -626,12 +640,12 @@
       <pre class="lines">
 
 
-56
-57
-58</pre>
+59
+60
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/filter.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/filter.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -842,6 +856,19 @@
           
         </li>
       
+        <li>
+          <span class="name">content_view_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>content view identifier</p>
+</div>
+          
+        </li>
+      
     </ul>
   
     
@@ -872,12 +899,12 @@
       <pre class="lines">
 
 
-35
 36
-37</pre>
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/filter.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/filter.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -966,6 +993,19 @@
         </li>
       
         <li>
+          <span class="name">content_view_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>content view identifier</p>
+</div>
+          
+        </li>
+      
+        <li>
           <span class="name">repository_ids</span>
           <span class="type">(<tt>Array</tt>)</span>
           <span class="default">
@@ -979,6 +1019,20 @@
         </li>
       
         <li>
+          <span class="name">inclusion</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>specifies if content should be included or excluded, default:
+inclusion=false</p>
+</div>
+          
+        </li>
+      
+        <li>
           <span class="name">name</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
@@ -987,19 +1041,6 @@
           
             &mdash; <div class='inline'>
 <p>new name for the filter</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">parameters</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>the filter parameters rules</p>
 </div>
           
         </li>
@@ -1034,12 +1075,12 @@
       <pre class="lines">
 
 
-47
-48
-49</pre>
+49
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/filter.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/filter.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1054,7 +1095,7 @@
 </div>
 
     <div id="footer">
-  Generated on Tue Feb 11 08:42:11 2014 by
+  Generated on Tue Feb 18 11:15:24 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>

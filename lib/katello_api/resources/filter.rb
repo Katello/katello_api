@@ -17,9 +17,9 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] content_view_id  content view identifier 
       # @option params [Array] repository_ids  list of repository ids 
+      # @option params [String] inclusion  specifies if content should be included or excluded, default: inclusion=false 
       # @option params [String] name  name of the filter 
-      # @option params [String] parameters  the filter parameters rules 
-      # @option params [String] type  type of filter (e.g. rpm, package_group, erratum, puppet_module) 
+      # @option params [String] type  type of filter (e.g. rpm, package_group, erratum) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -29,6 +29,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  filter identifier 
+      # @option params [String] content_view_id  content view identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -38,9 +39,10 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  filter identifierr 
+      # @option params [String] content_view_id  content view identifier 
       # @option params [Array] repository_ids  list of repository ids 
+      # @option params [String] inclusion  specifies if content should be included or excluded, default: inclusion=false 
       # @option params [String] name  new name for the filter 
-      # @option params [String] parameters  the filter parameters rules 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -50,6 +52,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  filter identifier 
+      # @option params [String] content_view_id  content view identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

@@ -20,7 +20,6 @@ module KatelloApi
       # @option params [String] id  id of the environment 
       # @option params [Object] environment_id Part of +/api/organizations/:organization_id/environments/:environment_id+ path
       # @option params [String] organization_id  id of the organization 
-      # @option params [String] name  name of the environment 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -44,7 +43,6 @@ module KatelloApi
       # @option params [String] id  id of the environment 
       # @option params [String] organization_id  name of the organization 
       # @option params [String] description  description of the environment 
-      # @option params [String] name  name of the environment 
       # @option params [String] new_name  new name to be given to the environment 
       # @option params [String] prior  name of an environment that is prior to the new environment in the chain. it has to be either ‘library’ or an environment at the end of a chain. 
       #
@@ -57,7 +55,6 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the environment 
       # @option params [String] organization_id  organization identifier 
-      # @option params [String] name  name of the environment 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
