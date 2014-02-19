@@ -15,7 +15,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] activation_key_id  activation key identifier 
       # @option params [String] organization_id  organization identifier 
+      # @option params [String] system_id  system identifier 
       # @option params [String] full_results  whether or not to show all results 
       # @option params [String] name  system group name to filter by 
       # @option params [String] order  sort field and order, eg. ‘name desc’ 
@@ -90,6 +92,26 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
+      # @option params [Array] activation_key_ids  array of activation key ids 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def add_activation_keys(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  id of the activation key group 
+      # @option params [Array] activation_key_ids  array of activation key ids 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def remove_activation_keys(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  id of the system group 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -109,16 +131,6 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the system group 
-      # @option params [String] name  new system group name 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def copy(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  id of the system group 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -132,6 +144,16 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy_systems(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  id of the system group 
+      # @option params [String] name  new system group name 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def copy(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
