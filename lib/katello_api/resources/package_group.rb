@@ -1,12 +1,11 @@
 module KatelloApi
   module Resources
-    class PuppetModule < KatelloApi::Base
+    class PackageGroup < KatelloApi::Base
       def self.doc
-        @doc ||= KatelloApi.doc['resources']["puppet_modules"]
+        @doc ||= KatelloApi.doc['resources']["package_groups"]
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] environment_id  environment identifier 
       # @option params [String] repository_id  repository identifier 
       #
       # @param [Hash] headers additional http headers
@@ -16,7 +15,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  puppet module identifier 
+      # @option params [String] id  package group identifier 
       # @option params [String] repository_id  repository identifier 
       #
       # @param [Hash] headers additional http headers
