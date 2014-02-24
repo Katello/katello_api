@@ -61,6 +61,24 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] organization_id  organization id 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def refresh_manifest(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] organization_id  organization id 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def delete_manifest(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] system_id  uuid of the system 
       # @option params [String] match_installed  return subscriptions that match installed 
       # @option params [String] match_system  return subscriptions that match system 

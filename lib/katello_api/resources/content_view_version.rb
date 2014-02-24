@@ -1,13 +1,12 @@
 module KatelloApi
   module Resources
-    class PuppetModule < KatelloApi::Base
+    class ContentViewVersion < KatelloApi::Base
       def self.doc
-        @doc ||= KatelloApi.doc['resources']["puppet_modules"]
+        @doc ||= KatelloApi.doc['resources']["content_view_versions"]
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] environment_id  environment identifier 
-      # @option params [String] repository_id  repository identifier 
+      # @option params [String] content_view_id  content view identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -16,8 +15,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  puppet module identifier 
-      # @option params [String] repository_id  repository identifier 
+      # @option params [String] id  content view version identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
