@@ -18,6 +18,7 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] organization_id  organization identifier 
       # @option params [Array] repositoriy_ids  list of repository ids 
+      # @option params [String] composite  composite content view 
       # @option params [String] description  description of the content view 
       # @option params [String] label  content view label 
       # @option params [String] name  name of the content view 
@@ -30,6 +31,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  content view identifier 
+      # @option params [Array] component_ids  list of component content view version ids 
       # @option params [Array] repository_ids  list of repository ids 
       # @option params [String] description  updated description for the content view 
       # @option params [String] name  new name for the content view 

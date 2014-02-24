@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  Class: KatelloApi::Resources::SystemErratum
+  Class: KatelloApi::Resources::PackageGroup
   
     &mdash; Documentation by YARD 0.8.7.3
   
@@ -31,10 +31,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (S)</a> &raquo;
+    <a href="../../_index.html">Index (P)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../KatelloApi.html" title="KatelloApi (module)">KatelloApi</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Resources.html" title="KatelloApi::Resources (module)">Resources</a></span></span>
      &raquo; 
-    <span class="title">SystemErratum</span>
+    <span class="title">PackageGroup</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -63,7 +63,7 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><h1>Class: KatelloApi::Resources::SystemErratum
+    <div id="content"><h1>Class: KatelloApi::Resources::PackageGroup
   
   
   
@@ -80,7 +80,7 @@
           
             <li class="next"><span class='object_link'><a href="../Base.html" title="KatelloApi::Base (class)">Base</a></span></li>
           
-            <li class="next">KatelloApi::Resources::SystemErratum</li>
+            <li class="next">KatelloApi::Resources::PackageGroup</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -96,7 +96,7 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/katello_api/resources/system_erratum.rb</dd>
+    <dd class="r2 last">lib/katello_api/resources/package_group.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -164,7 +164,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#apply-instance_method" title="#apply (instance method)">- (Array) <strong>apply</strong>(params = {}, headers = {}) </a>
+      <a href="#index-instance_method" title="#index (instance method)">- (Array) <strong>index</strong>(params = {}, headers = {}) </a>
     
 
     
@@ -255,10 +255,10 @@
 6</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_erratum.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/package_group.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span>
-  <span class='ivar'>@doc</span> <span class='op'>||=</span> <span class='const'>KatelloApi</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>resources</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>system_errata</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='ivar'>@doc</span> <span class='op'>||=</span> <span class='const'>KatelloApi</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>resources</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>package_groups</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -272,9 +272,9 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="apply-instance_method">
+  <h3 class="signature first" id="index-instance_method">
   
-    - (<tt>Array</tt>) <strong>apply</strong>(params = {}, headers = {}) 
+    - (<tt>Array</tt>) <strong>index</strong>(params = {}, headers = {}) 
   
 
   
@@ -337,27 +337,14 @@
     <ul class="option">
       
         <li>
-          <span class="name">errata_ids</span>
-          <span class="type">(<tt>Array</tt>)</span>
+          <span class="name">repository_id</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>list of errata ids to install</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">system_id</span>
-          <span class="type">(<tt>Object</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>Part of <tt>/api/systems/:system_id/errata</tt> path</p>
+<p>repository identifier</p>
 </div>
           
         </li>
@@ -392,14 +379,14 @@
       <pre class="lines">
 
 
+13
 14
-15
-16</pre>
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_erratum.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/package_group.rb', line 13</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_apply'>apply</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -480,20 +467,20 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>errata id of the erratum (rhsa-2012:108)</p>
+<p>package group identifier</p>
 </div>
           
         </li>
       
         <li>
-          <span class="name">system_id</span>
-          <span class="type">(<tt>Object</tt>)</span>
+          <span class="name">repository_id</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>Part of <tt>/api/systems/:system_id/errata/:id</tt> path</p>
+<p>repository identifier</p>
 </div>
           
         </li>
@@ -528,12 +515,12 @@
       <pre class="lines">
 
 
+23
 24
-25
-26</pre>
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/system_erratum.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/package_group.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -548,7 +535,7 @@
 </div>
 
     <div id="footer">
-  Generated on Mon Feb 24 16:24:04 2014 by
+  Generated on Mon Feb 24 16:24:03 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>
