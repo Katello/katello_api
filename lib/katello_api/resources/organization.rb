@@ -75,7 +75,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  organization id, label, or name 
+      # @option params [String] label  organization label 
       # @option params [String] url  base url to perform repo discovery on 
       #
       # @param [Hash] headers additional http headers
