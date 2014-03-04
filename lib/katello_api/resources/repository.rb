@@ -53,6 +53,15 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  repository id 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def sync(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  repository id 
       # @option params [String] gpg_key_id  id of a gpg key that will be assigned to this repository 
       #
       # @param [Hash] headers additional http headers
@@ -71,11 +80,17 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  repository id 
+      # @option params [Hash] call_report
+      #   allowed keys are:
+      #   * task_id [String]
+      # @option params [Hash] payload
+      #   allowed keys are:
+      #   * repo_id [String]
+      # @option params [String] token  shared secret token 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
-      def sync(params = {}, headers = {})
+      def sync_complete(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
