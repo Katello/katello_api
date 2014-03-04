@@ -164,7 +164,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#available-instance_method" title="#available (instance method)">- (Array) <strong>available</strong>(params = {}, headers = {}) </a>
+      <a href="#available_system-instance_method" title="#available_system (instance method)">- (Array) <strong>available_system</strong>(params = {}, headers = {}) </a>
     
 
     
@@ -212,6 +212,30 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#delete_manifest-instance_method" title="#delete_manifest (instance method)">- (Array) <strong>delete_manifest</strong>(params = {}, headers = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>First item: parsed data; second item: raw body.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#destroy-instance_method" title="#destroy (instance method)">- (Array) <strong>destroy</strong>(params = {}, headers = {}) </a>
     
 
@@ -236,7 +260,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#destroy_all-instance_method" title="#destroy_all (instance method)">- (Array) <strong>destroy_all</strong>(params = {}, headers = {}) </a>
+      <a href="#index-instance_method" title="#index (instance method)">- (Array) <strong>index</strong>(params = {}, headers = {}) </a>
     
 
     
@@ -260,7 +284,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#index-instance_method" title="#index (instance method)">- (Array) <strong>index</strong>(params = {}, headers = {}) </a>
+      <a href="#refresh_manifest-instance_method" title="#refresh_manifest (instance method)">- (Array) <strong>refresh_manifest</strong>(params = {}, headers = {}) </a>
     
 
     
@@ -392,9 +416,9 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="available-instance_method">
+  <h3 class="signature first" id="available_system-instance_method">
   
-    - (<tt>Array</tt>) <strong>available</strong>(params = {}, headers = {}) 
+    - (<tt>Array</tt>) <strong>available_system</strong>(params = {}, headers = {}) 
   
 
   
@@ -538,14 +562,14 @@
       <pre class="lines">
 
 
-36
-37
-38</pre>
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 89</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_available'>available</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_available_system'>available_system</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -619,6 +643,32 @@
     <ul class="option">
       
         <li>
+          <span class="name">id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>subscription pool uuid</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">activation_key_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>id of the activation key</p>
+</div>
+          
+        </li>
+      
+        <li>
           <span class="name">system_id</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
@@ -632,19 +682,27 @@
         </li>
       
         <li>
-          <span class="name">subscription</span>
-          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="name">quantity</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>allowed keys are:</p>
-<ul><li>
-<p>pool [String]  subscription pool uuid</p>
-</li><li>
-<p>quantity [String]  number of subscription to use</p>
-</li></ul>
+<p>quantity of this subscriptions to add</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">subscriptions</span>
+          <span class="type">(<tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>array of subscriptions to add</p>
 </div>
           
         </li>
@@ -679,14 +737,137 @@
       <pre class="lines">
 
 
-49
-50
-51</pre>
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_manifest-instance_method">
+  
+    - (<tt>Array</tt>) <strong>delete_manifest</strong>(params = {}, headers = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns First item: parsed data; second item: raw body</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a hash of params to be passed to the service</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>headers</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional http headers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>params</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">organization_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>organization id</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>First item: parsed data; second item: raw body</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_manifest'>delete_manifest</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -767,7 +948,20 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>entitlement id</p>
+<p>subscription id</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">activation_key_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>activation key id</p>
 </div>
           
         </li>
@@ -815,12 +1009,12 @@
       <pre class="lines">
 
 
-59
-60
-61</pre>
+49
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -831,9 +1025,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="destroy_all-instance_method">
+  <h3 class="signature " id="index-instance_method">
   
-    - (<tt>Array</tt>) <strong>destroy_all</strong>(params = {}, headers = {}) 
+    - (<tt>Array</tt>) <strong>index</strong>(params = {}, headers = {}) 
   
 
   
@@ -896,6 +1090,32 @@
     <ul class="option">
       
         <li>
+          <span class="name">activation_key_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>activation key id</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">organization_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>organization id</p>
+</div>
+          
+        </li>
+      
+        <li>
           <span class="name">system_id</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
@@ -938,14 +1158,14 @@
       <pre class="lines">
 
 
-68
-69
-70</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 15</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_destroy_all'>destroy_all</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -954,9 +1174,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="index-instance_method">
+  <h3 class="signature " id="refresh_manifest-instance_method">
   
-    - (<tt>Array</tt>) <strong>index</strong>(params = {}, headers = {}) 
+    - (<tt>Array</tt>) <strong>refresh_manifest</strong>(params = {}, headers = {}) 
   
 
   
@@ -1031,19 +1251,6 @@
           
         </li>
       
-        <li>
-          <span class="name">system_id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>uuid of the system</p>
-</div>
-          
-        </li>
-      
     </ul>
   
     
@@ -1074,14 +1281,14 @@
       <pre class="lines">
 
 
-14
-15
-16</pre>
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 68</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_refresh_manifest'>refresh_manifest</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1210,12 +1417,12 @@
       <pre class="lines">
 
 
-24
 25
-26</pre>
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1346,12 +1553,12 @@
       <pre class="lines">
 
 
-78
-79
-80</pre>
+59
+60
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subscription.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_upload'>upload</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1366,7 +1573,7 @@
 </div>
 
     <div id="footer">
-  Generated on Mon Feb  3 15:49:54 2014 by
+  Generated on Tue Mar  4 11:32:56 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>

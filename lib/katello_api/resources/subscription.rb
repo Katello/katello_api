@@ -6,6 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] activation_key_id  activation key id 
       # @option params [String] organization_id  organization id 
       # @option params [String] system_id  uuid of the system 
       #
@@ -26,23 +27,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  subscription pool uuid 
+      # @option params [String] activation_key_id  id of the activation key 
       # @option params [String] system_id  uuid of the system 
-      # @option params [String] match_installed  return subscriptions that match installed 
-      # @option params [String] match_system  return subscriptions that match system 
-      # @option params [String] no_overlap  return subscriptions that don’t overlap 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def available(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] system_id  uuid of the system 
-      # @option params [Hash] subscription
-      #   allowed keys are:
-      #   * pool [String]  subscription pool uuid 
-      #   * quantity [String]  number of subscription to use 
+      # @option params [String] quantity  quantity of this subscriptions to add 
+      # @option params [Array] subscriptions  array of subscriptions to add 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -51,21 +40,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  entitlement id 
+      # @option params [String] id  subscription id 
+      # @option params [String] activation_key_id  activation key id 
       # @option params [String] system_id  uuid of the system 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] system_id  uuid of the system 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def destroy_all(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
@@ -76,6 +57,36 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def upload(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] organization_id  organization id 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def refresh_manifest(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] organization_id  organization id 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def delete_manifest(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] system_id  uuid of the system 
+      # @option params [String] match_installed  return subscriptions that match installed 
+      # @option params [String] match_system  return subscriptions that match system 
+      # @option params [String] no_overlap  return subscriptions that don’t overlap 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def available_system(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

@@ -6,9 +6,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  id or name of the repository set to enable 
-      # @option params [String] organization_id  id of an organization the repository will be contained in 
-      # @option params [String] product_id  id of a product the repository will be contained in 
+      # @option params [String] id  id of the repository set to enable 
+      # @option params [String] product_id  id of the product containing the repository set 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -17,9 +16,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  id of the repository set to disable 
-      # @option params [String] organization_id  id of an organization the repository will be contained in 
-      # @option params [String] product_id  id of a product the repository will be contained in 
+      # @option params [String] id  id of the repository set to enable 
+      # @option params [String] product_id  id of the product containing the repository set 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -28,11 +26,21 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] product_id  id of a product to list repository sets for 
+      # @option params [String] product_id  id of a product to list repository sets from 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def index(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  id of the repository set 
+      # @option params [String] product_id  id of a product to list repository sets from 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def show(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
