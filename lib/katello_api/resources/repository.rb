@@ -11,6 +11,7 @@ module KatelloApi
       # @option params [String] environment_id  id of an environment to show repositories in 
       # @option params [String] organization_id  id of an organization to show repositories in 
       # @option params [String] product_id  id of a product to show repositories of 
+      # @option params [String] content_type  limit to only repositories of this time 
       # @option params [String] enabled  limit to only enabled repositories 
       # @option params [String] full_results  whether or not to show all results 
       # @option params [String] library  show repositories in library and the default content view 
@@ -55,6 +56,15 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  repository id 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def sync(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  repository id 
       # @option params [String] gpg_key_id  id of a gpg key that will be assigned to this repository 
       #
       # @param [Hash] headers additional http headers
@@ -73,11 +83,17 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  repository id 
+      # @option params [Hash] call_report
+      #   allowed keys are:
+      #   * task_id [String]
+      # @option params [Hash] payload
+      #   allowed keys are:
+      #   * repo_id [String]
+      # @option params [String] token  shared secret token 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
-      def sync(params = {}, headers = {})
+      def sync_complete(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

@@ -23,6 +23,16 @@ module KatelloApi
         perform_call(__method__, params, headers)
       end
 
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  content view version identifier 
+      # @option params [String] environment_id
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def promote(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
     end
   end
 end

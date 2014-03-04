@@ -38,7 +38,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  filter identifierr 
+      # @option params [String] id  filter identifier 
       # @option params [String] content_view_id  content view identifier 
       # @option params [Array] repository_ids  list of repository ids 
       # @option params [String] inclusion  specifies if content should be included or excluded, default: inclusion=false 
@@ -57,6 +57,26 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  filter identifier 
+      # @option params [String] content_view_id  content view identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def available_errata(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  filter identifier 
+      # @option params [String] content_view_id  content view identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def available_package_groups(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
