@@ -1,9 +1,7 @@
-%{?scl:%scl_package rubygem-%{gem_name}}
-%{!?scl:%global pkg_name %{name}}
-
+%global pkg_name %{name}
 %global gem_name katello_api
 
-%if !("%{?scl}" == "ruby193" || 0%{?rhel} > 6 || 0%{?fedora} > 16)
+%if !(0%{?rhel} > 6 || 0%{?fedora} > 16)
 %global gem_dir /usr/lib/ruby/gems/1.8
 %global gem_instdir %{gem_dir}/gems/%{gem_name}-%{version}
 %global gem_libdir %{gem_instdir}/lib
@@ -13,18 +11,18 @@
 %endif
 
 Summary: Ruby bindings for Katello's rest API
-Name: %{?scl_prefix}rubygem-%{gem_name}
+Name: rubygem-%{gem_name}
 Version: 0.0.8
 Release: 1%{?dist}
 Group: Development/Languages
 License: MIT
 URL: http://github.com/Katello/katello_api
 Source0:  http://rubygems.org/downloads/%{gem_name}-%{version}.gem
-Requires: %{?scl_prefix}ruby(rubygems)
-Requires: %{?scl_prefix}rubygem(json)
-Requires: %{?scl_prefix}rubygem(rest-client) >= 1.6.1
-Requires: %{?scl_prefix}rubygem(oauth) >= 0.4
-BuildRequires: %{?scl_prefix}ruby(rubygems)
+Requires: ruby(rubygems)
+Requires: rubygem(json)
+Requires: rubygem(rest-client) >= 1.6.1
+Requires: rubygem(oauth) >= 0.4
+BuildRequires: ruby(rubygems)
 
 %if 0%{?fedora} > 19
 Requires: ruby(release) = 2.0.0
@@ -32,11 +30,11 @@ Requires: rubygems
 BuildRequires: ruby(release) = 2.0.0
 Requires: rubygems-devel
 %else
-%if "%{?scl}" == "ruby193" || 0%{?rhel} > 6 || 0%{?fedora} > 16
-Requires: %{?scl_prefix}ruby(abi) = 1.9.1
-Requires: %{?scl_prefix}rubygems
-BuildRequires: %{?scl_prefix}ruby(abi) = 1.9.1
-BuildRequires:  %{?scl_prefix}rubygems-devel
+%if 0%{?rhel} > 6 || 0%{?fedora} > 16
+Requires: ruby(abi) = 1.9.1
+Requires: rubygems
+BuildRequires: ruby(abi) = 1.9.1
+BuildRequires:  rubygems-devel
 %else
 Requires: ruby(abi) = 1.8
 BuildRequires: ruby(abi) = 1.8
@@ -44,14 +42,14 @@ BuildRequires: ruby(abi) = 1.8
 %endif
 
 BuildArch: noarch
-Provides: %{?scl_prefix}rubygem(%{gem_name}) = %{version}
+Provides: rubygem(%{gem_name}) = %{version}
 
 %description
 Helps you to use Katello's API calls from your app.
 
 %package doc
 BuildArch:  noarch
-Requires:   %{?scl_prefix}%{pkg_name} = %{version}-%{release}
+Requires:   %{pkg_name} = %{version}-%{release}
 Summary:    Documentation for rubygem-%{gem_name}
 
 %description doc
@@ -62,10 +60,8 @@ This package contains documentation for rubygem-%{gem_name}.
 
 %build
 mkdir -p .%{gem_dir}
-%{?scl:scl enable %{scl} "}
 gem install --local --install-dir .%{gem_dir} \
             --force --no-rdoc --no-ri %{SOURCE0}
-%{?scl:"}
 
 %install
 mkdir -p %{buildroot}%{gem_dir}
@@ -92,6 +88,9 @@ mv %{buildroot}%{gem_instdir}/doc %{buildroot}%{gem_docdir}
 %{gem_instdir}/%{gem_name}.gemspec
 
 %changelog
+* Tue Mar 04 2014 Jason Montleon <jmontleo@redhat.com> 0.0.9-1
+- new package built with tito
+
 * Mon Feb 03 2014 Jason Montleon <jmontleo@redhat.com> 0.0.8-1
 - update katello_api to 0.0.8 (jmontleo@redhat.com)
 
