@@ -22,7 +22,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = KatelloApi::VERSION
 
-  gem.add_dependency 'json', '~> 1.8'
+  gem.add_dependency 'json', '~> 1.4'
   gem.add_dependency 'rest-client', '~> 1.6'
   gem.add_dependency 'oauth', '~> 0.4'
 end

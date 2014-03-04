@@ -6,6 +6,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] content_view_id  content view identifier 
       # @option params [String] environment_id  environment identifier 
       # @option params [String] repository_id  repository identifier 
       #

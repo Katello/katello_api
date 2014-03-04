@@ -34,6 +34,16 @@ module KatelloApi
         perform_call(__method__, params, headers)
       end
 
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  id of the repository set 
+      # @option params [String] product_id  id of a product to list repository sets from 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def show(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
     end
   end
 end

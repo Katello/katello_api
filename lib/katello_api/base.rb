@@ -53,10 +53,15 @@ module KatelloApi
 
     def http_call(http_method, path, params = { }, headers = { })
       headers ||= { }
-
       args = [http_method]
+
       if %w[post put].include?(http_method.to_s)
-        args << params.to_json
+        #If using multi-part forms, the paramaters should not be json
+        if ((headers.include?(:content_type)) and (headers[:content_type] == "multipart/form-data"))
+            args << params
+        else
+            args << params.to_json
+        end
       else
         headers[:params] = params if params
       end
