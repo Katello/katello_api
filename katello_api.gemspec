@@ -9,13 +9,13 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Ruby bindings for Katello's API}
   gem.homepage      = "http://github.com/katello/katello_api"
 
-  gem.files         = `git ls-files`.split($\)
-
-  gem.files.reject! do |fn|
-    fn.start_with?("lib/katello_api/generator") ||
-      fn == 'bin/generate.rb' ||
-      fn == 'rubygem-katello_api.spec' ||
-      fn == 'Rakefile'
+  gem.files         = Dir["**/**"].reject! do |fn|
+    fn.start_with?('lib/katello_api/generator') ||
+      fn.start_with?('bin') ||
+      fn.start_with?('pkg') ||
+      fn.downcase == 'rubygem-katello_api.spec' ||
+      fn.downcase == 'rakefile' ||
+      fn.downcase == 'gemfile.lock'
   end
 
   gem.name          = "katello_api"
