@@ -75,7 +75,6 @@ mv %{buildroot}%{gem_instdir}/doc %{buildroot}%{gem_docdir}
 %{gem_instdir}/lib
 %exclude %{gem_cache}
 %{gem_spec}
-%exclude %{gem_instdir}/.gitignore
 
 %doc %{gem_instdir}/MIT-LICENSE
 %doc %{gem_instdir}/README.rdoc
