@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://github.com/katello/katello_api"
 
   gem.files         = Dir["{doc,lib}/**/*"].reject { |fn| fn.start_with?('lib/katello_api/generator') }
-  gem.files         += %w{ Gemfile katello_api.gemspec MIT-LICENSE Rakefile README.rdoc }
+  gem.files         += %w{ Gemfile katello_api.gemspec MIT-LICENSE README.rdoc }
 
   gem.name          = "katello_api"
   gem.require_paths = ["lib"]
