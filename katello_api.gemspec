@@ -9,14 +9,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Ruby bindings for Katello's API}
   gem.homepage      = "http://github.com/katello/katello_api"
 
-  gem.files         = Dir["**/**"].reject! do |fn|
-    fn.start_with?('lib/katello_api/generator') ||
-      fn.start_with?('bin') ||
-      fn.start_with?('pkg') ||
-      fn.downcase == 'rubygem-katello_api.spec' ||
-      fn.downcase == 'rakefile' ||
-      fn.downcase == 'gemfile.lock'
-  end
+  gem.files         = Dir["{doc,lib}/**/*"].reject { |fn| fn.start_with?('lib/katello_api/generator') }
+  gem.files         += %w{ Gemfile katello_api.gemspec MIT-LICENSE Rakefile README.rdoc }
 
   gem.name          = "katello_api"
   gem.require_paths = ["lib"]
