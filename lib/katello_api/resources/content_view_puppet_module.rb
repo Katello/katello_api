@@ -27,7 +27,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/content_views/:content_view_id/puppet_modules/:id+ path
+      # @option params [Object] id Part of +/api/content_views/:content_view_id/content_view_puppet_modules/:id+ path
       # @option params [String] content_view_id  content view numeric identifier 
       #
       # @param [Hash] headers additional http headers
