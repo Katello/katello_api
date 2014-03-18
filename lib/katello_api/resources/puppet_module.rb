@@ -6,7 +6,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] repository_id  repository numeric identifier 
+      # @option params [String] content_view_id  content view identifier 
+      # @option params [String] environment_id  environment identifier 
+      # @option params [String] repository_id  repository identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -15,18 +17,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] repository_id  repository numeric identifier 
-      # @option params [String] search  search expression 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def search(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  puppet module id 
-      # @option params [String] repository_id  repository numeric identifier 
+      # @option params [String] id  puppet module identifier 
+      # @option params [String] repository_id  repository identifier 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

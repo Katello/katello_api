@@ -475,12 +475,12 @@
       <pre class="lines">
 
 
-82
-83
-84</pre>
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_pxe_default'>build_pxe_default</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -557,7 +557,7 @@
       
         <li>
           <span class="name">config_template</span>
-          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="type">(<tt>Hash</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
@@ -565,6 +565,9 @@
             &mdash; <div class='inline'>
 <p>allowed keys are:</p>
 <ul><li>
+<p>operatingsystem_ids [Array, nil]  array of operating systems id to
+associate the template with</p>
+</li><li>
 <p>template_kind_id [String, nil]  not relevant for snippet</p>
 </li><li>
 <p>audit_comment [String, nil]</p>
@@ -575,7 +578,7 @@
 </li><li>
 <p>template [String]</p>
 </li><li>
-<p>template_combinations_attributes [String, nil]  array of template
+<p>template_combinations_attributes [Array, nil]  array of template
 combinations (hostgroup_id, environment_id)</p>
 </li></ul>
 </div>
@@ -612,12 +615,12 @@ combinations (hostgroup_id, environment_id)</p>
       <pre class="lines">
 
 
-39
-40
-41</pre>
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -694,14 +697,10 @@ combinations (hostgroup_id, environment_id)</p>
       
         <li>
           <span class="name">id</span>
-          <span class="type">(<tt>Object</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
-          
-            &mdash; <div class='inline'>
-<p>Part of <tt>/api/config_templates/:id</tt> path</p>
-</div>
           
         </li>
       
@@ -735,12 +734,12 @@ combinations (hostgroup_id, environment_id)</p>
       <pre class="lines">
 
 
-65
-66
-67</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -829,6 +828,32 @@ combinations (hostgroup_id, environment_id)</p>
         </li>
       
         <li>
+          <span class="name">page</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>paginate results</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">per_page</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>number of entries per request</p>
+</div>
+          
+        </li>
+      
+        <li>
           <span class="name">search</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
@@ -871,12 +896,12 @@ combinations (hostgroup_id, environment_id)</p>
       <pre class="lines">
 
 
-14
-15
-16</pre>
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -994,12 +1019,12 @@ combinations (hostgroup_id, environment_id)</p>
       <pre class="lines">
 
 
-74
-75
-76</pre>
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_revision'>revision</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1076,14 +1101,10 @@ combinations (hostgroup_id, environment_id)</p>
       
         <li>
           <span class="name">id</span>
-          <span class="type">(<tt>Object</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
-          
-            &mdash; <div class='inline'>
-<p>Part of <tt>/api/config_templates/:id</tt> path</p>
-</div>
           
         </li>
       
@@ -1117,12 +1138,12 @@ combinations (hostgroup_id, environment_id)</p>
       <pre class="lines">
 
 
-23
-24
-25</pre>
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1199,20 +1220,16 @@ combinations (hostgroup_id, environment_id)</p>
       
         <li>
           <span class="name">id</span>
-          <span class="type">(<tt>Object</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
-          
-            &mdash; <div class='inline'>
-<p>Part of <tt>/api/config_templates/:id</tt> path</p>
-</div>
           
         </li>
       
         <li>
           <span class="name">config_template</span>
-          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="type">(<tt>Hash</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
@@ -1220,6 +1237,9 @@ combinations (hostgroup_id, environment_id)</p>
             &mdash; <div class='inline'>
 <p>allowed keys are:</p>
 <ul><li>
+<p>operatingsystem_ids [Array, nil]  array of operating systems id to
+associate the template with</p>
+</li><li>
 <p>template_kind_id [String, nil]  not relevant for snippet</p>
 </li><li>
 <p>audit_comment [String, nil]</p>
@@ -1230,7 +1250,7 @@ combinations (hostgroup_id, environment_id)</p>
 </li><li>
 <p>template [String]</p>
 </li><li>
-<p>template_combinations_attributes [String, nil]  array of template
+<p>template_combinations_attributes [Array, nil]  array of template
 combinations (hostgroup_id, environment_id)</p>
 </li></ul>
 </div>
@@ -1267,12 +1287,12 @@ combinations (hostgroup_id, environment_id)</p>
       <pre class="lines">
 
 
-56
-57
-58</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/config_template.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1287,7 +1307,7 @@ combinations (hostgroup_id, environment_id)</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Mar  4 11:32:58 2014 by
+  Generated on Tue Mar 18 15:30:40 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>

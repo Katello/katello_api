@@ -6,8 +6,22 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] order  sort results 
-      # @option params [String] search  filter results 
+      # @option params [String] id
+      # @option params [String] environment_id
+      # @option params [String] smart_proxy_id
+      # @option params [String] dryrun
+      # @option params [String] except  optional comma-deliminated string containing either ‘new,updated,obsolete’ used to limit the import_puppetclasses actions 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def import_puppetclasses(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] page  paginate results 
+      # @option params [String] per_page  number of entries per request 
+      # @option params [String] type  filter by type 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -16,7 +30,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  domain name (no slashes) 
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -25,10 +39,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Hash] smart_proxy
+      # @option params [Hash, nil] smart_proxy
       #   allowed keys are:
-      #   * name [String]  the smart proxy name 
-      #   * url [String]  the smart proxy url starting with ‘http://’ or ‘https://’ 
+      #   * name [String]
+      #   * url [String]
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -37,11 +51,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/smart_proxies/:id+ path
-      # @option params [Hash] smart_proxy
+      # @option params [String] id
+      # @option params [Hash, nil] smart_proxy
       #   allowed keys are:
-      #   * name [String]  the smart proxy name 
-      #   * url [String]  the smart proxy url starting with ‘http://’ or ‘https://’ 
+      #   * name [String]
+      #   * url [String]
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -50,11 +64,20 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  domain name (no slashes) 
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def refresh(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

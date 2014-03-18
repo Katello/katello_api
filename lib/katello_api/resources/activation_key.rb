@@ -65,7 +65,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/activation_keys/:id/system_groups/available+ path
+      # @option params [Object] id Part of +/katello/api/activation_keys/:id/system_groups/available+ path
       # @option params [String] full_results  whether or not to show all results 
       # @option params [String] name  system group name to filter by 
       # @option params [String] order  sort field and order, eg. ‘name desc’ 
@@ -93,7 +93,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/activation_keys/:id/system_groups+ path
+      # @option params [Object] id Part of +/katello/api/activation_keys/:id/system_groups+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

@@ -6,7 +6,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] name
+      # @option params [String] page  paginate results 
+      # @option params [String] per_page  number of entries per request 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -15,7 +16,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/roles/:id+ path
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -24,9 +25,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Hash] role
+      # @option params [Hash, nil] role
       #   allowed keys are:
-      #   * description [String, nil]
       #   * name [String]
       #
       # @param [Hash] headers additional http headers
@@ -36,10 +36,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/roles/:id+ path
-      # @option params [Hash] role
+      # @option params [String] id
+      # @option params [Hash, nil] role
       #   allowed keys are:
-      #   * description [String, nil]
       #   * name [String]
       #
       # @param [Hash] headers additional http headers
@@ -49,20 +48,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/roles/:id+ path
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  with this option specified the listed tags are scoped to the organization. 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def available_verbs(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

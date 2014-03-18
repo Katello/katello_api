@@ -8,19 +8,84 @@ module KatelloApi
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] environment_id  environment identifier 
       # @option params [String] organization_id  organization identifier 
-      # @option params [String] full_results  whether or not to show all results 
-      # @option params [String] order  sort field and order, eg. ‘name desc’ 
-      # @option params [String] page  page number, starting at 1 
-      # @option params [String] per_page  number of results per page to return 
-      # @option params [String] search  search string 
-      # @option params [Hash] sort  hash version of ‘order’ param 
-      #   allowed keys are:
-      #   * by [String]  field to sort the results on 
-      #   * order [String]  how to order the sorted results (e.g. asc for ascending) 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def index(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [Array] component_ids  list of component content view version ids for composite views 
+      # @option params [String] organization_id  organization identifier 
+      # @option params [Array] repository_ids  list of repository ids 
+      # @option params [String] composite  composite content view 
+      # @option params [String] description  description for the content view 
+      # @option params [String] label  content view label 
+      # @option params [String] name  name of the content view 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def create(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  content view identifier 
+      # @option params [Array] component_ids  list of component content view version ids for composite views 
+      # @option params [Array] repository_ids  list of repository ids 
+      # @option params [String] description  description for the content view 
+      # @option params [String] name  new name for the content view 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def update(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  content view identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def publish(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  content view numeric identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def show(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  content view numeric identifier 
+      # @option params [String] name  module name to restrict modules for 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def available_puppet_modules(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  content view numeric identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def available_puppet_module_names(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] id  content view numeric identifier 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def history(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

@@ -6,6 +6,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] order  sort results 
+      # @option params [String] page  paginate results 
+      # @option params [String] per_page  number of entries per request 
+      # @option params [String] search  filter results 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -14,7 +18,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  architecture name 
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -23,9 +27,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Hash] architecture  architecture info 
+      # @option params [Hash, nil] architecture
       #   allowed keys are:
-      #   * name [String]  architecture name 
+      #   * operatingsystem_ids [Array, nil]  operatingsystem id’s 
+      #   * name [String]
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -34,10 +39,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  architecture name 
-      # @option params [Hash] architecture  architecture info 
+      # @option params [String] id
+      # @option params [Hash, nil] architecture
       #   allowed keys are:
-      #   * name [String]  architecture name 
+      #   * operatingsystem_ids [Array, nil]  operatingsystem id’s 
+      #   * name [String]
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -46,7 +52,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  architecture name 
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

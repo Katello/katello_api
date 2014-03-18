@@ -410,7 +410,7 @@
       
         <li>
           <span class="name">domain</span>
-          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="type">(<tt>Hash</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
@@ -420,7 +420,7 @@
 <ul><li>
 <p>dns_id [String, nil]  dns proxy to use within this domain</p>
 </li><li>
-<p>domain_parameters_attributes [String, nil]  array of parameters (name,
+<p>domain_parameters_attributes [Array, nil]  array of parameters (name,
 value)</p>
 </li><li>
 <p>fullname [String, nil]  full name describing the domain</p>
@@ -461,12 +461,12 @@ value)</p>
       <pre class="lines">
 
 
-37
-38
-39</pre>
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/domain.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/domain.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -548,10 +548,6 @@ value)</p>
             
           </span>
           
-            &mdash; <div class='inline'>
-<p>domain name (no slashes)</p>
-</div>
-          
         </li>
       
     </ul>
@@ -584,12 +580,12 @@ value)</p>
       <pre class="lines">
 
 
-61
-62
-63</pre>
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/domain.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/domain.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -678,6 +674,32 @@ value)</p>
         </li>
       
         <li>
+          <span class="name">page</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>paginate results</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">per_page</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>number of entries per request</p>
+</div>
+          
+        </li>
+      
+        <li>
           <span class="name">search</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
@@ -720,12 +742,12 @@ value)</p>
       <pre class="lines">
 
 
-14
-15
-16</pre>
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/domain.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/domain.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -808,7 +830,7 @@ value)</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>domain name (no slashes)</p>
+<p>may be numerical id or domain name</p>
 </div>
           
         </li>
@@ -843,12 +865,12 @@ value)</p>
       <pre class="lines">
 
 
-23
-24
-25</pre>
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/domain.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/domain.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -925,20 +947,16 @@ value)</p>
       
         <li>
           <span class="name">id</span>
-          <span class="type">(<tt>Object</tt>)</span>
+          <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
           </span>
-          
-            &mdash; <div class='inline'>
-<p>Part of <tt>/api/domains/:id</tt> path</p>
-</div>
           
         </li>
       
         <li>
           <span class="name">domain</span>
-          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="type">(<tt>Hash</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
@@ -948,7 +966,7 @@ value)</p>
 <ul><li>
 <p>dns_id [String, nil]  dns proxy to use within this domain</p>
 </li><li>
-<p>domain_parameters_attributes [String, nil]  array of parameters (name,
+<p>domain_parameters_attributes [Array, nil]  array of parameters (name,
 value)</p>
 </li><li>
 <p>fullname [String, nil]  full name describing the domain</p>
@@ -989,12 +1007,12 @@ value)</p>
       <pre class="lines">
 
 
-52
-53
-54</pre>
+54
+55
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/domain.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/domain.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1009,7 +1027,7 @@ value)</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Mar  4 11:32:52 2014 by
+  Generated on Tue Mar 18 15:30:32 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>

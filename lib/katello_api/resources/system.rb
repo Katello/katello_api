@@ -53,7 +53,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/systems/:id+ path
+      # @option params [Object] id Part of +/katello/api/systems/:id+ path
       # @option params [String] content_view_id  specify the content view 
       # @option params [String] environment_id  specify the environment 
       # @option params [Array] guest_ids  ids of the guests running on this system 
@@ -85,7 +85,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/systems/:id/available_system_groups+ path
+      # @option params [Object] id Part of +/katello/api/systems/:id/available_system_groups+ path
       # @option params [String] full_results  whether or not to show all results 
       # @option params [String] name  system group name to filter by 
       # @option params [String] order  sort field and order, eg. ‘name desc’ 
@@ -169,8 +169,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] environment_id Part of +/api/environments/:environment_id/systems/report+ path
-      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/systems/report+ path
+      # @option params [Object] environment_id Part of +/katello/api/environments/:environment_id/systems/report+ path
+      # @option params [Object] organization_id Part of +/katello/api/organizations/:organization_id/systems/report+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -228,7 +228,7 @@ module KatelloApi
       # @option params [String] id  uuid of the system 
       # @option params [Hash] enabled_repos
       #   allowed keys are:
-      #   * repos [Array]
+      #   * repos [String]
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
