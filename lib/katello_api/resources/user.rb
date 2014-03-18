@@ -6,9 +6,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] disabled  filter by disabled flag 
-      # @option params [String] email  filter by email 
-      # @option params [String] login  filter by login 
+      # @option params [String] order  sort results 
+      # @option params [String] page  paginate results 
+      # @option params [String] per_page  number of entries per request 
+      # @option params [String] search  filter results 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -17,7 +18,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/users/:id+ path
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -41,7 +42,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/users/:id+ path
+      # @option params [Object] id Part of +/katello/api/users/:id+ path
       # @option params [Hash] user
       #   allowed keys are:
       #   * default_environment_id [Numeric, nil]
@@ -56,48 +57,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/users/:id+ path
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] user_id Part of +/api/users/:user_id/roles+ path
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def list_roles(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def sync_ldap_roles(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Numeric] role_id
-      # @option params [Object] user_id Part of +/api/users/:user_id/roles+ path
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def add_role(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/users/:user_id/roles/:id+ path
-      # @option params [Object] user_id Part of +/api/users/:user_id/roles/:id+ path
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def remove_role(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

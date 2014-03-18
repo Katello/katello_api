@@ -6,8 +6,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] system_group_id  system_group identifier 
+      # @option params [Object] organization_id Part of +/katello/api/organizations/:organization_id/system_groups/:system_group_id/packages+ path
+      # @option params [Object] system_group_id Part of +/katello/api/organizations/:organization_id/system_groups/:system_group_id/packages+ path
       # @option params [Array] groups  list of package group names 
       # @option params [Array] packages  list of package names 
       #
@@ -18,8 +18,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] system_group_id  system_group identifier 
+      # @option params [Object] organization_id Part of +/katello/api/organizations/:organization_id/system_groups/:system_group_id/packages+ path
+      # @option params [Object] system_group_id Part of +/katello/api/organizations/:organization_id/system_groups/:system_group_id/packages+ path
       # @option params [Array] groups  list of package group names 
       # @option params [Array] packages  list of package names 
       #
@@ -30,8 +30,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] system_group_id  system_group identifier 
+      # @option params [Object] organization_id Part of +/katello/api/organizations/:organization_id/system_groups/:system_group_id/packages+ path
+      # @option params [Object] system_group_id Part of +/katello/api/organizations/:organization_id/system_groups/:system_group_id/packages+ path
       # @option params [Array] groups  list of package group names 
       # @option params [Array] packages  list of package names 
       #

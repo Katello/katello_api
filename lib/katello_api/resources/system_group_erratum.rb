@@ -6,8 +6,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] system_group_id  system_group identifier 
+      # @option params [Object] organization_id Part of +/katello/api/organizations/:organization_id/system_groups/:system_group_id/errata+ path
+      # @option params [Object] system_group_id Part of +/katello/api/organizations/:organization_id/system_groups/:system_group_id/errata+ path
       # @option params [String] type  filter errata by type 
       #
       # @param [Hash] headers additional http headers
@@ -18,8 +18,8 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [Array] errata_ids  list of errata ids to install 
-      # @option params [String] organization_id  oranization identifier 
-      # @option params [String] system_group_id  system_group identifier 
+      # @option params [Object] organization_id Part of +/katello/api/organizations/:organization_id/system_groups/:system_group_id/errata+ path
+      # @option params [Object] system_group_id Part of +/katello/api/organizations/:organization_id/system_groups/:system_group_id/errata+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

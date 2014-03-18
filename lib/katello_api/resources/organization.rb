@@ -23,7 +23,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/organizations/:id+ path
+      # @option params [Object] id Part of +/katello/api/organizations/:id+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -32,18 +32,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] description  description 
-      # @option params [String] label  unique label 
-      # @option params [String] name  name 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def create(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/organizations/:id+ path
+      # @option params [Object] id Part of +/katello/api/organizations/:id+ path
       # @option params [String] description  description 
       # @option params [Hash, nil] resource
       #   allowed keys are:
@@ -56,11 +45,13 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/organizations/:id+ path
+      # @option params [String] description  description 
+      # @option params [String] label  unique label 
+      # @option params [String] name  name 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
-      def destroy(params = {}, headers = {})
+      def create(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 
@@ -85,7 +76,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/organizations/:id/autoattach_subscriptions+ path
+      # @option params [Object] id Part of +/katello/api/organizations/:id/autoattach_subscriptions+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

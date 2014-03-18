@@ -65,8 +65,8 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/organizations/:organization_id/sync_plans/:id/available_products+ path
-      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/sync_plans/:id/available_products+ path
+      # @option params [Object] id Part of +/katello/api/organizations/:organization_id/sync_plans/:id/available_products+ path
+      # @option params [Object] organization_id Part of +/katello/api/organizations/:organization_id/sync_plans/:id/available_products+ path
       # @option params [String] full_results  whether or not to show all results 
       # @option params [String] name  product name to filter by 
       # @option params [String] order  sort field and order, eg. ‘name desc’ 
@@ -86,7 +86,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the sync plan 
-      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/sync_plans/:id/products+ path
+      # @option params [Object] organization_id Part of +/katello/api/organizations/:organization_id/sync_plans/:id/products+ path
       # @option params [Array] product_ids  list of product ids to add to the sync plan 
       #
       # @param [Hash] headers additional http headers
@@ -97,7 +97,7 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] id  id of the sync plan 
-      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/sync_plans/:id/products+ path
+      # @option params [Object] organization_id Part of +/katello/api/organizations/:organization_id/sync_plans/:id/products+ path
       # @option params [Array] product_ids  list of product ids to remove from the sync plan 
       #
       # @param [Hash] headers additional http headers

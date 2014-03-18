@@ -21,27 +21,6 @@ module KatelloApi
 
       # @param [Hash] params a hash of params to be passed to the service
       # @option params [String] informable_id  resource identifier 
-      # @option params [String] informable_type  name of the resource 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def index(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] informable_id  resource identifier 
-      # @option params [String] informable_type  name of the resource 
-      # @option params [String] keyname  custom info key 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def show(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] informable_id  resource identifier 
       # @option params [Hash] custom_info
       #   allowed keys are:
       #   * value [String]
@@ -51,17 +30,6 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def update(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] informable_id  resource identifier 
-      # @option params [String] informable_type  name of the resource 
-      # @option params [String] keyname  custom info key 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def destroy(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

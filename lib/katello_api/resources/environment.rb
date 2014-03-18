@@ -6,9 +6,23 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  organization identifier 
-      # @option params [String] library  set true if you want to see only library environments 
-      # @option params [String] name  filter only environments containing this name 
+      # @option params [String] id
+      # @option params [String] environment_id
+      # @option params [String] smart_proxy_id
+      # @option params [String] dryrun
+      # @option params [String] except  optional comma-deliminated string containing either ‘new,updated,obsolete’ used to limit the import_puppetclasses actions 
+      #
+      # @param [Hash] headers additional http headers
+      # @return [Array] First item: parsed data; second item: raw body
+      def import_puppetclasses(params = {}, headers = {})
+        perform_call(__method__, params, headers)
+      end
+
+      # @param [Hash] params a hash of params to be passed to the service
+      # @option params [String] order  sort results 
+      # @option params [String] page  paginate results 
+      # @option params [String] per_page  number of entries per request 
+      # @option params [String] search  filter results 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -17,9 +31,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  id of the environment 
-      # @option params [Object] environment_id Part of +/api/organizations/:organization_id/environments/:environment_id+ path
-      # @option params [String] organization_id  id of the organization 
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -28,10 +40,9 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  name of organization 
-      # @option params [String] description  description of the environment 
-      # @option params [String] name  name of the environment 
-      # @option params [String] prior  name of an environment that is prior to the new environment in the chain. it has to be either ‘library’ or an environment at the end of a chain. 
+      # @option params [Hash, nil] environment
+      #   allowed keys are:
+      #   * name [String]
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -40,11 +51,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  id of the environment 
-      # @option params [String] organization_id  name of the organization 
-      # @option params [String] description  description of the environment 
-      # @option params [String] new_name  new name to be given to the environment 
-      # @option params [String] prior  name of an environment that is prior to the new environment in the chain. it has to be either ‘library’ or an environment at the end of a chain. 
+      # @option params [String] id
+      # @option params [Hash, nil] environment
+      #   allowed keys are:
+      #   * name [String]
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -53,21 +63,11 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] id  id of the environment 
-      # @option params [String] organization_id  organization identifier 
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def destroy(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [String] organization_id  organization identifier 
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def paths(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

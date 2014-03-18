@@ -569,12 +569,12 @@
       <pre class="lines">
 
 
-41
-42
-43</pre>
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -688,12 +688,12 @@
       <pre class="lines">
 
 
-78
-79
-80</pre>
+81
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -769,6 +769,32 @@
     <ul class="option">
       
         <li>
+          <span class="name">id</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Part of <tt>/katello/api/content_views/:id/repositories</tt> path</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">content_view_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>id of a content view to show repositories in</p>
+</div>
+          
+        </li>
+      
+        <li>
           <span class="name">environment_id</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
@@ -803,6 +829,19 @@
           
             &mdash; <div class='inline'>
 <p>id of a product to show repositories of</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">content_type</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>limit to only repositories of this time</p>
 </div>
           
         </li>
@@ -946,12 +985,12 @@
       <pre class="lines">
 
 
-26
-27
-28</pre>
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1069,12 +1108,12 @@
       <pre class="lines">
 
 
-50
-51
-52</pre>
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1192,12 +1231,12 @@
       <pre class="lines">
 
 
-59
-60
-61</pre>
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sync'>sync</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1347,12 +1386,12 @@
       <pre class="lines">
 
 
-93
-94
-95</pre>
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sync_complete'>sync_complete</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1483,12 +1522,12 @@
       <pre class="lines">
 
 
-69
-70
-71</pre>
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/repository.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -1503,7 +1542,7 @@
 </div>
 
     <div id="footer">
-  Generated on Tue Mar  4 11:32:55 2014 by
+  Generated on Tue Mar 18 15:30:36 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>

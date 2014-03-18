@@ -6,11 +6,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] role_id Part of +/api/roles/:role_id/permissions+ path
-      # @option params [String] all_tags  filter by all_flags flag 
-      # @option params [String] all_verbs  filter by all_verbs flag 
-      # @option params [String] description  filter by description 
-      # @option params [String] name  filter by name 
+      # @option params [String] name
+      # @option params [String] page  paginate results 
+      # @option params [String] per_page  number of entries per request 
+      # @option params [String] resource_type
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -19,8 +18,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/roles/:role_id/permissions/:id+ path
-      # @option params [Object] role_id Part of +/api/roles/:role_id/permissions/:id+ path
+      # @option params [String] id
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -29,7 +27,7 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] role_id Part of +/api/roles/:role_id/permissions+ path
+      # @option params [Object] role_id Part of +/katello/api/roles/:role_id/permissions+ path
       # @option params [Hash] permission
       #   allowed keys are:
       #   * organization_id [String]
@@ -44,16 +42,6 @@ module KatelloApi
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
       def create(params = {}, headers = {})
-        perform_call(__method__, params, headers)
-      end
-
-      # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] id Part of +/api/roles/:role_id/permissions/:id+ path
-      # @option params [Object] role_id Part of +/api/roles/:role_id/permissions/:id+ path
-      #
-      # @param [Hash] headers additional http headers
-      # @return [Array] First item: parsed data; second item: raw body
-      def destroy(params = {}, headers = {})
         perform_call(__method__, params, headers)
       end
 

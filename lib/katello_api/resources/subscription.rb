@@ -31,7 +31,7 @@ module KatelloApi
       # @option params [String] activation_key_id  id of the activation key 
       # @option params [String] system_id  uuid of the system 
       # @option params [String] quantity  quantity of this subscriptions to add 
-      # @option params [Array] subscriptions  array of subscriptions to add 
+      # @option params [String] subscriptions  array of subscriptions to add 
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

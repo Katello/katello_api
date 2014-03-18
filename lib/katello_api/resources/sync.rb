@@ -6,10 +6,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] organization_id Part of +/api/organizations/:organization_id/products/:product_id/sync+ path
-      # @option params [Object] product_id Part of +/api/organizations/:organization_id/products/:product_id/sync+ path
-      # @option params [Object] provider_id Part of +/api/providers/:provider_id/sync+ path
-      # @option params [Object] repository_id Part of +/api/repositories/:repository_id/sync+ path
+      # @option params [Object] organization_id Part of +/katello/api/organizations/:organization_id/products/:product_id/sync+ path
+      # @option params [Object] product_id Part of +/katello/api/organizations/:organization_id/products/:product_id/sync+ path
+      # @option params [Object] provider_id Part of +/katello/api/providers/:provider_id/sync+ path
+      # @option params [Object] repository_id Part of +/katello/api/repositories/:repository_id/sync+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body
@@ -18,10 +18,10 @@ module KatelloApi
       end
 
       # @param [Hash] params a hash of params to be passed to the service
-      # @option params [Object] organization_id Part of +/apiorganizations/:organization_id/products/:product_id/sync+ path
-      # @option params [Object] product_id Part of +/apiorganizations/:organization_id/products/:product_id/sync+ path
-      # @option params [Object] provider_id Part of +/api/providers/:provider_id/sync+ path
-      # @option params [Object] repository_id Part of +/api/repositories/:repository_id/sync+ path
+      # @option params [Object] organization_id Part of +/katello/apiorganizations/:organization_id/products/:product_id/sync+ path
+      # @option params [Object] product_id Part of +/katello/apiorganizations/:organization_id/products/:product_id/sync+ path
+      # @option params [Object] provider_id Part of +/katello/api/providers/:provider_id/sync+ path
+      # @option params [Object] repository_id Part of +/katello/api/repositories/:repository_id/sync+ path
       #
       # @param [Hash] headers additional http headers
       # @return [Array] First item: parsed data; second item: raw body

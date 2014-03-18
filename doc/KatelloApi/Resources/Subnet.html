@@ -410,15 +410,39 @@
       
         <li>
           <span class="name">subnet</span>
-          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="type">(<tt>Hash</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>subnet info  allowed keys are:</p>
+<p>allowed keys are:</p>
 <ul><li>
+<p>dhcp_id [String, nil]  dhcp proxy to use within this subnet</p>
+</li><li>
+<p>dns_id [String, nil]  dns proxy to use within this subnet</p>
+</li><li>
+<p>domain_ids [Array, nil]  domains in which this subnet is part</p>
+</li><li>
+<p>tftp_id [String, nil]  tftp proxy to use within this subnet</p>
+</li><li>
+<p>dns_primary [String, nil]  primary dns for this subnet</p>
+</li><li>
+<p>dns_secondary [String, nil]  secondary dns for this subnet</p>
+</li><li>
+<p>from [String, nil]  starting ip address for ip auto suggestion</p>
+</li><li>
+<p>gateway [String, nil]  primary dns for this subnet</p>
+</li><li>
+<p>mask [String]  netmask for this subnet</p>
+</li><li>
 <p>name [String]  subnet name</p>
+</li><li>
+<p>network [String]  subnet network</p>
+</li><li>
+<p>to [String, nil]  ending ip address for ip auto suggestion</p>
+</li><li>
+<p>vlanid [String, nil]  vlan id for this subnet</p>
 </li></ul>
 </div>
           
@@ -454,12 +478,12 @@
       <pre class="lines">
 
 
-32
-33
-34</pre>
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subnet.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subnet.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -542,7 +566,7 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>subnet name</p>
+<p>subnet numeric identifier</p>
 </div>
           
         </li>
@@ -577,12 +601,12 @@
       <pre class="lines">
 
 
-53
-54
-55</pre>
+81
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subnet.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subnet.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -651,6 +675,69 @@
   
 </ul>
 
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>params</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">order</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>sort results</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">page</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>paginate results</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">per_page</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>number of entries per request</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">search</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>filter results</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -676,12 +763,12 @@
       <pre class="lines">
 
 
-12
-13
-14</pre>
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subnet.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subnet.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -763,10 +850,6 @@
             
           </span>
           
-            &mdash; <div class='inline'>
-<p>subnet name</p>
-</div>
-          
         </li>
       
     </ul>
@@ -799,12 +882,12 @@
       <pre class="lines">
 
 
-21
-22
-23</pre>
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subnet.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subnet.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -887,22 +970,46 @@
           </span>
           
             &mdash; <div class='inline'>
-<p>subnet name</p>
+<p>subnet numeric identifier</p>
 </div>
           
         </li>
       
         <li>
           <span class="name">subnet</span>
-          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="type">(<tt>Hash</tt>, <tt>nil</tt>)</span>
           <span class="default">
             
           </span>
           
             &mdash; <div class='inline'>
-<p>subnet info  allowed keys are:</p>
+<p>allowed keys are:</p>
 <ul><li>
+<p>dhcp_id [String, nil]  dhcp proxy to use within this subnet</p>
+</li><li>
+<p>dns_id [String, nil]  dns proxy to use within this subnet</p>
+</li><li>
+<p>domain_ids [Array, nil]  domains in which this subnet is part</p>
+</li><li>
+<p>tftp_id [String, nil]  tftp proxy to use within this subnet</p>
+</li><li>
+<p>dns_primary [String, nil]  primary dns for this subnet</p>
+</li><li>
+<p>dns_secondary [String, nil]  secondary dns for this subnet</p>
+</li><li>
+<p>from [String, nil]  starting ip address for ip auto suggestion</p>
+</li><li>
+<p>gateway [String, nil]  primary dns for this subnet</p>
+</li><li>
+<p>mask [String]  netmask for this subnet</p>
+</li><li>
 <p>name [String]  subnet name</p>
+</li><li>
+<p>network [String]  subnet network</p>
+</li><li>
+<p>to [String, nil]  ending ip address for ip auto suggestion</p>
+</li><li>
+<p>vlanid [String, nil]  vlan id for this subnet</p>
 </li></ul>
 </div>
           
@@ -938,12 +1045,12 @@
       <pre class="lines">
 
 
-44
-45
-46</pre>
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subnet.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/katello_api/resources/subnet.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_perform_call'>perform_call</span><span class='lparen'>(</span><span class='id identifier rubyid___method__'>__method__</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
@@ -958,7 +1065,7 @@
 </div>
 
     <div id="footer">
-  Generated on Tue Mar  4 11:32:53 2014 by
+  Generated on Tue Mar 18 15:30:32 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>
