@@ -33,7 +33,7 @@ module KatelloApi
                   :accept => "application/json,version=#{API_VERSION}" }
 
       @client = RestClient::Resource.new(
-          "#{config[:base_url]}/katello",
+          config[:base_url],
           { :user => config[:username],
             :password => config[:password],
             :oauth => config[:oauth],
